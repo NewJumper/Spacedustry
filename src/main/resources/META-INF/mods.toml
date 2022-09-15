@@ -3,7 +3,7 @@ loaderVersion="[43,)"
 license="All rights reserved"
 
 [[mods]]
-    modId="spacedutry"
+    modId="spacedustry"
     version="0.1.0"
 
     displayName="Spacedustry"

@@ -1,0 +1,38 @@
+package com.newjumper.spacedustry.datagen.assets;
+
+import com.newjumper.spacedustry.Spacedustry;
+import com.newjumper.spacedustry.block.SpacedustryBlocks;
+import net.minecraft.data.DataGenerator;
+import net.minecraft.world.level.block.Block;
+import net.minecraftforge.common.data.LanguageProvider;
+import net.minecraftforge.registries.RegistryObject;
+
+public class ENLanguageProvider extends LanguageProvider {
+    public ENLanguageProvider(DataGenerator gen) {
+        super(gen, Spacedustry.MOD_ID, "en_us");
+    }
+
+    @Override
+    protected void addTranslations() {
+        SpacedustryBlocks.BLOCKS.getEntries().forEach(this::addBlock);
+
+        add("itemGroup.spacedustry", "Spacedustry");
+    }
+
+    private void addBlock(RegistryObject<Block> block) {
+        String key = block.getId().getPath();
+        add("block.spacedustry." + key, convertToName(key));
+    }
+
+    private String convertToName(String key) {
+        StringBuilder builder = new StringBuilder(key.substring(0, 1).toUpperCase() + key.substring(1));
+        for(int i = 1; i < builder.length(); i++) {
+            if(builder.charAt(i) == '_') {
+                builder.deleteCharAt(i);
+                builder.replace(i, i + 1, " " + Character.toUpperCase(builder.charAt(i)));
+            }
+        }
+
+        return builder.toString();
+    }
+}
