@@ -2,6 +2,7 @@ package com.newjumper.spacedustry.datagen.data;
 
 import com.newjumper.spacedustry.Spacedustry;
 import com.newjumper.spacedustry.block.SpacedustryBlocks;
+import com.newjumper.spacedustry.util.SpacedustryTags;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.tags.BlockTags;
@@ -18,5 +19,9 @@ public class SpacedustryBlockTagsProvider extends BlockTagsProvider {
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(SpacedustryBlocks.ALUMINUM_ORE.get(), SpacedustryBlocks.LITHIUM_ORE.get(), SpacedustryBlocks.TUNGSTEN_ORE.get());
 
         tag(Tags.Blocks.ORES).add(SpacedustryBlocks.ALUMINUM_ORE.get(), SpacedustryBlocks.LITHIUM_ORE.get(), SpacedustryBlocks.TUNGSTEN_ORE.get());
+
+        tag(SpacedustryTags.Blocks.ORES_ALUMINUM).add(SpacedustryBlocks.ALUMINUM_ORE.get());
+        tag(SpacedustryTags.Blocks.ORES_LITHIUM).add(SpacedustryBlocks.LITHIUM_ORE.get());
+        tag(SpacedustryTags.Blocks.ORES_TUNGSTEN).add(SpacedustryBlocks.TUNGSTEN_ORE.get());
     }
 }
