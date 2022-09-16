@@ -2,5 +2,14 @@
   "block.spacedustry.aluminum_ore": "Aluminum Ore",
   "block.spacedustry.lithium_ore": "Lithium Ore",
   "block.spacedustry.tungsten_ore": "Tungsten Ore",
+  "item.spacedustry.aluminum_ingot": "Aluminum Ingot",
+  "item.spacedustry.aluminum_ore": "Aluminum Ore",
+  "item.spacedustry.lithium_ingot": "Lithium Ingot",
+  "item.spacedustry.lithium_ore": "Lithium Ore",
+  "item.spacedustry.raw_aluminum": "Raw Aluminum",
+  "item.spacedustry.raw_lithium": "Raw Lithium",
+  "item.spacedustry.raw_tungsten": "Raw Tungsten",
+  "item.spacedustry.tungsten_ingot": "Tungsten Ingot",
+  "item.spacedustry.tungsten_ore": "Tungsten Ore",
   "itemGroup.spacedustry": "Spacedustry"
 }

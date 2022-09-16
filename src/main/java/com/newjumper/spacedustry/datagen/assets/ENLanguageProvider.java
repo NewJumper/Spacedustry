@@ -2,7 +2,9 @@ package com.newjumper.spacedustry.datagen.assets;
 
 import com.newjumper.spacedustry.Spacedustry;
 import com.newjumper.spacedustry.block.SpacedustryBlocks;
+import com.newjumper.spacedustry.item.SpacedustryItems;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.LanguageProvider;
 import net.minecraftforge.registries.RegistryObject;
@@ -15,6 +17,7 @@ public class ENLanguageProvider extends LanguageProvider {
     @Override
     protected void addTranslations() {
         SpacedustryBlocks.BLOCKS.getEntries().forEach(this::addBlock);
+        SpacedustryItems.ITEMS.getEntries().forEach(this::addItem);
 
         add("itemGroup.spacedustry", "Spacedustry");
     }
@@ -22,6 +25,11 @@ public class ENLanguageProvider extends LanguageProvider {
     private void addBlock(RegistryObject<Block> block) {
         String key = block.getId().getPath();
         add("block.spacedustry." + key, convertToName(key));
+    }
+
+    private void addItem(RegistryObject<Item> block) {
+        String key = block.getId().getPath();
+        add("item.spacedustry." + key, convertToName(key));
     }
 
     private String convertToName(String key) {

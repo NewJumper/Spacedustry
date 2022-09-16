@@ -1,4 +1,10 @@
-// 1.19.2	2022-09-14T23:16:22.1298787	Item Models: spacedustry
+// 1.19.2	2022-09-15T21:53:45.9204167	Item Models: spacedustry
+0347cf0332060c50f9e2c99f200ed3263d9fa1f7 assets/spacedustry/models/item/aluminum_ingot.json
 d3cb3e25c4ba00eb4207b8f33b51b7e491408e49 assets/spacedustry/models/item/aluminum_ore.json
+acbdda732d9a133ecf532ecd2a5840e37edb4cdb assets/spacedustry/models/item/lithium_ingot.json
 8df19f3f31fce3980414cd496871aef9f50539cb assets/spacedustry/models/item/lithium_ore.json
+ae278479f4fbb23e6afff3994f4f4d8845bad95e assets/spacedustry/models/item/raw_aluminum.json
+b284fa5d9f3f82c8f268afcfe7501e6592d580c9 assets/spacedustry/models/item/raw_lithium.json
+a284874a7e6ad5b604f5482adb3a1e53bc95e8f7 assets/spacedustry/models/item/raw_tungsten.json
+2b4f9c904ff4d95bd68f987580e2dce142fbaeef assets/spacedustry/models/item/tungsten_ingot.json
 0e0b39e3b3a45f1fdcbe33686df89a2be7cfe7ee assets/spacedustry/models/item/tungsten_ore.json
