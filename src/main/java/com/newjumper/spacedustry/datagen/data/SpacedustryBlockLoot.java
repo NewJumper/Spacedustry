@@ -1,6 +1,7 @@
 package com.newjumper.spacedustry.datagen.data;
 
 import com.newjumper.spacedustry.block.SpacedustryBlocks;
+import com.newjumper.spacedustry.item.SpacedustryItems;
 import net.minecraft.data.loot.BlockLoot;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.RegistryObject;
@@ -9,9 +10,9 @@ import org.jetbrains.annotations.NotNull;
 public class SpacedustryBlockLoot extends BlockLoot {
     @Override
     protected void addTables() {
-        this.dropSelf(SpacedustryBlocks.ALUMINUM_ORE.get());
-        this.dropSelf(SpacedustryBlocks.LITHIUM_ORE.get());
-        this.dropSelf(SpacedustryBlocks.TUNGSTEN_ORE.get());
+        this.add(SpacedustryBlocks.ALUMINUM_ORE.get(), block -> createOreDrop(block, SpacedustryItems.RAW_ALUMINUM.get()));
+        this.add(SpacedustryBlocks.LITHIUM_ORE.get(), block -> createOreDrop(block, SpacedustryItems.RAW_LITHIUM.get()));
+        this.add(SpacedustryBlocks.TUNGSTEN_ORE.get(), block -> createOreDrop(block, SpacedustryItems.RAW_TUNGSTEN.get()));
     }
 
     @NotNull

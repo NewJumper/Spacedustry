@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 3.0,
+  "group": "lithium_ingot",
+  "ingredient": {
+    "item": "spacedustry:lithium_ore"
+  },
+  "result": "spacedustry:lithium_ingot"
+}
