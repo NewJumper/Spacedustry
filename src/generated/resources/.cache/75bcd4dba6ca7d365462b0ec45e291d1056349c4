@@ -1,6 +1,9 @@
-// 1.19.2	2022-09-15T22:16:38.174259	Tags for minecraft:block
+// 1.19.2	2022-09-15T22:59:09.3116534	Tags for minecraft:block
 0171c9859902f9e90c96115635bccb0150fddc07 data/forge/tags/blocks/ores.json
 8d4be00d45d6f0294ee83eb7ebe73e26aaddbb8d data/forge/tags/blocks/ores/aluminum.json
 1d72e4ce79501de38193cdd84940b75c72945a74 data/forge/tags/blocks/ores/lithium.json
 3ca7ca836dea826227a8633746cc9501a3e1dec4 data/forge/tags/blocks/ores/tungsten.json
 0171c9859902f9e90c96115635bccb0150fddc07 data/minecraft/tags/blocks/mineable/pickaxe.json
+3ca7ca836dea826227a8633746cc9501a3e1dec4 data/minecraft/tags/blocks/needs_diamond_tool.json
+1d72e4ce79501de38193cdd84940b75c72945a74 data/minecraft/tags/blocks/needs_iron_tool.json
+8d4be00d45d6f0294ee83eb7ebe73e26aaddbb8d data/minecraft/tags/blocks/needs_stone_tool.json

@@ -22,6 +22,9 @@ public class SpacedustryItemTagsProvider extends ItemTagsProvider {
         copy(SpacedustryTags.Blocks.ORES_LITHIUM, SpacedustryTags.Items.ORES_LITHIUM);
         copy(SpacedustryTags.Blocks.ORES_TUNGSTEN, SpacedustryTags.Items.ORES_TUNGSTEN);
 
+        tag(Tags.Items.INGOTS).add(SpacedustryItems.ALUMINUM_INGOT.get(), SpacedustryItems.LITHIUM_INGOT.get(), SpacedustryItems.TUNGSTEN_INGOT.get());
+        tag(Tags.Items.RAW_MATERIALS).add(SpacedustryItems.RAW_ALUMINUM.get(), SpacedustryItems.RAW_LITHIUM.get(), SpacedustryItems.RAW_TUNGSTEN.get());
+
         tag(SpacedustryTags.Items.RAW_ALUMINUM).add(SpacedustryItems.RAW_ALUMINUM.get());
         tag(SpacedustryTags.Items.RAW_LITHIUM).add(SpacedustryItems.RAW_LITHIUM.get());
         tag(SpacedustryTags.Items.RAW_TUNGSTEN).add(SpacedustryItems.RAW_TUNGSTEN.get());
