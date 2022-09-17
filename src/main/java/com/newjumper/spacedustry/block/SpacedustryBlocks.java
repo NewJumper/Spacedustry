@@ -7,6 +7,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DropExperienceBlock;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.registries.DeferredRegister;
@@ -22,8 +23,15 @@ public class SpacedustryBlocks {
     public static final RegistryObject<Block> DEEPSLATE_ALUMINUM_ORE = register("deepslate_aluminum_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4.5f, 3f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> LITHIUM_ORE = register("lithium_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(3f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> DEEPSLATE_LITHIUM_ORE = register("deepslate_lithium_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4.5f, 3f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> MOLYBDENITE_ORE = register("molybdenite_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4f, 3.5f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> DEEPSLATE_MOLYBDENITE_ORE = register("deepslate_molybdenite_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(5.5f, 3.5f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> NICKEL_ORE = register("nickel_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(3f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> DEEPSLATE_NICKEL_ORE = register("deepslate_nickel_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4.5f, 3f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> SILICON_ORE = register("silicon_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(3f, 2.5f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> TUNGSTEN_ORE = register("tungsten_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4f, 3.5f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> DEEPSLATE_TUNGSTEN_ORE = register("deepslate_tungsten_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(5.5f, 3.5f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> SALT = register("salt", () -> new Block(BlockBehaviour.Properties.of(Material.CLAY).strength(0.6f).sound(SoundType.GRAVEL)));
 
     private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> pBlock) {
         RegistryObject<T> block = BLOCKS.register(name, pBlock);

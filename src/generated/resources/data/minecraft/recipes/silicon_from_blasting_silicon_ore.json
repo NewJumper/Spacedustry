@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:blasting",
+  "cookingtime": 100,
+  "experience": 3.0,
+  "group": "silicon",
+  "ingredient": {
+    "item": "spacedustry:silicon_ore"
+  },
+  "result": "spacedustry:silicon"
+}

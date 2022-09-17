@@ -24,15 +24,30 @@ public class SpacedustryItemModelProvider extends ItemModelProvider {
         blockModel(SpacedustryBlocks.DEEPSLATE_ALUMINUM_ORE);
         blockModel(SpacedustryBlocks.LITHIUM_ORE);
         blockModel(SpacedustryBlocks.DEEPSLATE_LITHIUM_ORE);
+        blockModel(SpacedustryBlocks.MOLYBDENITE_ORE);
+        blockModel(SpacedustryBlocks.DEEPSLATE_MOLYBDENITE_ORE);
+        blockModel(SpacedustryBlocks.NICKEL_ORE);
+        blockModel(SpacedustryBlocks.DEEPSLATE_NICKEL_ORE);
+        blockModel(SpacedustryBlocks.SILICON_ORE);
         blockModel(SpacedustryBlocks.TUNGSTEN_ORE);
         blockModel(SpacedustryBlocks.DEEPSLATE_TUNGSTEN_ORE);
+
+        blockModel(SpacedustryBlocks.SALT);
 
         itemModel(SpacedustryItems.RAW_ALUMINUM, GENERATED);
         itemModel(SpacedustryItems.ALUMINUM_INGOT, GENERATED);
         itemModel(SpacedustryItems.RAW_LITHIUM, GENERATED);
         itemModel(SpacedustryItems.LITHIUM_INGOT, GENERATED);
+        itemModel(SpacedustryItems.MOLYBDENITE, GENERATED);
+        itemModel(SpacedustryItems.MOLYBDENUM_INGOT, GENERATED);
+        itemModel(SpacedustryItems.RAW_NICKEL, GENERATED);
+        itemModel(SpacedustryItems.NICKEL_INGOT, GENERATED);
+        itemModel(SpacedustryItems.RAW_SILICON, GENERATED);
+        itemModel(SpacedustryItems.SILICON, GENERATED);
         itemModel(SpacedustryItems.RAW_TUNGSTEN, GENERATED);
         itemModel(SpacedustryItems.TUNGSTEN_INGOT, GENERATED);
+
+        itemModel(SpacedustryItems.SALTS, GENERATED);
     }
 
     public void blockModel(RegistryObject<Block> block) {

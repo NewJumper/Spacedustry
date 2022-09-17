@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 3.0,
+  "group": "nickel_ingot",
+  "ingredient": {
+    "item": "spacedustry:nickel_ore"
+  },
+  "result": "spacedustry:nickel_ingot"
+}

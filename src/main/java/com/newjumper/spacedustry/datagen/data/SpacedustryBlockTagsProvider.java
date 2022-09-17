@@ -17,17 +17,21 @@ public class SpacedustryBlockTagsProvider extends BlockTagsProvider {
     @SuppressWarnings("unchecked")
     @Override
     protected void addTags() {
-        tag(BlockTags.MINEABLE_WITH_PICKAXE).addTags(SpacedustryTags.Blocks.ORES_ALUMINUM, SpacedustryTags.Blocks.ORES_LITHIUM, SpacedustryTags.Blocks.ORES_TUNGSTEN);
-        tag(BlockTags.NEEDS_STONE_TOOL).addTag(SpacedustryTags.Blocks.ORES_ALUMINUM);
-        tag(BlockTags.NEEDS_IRON_TOOL).addTag(SpacedustryTags.Blocks.ORES_LITHIUM);
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).addTags(SpacedustryTags.Blocks.ORES_ALUMINUM, SpacedustryTags.Blocks.ORES_LITHIUM, SpacedustryTags.Blocks.ORES_MOLYBDENUM, SpacedustryTags.Blocks.ORES_NICKEL, SpacedustryTags.Blocks.ORES_SILICON, SpacedustryTags.Blocks.ORES_TUNGSTEN);
+        tag(BlockTags.MINEABLE_WITH_SHOVEL).add(SpacedustryBlocks.SALT.get());
+        tag(BlockTags.NEEDS_STONE_TOOL).addTags(SpacedustryTags.Blocks.ORES_ALUMINUM, SpacedustryTags.Blocks.ORES_SILICON);
+        tag(BlockTags.NEEDS_IRON_TOOL).addTags(SpacedustryTags.Blocks.ORES_LITHIUM, SpacedustryTags.Blocks.ORES_MOLYBDENUM, SpacedustryTags.Blocks.ORES_NICKEL);
         tag(BlockTags.NEEDS_DIAMOND_TOOL).addTag(SpacedustryTags.Blocks.ORES_TUNGSTEN);
 
-        tag(Tags.Blocks.ORES).addTags(SpacedustryTags.Blocks.ORES_ALUMINUM, SpacedustryTags.Blocks.ORES_LITHIUM, SpacedustryTags.Blocks.ORES_TUNGSTEN);
-        tag(Tags.Blocks.ORES_IN_GROUND_STONE).add(SpacedustryBlocks.ALUMINUM_ORE.get(), SpacedustryBlocks.LITHIUM_ORE.get(), SpacedustryBlocks.TUNGSTEN_ORE.get());
-        tag(Tags.Blocks.ORES_IN_GROUND_DEEPSLATE).add(SpacedustryBlocks.DEEPSLATE_ALUMINUM_ORE.get(), SpacedustryBlocks.DEEPSLATE_LITHIUM_ORE.get(), SpacedustryBlocks.DEEPSLATE_TUNGSTEN_ORE.get());
+        tag(Tags.Blocks.ORES).addTags(SpacedustryTags.Blocks.ORES_ALUMINUM, SpacedustryTags.Blocks.ORES_LITHIUM, SpacedustryTags.Blocks.ORES_MOLYBDENUM, SpacedustryTags.Blocks.ORES_NICKEL, SpacedustryTags.Blocks.ORES_SILICON, SpacedustryTags.Blocks.ORES_TUNGSTEN);
+        tag(Tags.Blocks.ORES_IN_GROUND_STONE).add(SpacedustryBlocks.ALUMINUM_ORE.get(), SpacedustryBlocks.LITHIUM_ORE.get(), SpacedustryBlocks.MOLYBDENITE_ORE.get(), SpacedustryBlocks.NICKEL_ORE.get(), SpacedustryBlocks.SILICON_ORE.get(), SpacedustryBlocks.TUNGSTEN_ORE.get());
+        tag(Tags.Blocks.ORES_IN_GROUND_DEEPSLATE).add(SpacedustryBlocks.DEEPSLATE_ALUMINUM_ORE.get(), SpacedustryBlocks.DEEPSLATE_LITHIUM_ORE.get(), SpacedustryBlocks.DEEPSLATE_MOLYBDENITE_ORE.get(), SpacedustryBlocks.DEEPSLATE_NICKEL_ORE.get(), SpacedustryBlocks.DEEPSLATE_TUNGSTEN_ORE.get());
 
         tag(SpacedustryTags.Blocks.ORES_ALUMINUM).add(SpacedustryBlocks.ALUMINUM_ORE.get(), SpacedustryBlocks.DEEPSLATE_ALUMINUM_ORE.get());
         tag(SpacedustryTags.Blocks.ORES_LITHIUM).add(SpacedustryBlocks.LITHIUM_ORE.get(), SpacedustryBlocks.DEEPSLATE_LITHIUM_ORE.get());
+        tag(SpacedustryTags.Blocks.ORES_MOLYBDENUM).add(SpacedustryBlocks.MOLYBDENITE_ORE.get(), SpacedustryBlocks.DEEPSLATE_MOLYBDENITE_ORE.get());
+        tag(SpacedustryTags.Blocks.ORES_NICKEL).add(SpacedustryBlocks.NICKEL_ORE.get(), SpacedustryBlocks.DEEPSLATE_NICKEL_ORE.get());
+        tag(SpacedustryTags.Blocks.ORES_SILICON).add(SpacedustryBlocks.SILICON_ORE.get());
         tag(SpacedustryTags.Blocks.ORES_TUNGSTEN).add(SpacedustryBlocks.TUNGSTEN_ORE.get(), SpacedustryBlocks.DEEPSLATE_TUNGSTEN_ORE.get());
     }
 }

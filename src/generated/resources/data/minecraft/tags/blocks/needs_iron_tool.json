@@ -1,5 +1,7 @@
 {
   "values": [
-    "#forge:ores/lithium"
+    "#forge:ores/lithium",
+    "#forge:ores/molybdenum",
+    "#forge:ores/nickel"
   ]
 }

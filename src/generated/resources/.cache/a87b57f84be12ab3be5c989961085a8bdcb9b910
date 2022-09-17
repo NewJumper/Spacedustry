@@ -1,13 +1,26 @@
-// 1.19.2	2022-09-16T19:44:59.1925433	Item Models: spacedustry
+// 1.19.2	2022-09-17T00:27:15.6841351	Item Models: spacedustry
 0347cf0332060c50f9e2c99f200ed3263d9fa1f7 assets/spacedustry/models/item/aluminum_ingot.json
 d3cb3e25c4ba00eb4207b8f33b51b7e491408e49 assets/spacedustry/models/item/aluminum_ore.json
 3a9fe5587613febfae9d38d6ecefa2700fdc0948 assets/spacedustry/models/item/deepslate_aluminum_ore.json
 f8270e787be6ff69cf90ff930ebf2669b8cbbd23 assets/spacedustry/models/item/deepslate_lithium_ore.json
+7d0c710af8ac1045c3bdb54ac7ddad8f27cc76b8 assets/spacedustry/models/item/deepslate_molybdenite_ore.json
+014c358a82c3565f28f846e1b31a8670337485f8 assets/spacedustry/models/item/deepslate_nickel_ore.json
 883cf5bb07be57209065ab682681fdb7197cc103 assets/spacedustry/models/item/deepslate_tungsten_ore.json
 acbdda732d9a133ecf532ecd2a5840e37edb4cdb assets/spacedustry/models/item/lithium_ingot.json
 8df19f3f31fce3980414cd496871aef9f50539cb assets/spacedustry/models/item/lithium_ore.json
+de5ff5f16e84f982c049ac70d28212ceb465a5cc assets/spacedustry/models/item/molybdenite.json
+7b384c60afc8e4e4b98bdeb03003ab6e605a8074 assets/spacedustry/models/item/molybdenite_ore.json
+eee1161962cb07a9ecf33c817fcff50320c72949 assets/spacedustry/models/item/molybdenum_ingot.json
+c6be8b4c753c8c7f64ae453d5697e357ae8d7a57 assets/spacedustry/models/item/nickel_ingot.json
+fcb79eeff2a9c28be3ddb2bd3b32a93b0b9478b2 assets/spacedustry/models/item/nickel_ore.json
 ae278479f4fbb23e6afff3994f4f4d8845bad95e assets/spacedustry/models/item/raw_aluminum.json
 b284fa5d9f3f82c8f268afcfe7501e6592d580c9 assets/spacedustry/models/item/raw_lithium.json
+4e1d49d86bbf19071031f5b9d44c0685f85717d5 assets/spacedustry/models/item/raw_nickel.json
+976cc659a39370830620aa6c3c00d1ac0a8028c5 assets/spacedustry/models/item/raw_silicon.json
 a284874a7e6ad5b604f5482adb3a1e53bc95e8f7 assets/spacedustry/models/item/raw_tungsten.json
+5b944fab2866c54bb1ca3518f189cb5c62fe4d67 assets/spacedustry/models/item/salt.json
+70fccfdcadd3879635ba6e2a33538e1dafcc1920 assets/spacedustry/models/item/salts.json
+dda4b8fcd6589419925e4fecd79ace0fb70b9a15 assets/spacedustry/models/item/silicon.json
+6d231ec7e89588532d5d5897142c7ddc1aee43c5 assets/spacedustry/models/item/silicon_ore.json
 2b4f9c904ff4d95bd68f987580e2dce142fbaeef assets/spacedustry/models/item/tungsten_ingot.json
 0e0b39e3b3a45f1fdcbe33686df89a2be7cfe7ee assets/spacedustry/models/item/tungsten_ore.json

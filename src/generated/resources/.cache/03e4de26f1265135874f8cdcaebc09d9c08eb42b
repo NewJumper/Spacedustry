@@ -1,15 +1,24 @@
-// 1.19.2	2022-09-16T19:44:59.1946054	Tags for minecraft:item
-98000ab03754a58545b4fe4d64ae714f01a2b38d data/forge/tags/items/ingots.json
+// 1.19.2	2022-09-17T00:27:15.6787443	Tags for minecraft:item
+cc5141b4df82e4b9fbcbfe3b544e9249001176cd data/forge/tags/items/ingots.json
 e874d9a0a2fb14ff3a998a974586a896b65e11f1 data/forge/tags/items/ingots/aluminum.json
 c0da5c9f1ea31d7fbdedc364b8011f652d499ceb data/forge/tags/items/ingots/lithium.json
+52a0ba09449635009d815fbd3be4ed6fc8812938 data/forge/tags/items/ingots/molybdenum.json
+d0d65298ee43d994be867c61c19369b2248c4261 data/forge/tags/items/ingots/nickel.json
+3238172460eb5ccaf39082677a3d0af2e3e9a698 data/forge/tags/items/ingots/silicon.json
 c153be35bd33dcc755e7c94d2a5d5ff0db97f7fa data/forge/tags/items/ingots/tungsten.json
-fc0582a05813a26ba326d96a89eeaa45038746c4 data/forge/tags/items/ores.json
+b2b6c680ba5075c21505ee2e9bd71ed4cc808451 data/forge/tags/items/ores.json
 6fa84d61475838e02cc577ed14515f4882729573 data/forge/tags/items/ores/aluminum.json
 1f7b5d33c4813279bc3de34ac2daa358bb41beef data/forge/tags/items/ores/lithium.json
+bcf0861f6de6e602697e4005e66c2df255aa83d7 data/forge/tags/items/ores/molybdenum.json
+1fb619b831e8c8c5eefde20a5138e68129eb5108 data/forge/tags/items/ores/nickel.json
+671b9ea67e2a03fe2291486b7b162402ba68ff9d data/forge/tags/items/ores/silicon.json
 c9cff7d1081fce8a92e3bf9434f9af2d453d5bd9 data/forge/tags/items/ores/tungsten.json
-907e1cdb07b51019025bbfad8646fccec4c69517 data/forge/tags/items/ores_in_ground/deepslate.json
-0171c9859902f9e90c96115635bccb0150fddc07 data/forge/tags/items/ores_in_ground/stone.json
-b52ae8d0f5ec02df46863a39932c29bc8c83145e data/forge/tags/items/raw_materials.json
+a9e37e62a7b3522598ab7010b91e365c47c432a1 data/forge/tags/items/ores_in_ground/deepslate.json
+61cf785bee73b9acea9832ba20df007970265691 data/forge/tags/items/ores_in_ground/stone.json
+9df11c8ebdff80b73068d724dfebd896cb696b9d data/forge/tags/items/raw_materials.json
 421ede71bfcc4771e370ff9d5ac1899b769561c1 data/forge/tags/items/raw_materials/aluminum.json
 b0db5ae12016c9934cb768c0c535cb20a5b8afc2 data/forge/tags/items/raw_materials/lithium.json
+1f55bf3e689f8f5cb2879c0a7e2e76dd356477bc data/forge/tags/items/raw_materials/molybdenum.json
+7ff6d85c1f74cc26e715cd5698265c675be95c97 data/forge/tags/items/raw_materials/nickel.json
+325d0e2a9676f1c2dd722925773551e5649903e6 data/forge/tags/items/raw_materials/silicon.json
 7d1b0e6379a709c1aa02b99c9e4df2d8c5b4f031 data/forge/tags/items/raw_materials/tungsten.json

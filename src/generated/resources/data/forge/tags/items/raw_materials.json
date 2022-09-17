@@ -2,6 +2,9 @@
   "values": [
     "spacedustry:raw_aluminum",
     "spacedustry:raw_lithium",
+    "spacedustry:molybdenite",
+    "spacedustry:raw_nickel",
+    "spacedustry:raw_silicon",
     "spacedustry:raw_tungsten"
   ]
 }

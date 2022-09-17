@@ -2,6 +2,9 @@
   "values": [
     "spacedustry:aluminum_ingot",
     "spacedustry:lithium_ingot",
+    "spacedustry:molybdenum_ingot",
+    "spacedustry:nickel_ingot",
+    "spacedustry:silicon",
     "spacedustry:tungsten_ingot"
   ]
 }

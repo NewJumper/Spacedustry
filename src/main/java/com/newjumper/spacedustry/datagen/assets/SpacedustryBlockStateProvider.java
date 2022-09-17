@@ -17,7 +17,14 @@ public class SpacedustryBlockStateProvider extends BlockStateProvider {
         simpleBlock(SpacedustryBlocks.DEEPSLATE_ALUMINUM_ORE.get());
         simpleBlock(SpacedustryBlocks.LITHIUM_ORE.get());
         simpleBlock(SpacedustryBlocks.DEEPSLATE_LITHIUM_ORE.get());
+        simpleBlock(SpacedustryBlocks.MOLYBDENITE_ORE.get());
+        simpleBlock(SpacedustryBlocks.DEEPSLATE_MOLYBDENITE_ORE.get());
+        simpleBlock(SpacedustryBlocks.NICKEL_ORE.get());
+        simpleBlock(SpacedustryBlocks.DEEPSLATE_NICKEL_ORE.get());
+        simpleBlock(SpacedustryBlocks.SILICON_ORE.get());
         simpleBlock(SpacedustryBlocks.TUNGSTEN_ORE.get());
         simpleBlock(SpacedustryBlocks.DEEPSLATE_TUNGSTEN_ORE.get());
+
+        simpleBlock(SpacedustryBlocks.SALT.get());
     }
 }

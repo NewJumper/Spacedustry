@@ -2,6 +2,9 @@
   "values": [
     "#forge:ores/aluminum",
     "#forge:ores/lithium",
+    "#forge:ores/molybdenum",
+    "#forge:ores/nickel",
+    "#forge:ores/silicon",
     "#forge:ores/tungsten"
   ]
 }
