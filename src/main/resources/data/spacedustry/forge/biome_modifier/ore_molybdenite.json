@@ -1,6 +1,6 @@
 {
   "type": "forge:add_features",
   "biomes": "#minecraft:is_overworld",
-  "features": "spacedustry:ore_aluminum",
+  "features": "spacedustry:ore_molybdenite",
   "step": "underground_ores"
 }
