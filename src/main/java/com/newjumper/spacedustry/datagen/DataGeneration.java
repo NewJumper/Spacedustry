@@ -4,10 +4,7 @@ import com.newjumper.spacedustry.Spacedustry;
 import com.newjumper.spacedustry.datagen.assets.ENLanguageProvider;
 import com.newjumper.spacedustry.datagen.assets.SpacedustryBlockStateProvider;
 import com.newjumper.spacedustry.datagen.assets.SpacedustryItemModelProvider;
-import com.newjumper.spacedustry.datagen.data.SmeltingRecipesProvider;
-import com.newjumper.spacedustry.datagen.data.SpacedustryBlockTagsProvider;
-import com.newjumper.spacedustry.datagen.data.SpacedustryItemTagsProvider;
-import com.newjumper.spacedustry.datagen.data.SpacedustryLootTables;
+import com.newjumper.spacedustry.datagen.data.*;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
@@ -27,6 +24,7 @@ public class DataGeneration {
         generator.addProvider(event.includeClient(), new SpacedustryItemModelProvider(generator, fileHelper));
 
         // data
+        generator.addProvider(event.includeServer(), new CraftingRecipesProvider(generator));
         generator.addProvider(event.includeServer(), new SmeltingRecipesProvider(generator));
         generator.addProvider(event.includeServer(), new SpacedustryLootTables(generator));
         SpacedustryBlockTagsProvider blockTags = new SpacedustryBlockTagsProvider(generator, fileHelper);
