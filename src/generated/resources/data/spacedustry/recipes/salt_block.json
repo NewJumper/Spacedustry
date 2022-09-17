@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "item": "spacedustry:salts"
+      "item": "spacedustry:salt"
     }
   },
   "pattern": [
@@ -10,6 +10,6 @@
     "##"
   ],
   "result": {
-    "item": "spacedustry:salt"
+    "item": "spacedustry:salt_block"
   }
 }

@@ -18,7 +18,7 @@ public class SpacedustryBlockTagsProvider extends BlockTagsProvider {
     @Override
     protected void addTags() {
         tag(BlockTags.MINEABLE_WITH_PICKAXE).addTags(SpacedustryTags.Blocks.ORES_ALUMINUM, SpacedustryTags.Blocks.ORES_LITHIUM, SpacedustryTags.Blocks.ORES_MOLYBDENUM, SpacedustryTags.Blocks.ORES_NICKEL, SpacedustryTags.Blocks.ORES_SILICON, SpacedustryTags.Blocks.ORES_TUNGSTEN);
-        tag(BlockTags.MINEABLE_WITH_SHOVEL).add(SpacedustryBlocks.SALT.get());
+        tag(BlockTags.MINEABLE_WITH_SHOVEL).add(SpacedustryBlocks.SALT_BLOCK.get());
         tag(BlockTags.NEEDS_STONE_TOOL).addTags(SpacedustryTags.Blocks.ORES_ALUMINUM, SpacedustryTags.Blocks.ORES_SILICON);
         tag(BlockTags.NEEDS_IRON_TOOL).addTags(SpacedustryTags.Blocks.ORES_LITHIUM, SpacedustryTags.Blocks.ORES_MOLYBDENUM, SpacedustryTags.Blocks.ORES_NICKEL);
         tag(BlockTags.NEEDS_DIAMOND_TOOL).addTag(SpacedustryTags.Blocks.ORES_TUNGSTEN);

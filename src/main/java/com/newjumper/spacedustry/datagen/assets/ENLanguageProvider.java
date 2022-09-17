@@ -41,6 +41,9 @@ public class ENLanguageProvider extends LanguageProvider {
             }
         }
 
-        return builder.toString();
+        String name = builder.toString();
+        if(name.contains(" Block")) name = "Block of " + name.substring(0, name.indexOf(" Block"));
+
+        return name;
     }
 }

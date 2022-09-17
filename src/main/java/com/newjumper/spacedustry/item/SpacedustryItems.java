@@ -23,7 +23,7 @@ public class SpacedustryItems {
     public static final RegistryObject<Item> RAW_TUNGSTEN = ITEMS.register("raw_tungsten", () -> new Item(new Item.Properties().tab(SpacedustryCreative.SPACEDUSTRY)));
     public static final RegistryObject<Item> TUNGSTEN_INGOT = ITEMS.register("tungsten_ingot", () -> new Item(new Item.Properties().tab(SpacedustryCreative.SPACEDUSTRY)));
 
-    public static final RegistryObject<Item> SALTS = ITEMS.register("salts", () -> new Item(new Item.Properties().tab(SpacedustryCreative.SPACEDUSTRY)));
+    public static final RegistryObject<Item> SALT = ITEMS.register("salt", () -> new Item(new Item.Properties().tab(SpacedustryCreative.SPACEDUSTRY)));
 //    public static final RegistryObject<Item> BURLAM_ALLOY = ITEMS.register("burlam_alloy", () -> new Item(new Item.Properties().tab(SpacedustryCreative.SPACEDUSTRY)));
 //    public static final RegistryObject<Item> COBALT_ALLOY = ITEMS.register("cobalt_alloy", () -> new Item(new Item.Properties().tab(SpacedustryCreative.SPACEDUSTRY)));
 //    public static final RegistryObject<Item> DURALUMIN_ALLOY = ITEMS.register("duralumin_alloy", () -> new Item(new Item.Properties().tab(SpacedustryCreative.SPACEDUSTRY)));

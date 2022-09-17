@@ -23,7 +23,7 @@ public class SpacedustryBlockLoot extends BlockLoot {
         this.add(SpacedustryBlocks.TUNGSTEN_ORE.get(), block -> createOreDrop(block, SpacedustryItems.RAW_TUNGSTEN.get()));
         this.add(SpacedustryBlocks.DEEPSLATE_TUNGSTEN_ORE.get(), block -> createOreDrop(block, SpacedustryItems.RAW_TUNGSTEN.get()));
 
-        this.add(SpacedustryBlocks.SALT.get(), block -> createSingleItemTableWithSilkTouch(block, SpacedustryItems.SALTS.get(), ConstantValue.exactly(4)));
+        this.add(SpacedustryBlocks.SALT_BLOCK.get(), block -> createSingleItemTableWithSilkTouch(block, SpacedustryItems.SALT.get(), ConstantValue.exactly(4)));
     }
 
     @NotNull

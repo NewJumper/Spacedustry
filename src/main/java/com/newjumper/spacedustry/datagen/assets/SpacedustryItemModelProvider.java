@@ -32,7 +32,7 @@ public class SpacedustryItemModelProvider extends ItemModelProvider {
         blockModel(SpacedustryBlocks.TUNGSTEN_ORE);
         blockModel(SpacedustryBlocks.DEEPSLATE_TUNGSTEN_ORE);
 
-        blockModel(SpacedustryBlocks.SALT);
+        blockModel(SpacedustryBlocks.SALT_BLOCK);
 
         itemModel(SpacedustryItems.RAW_ALUMINUM, GENERATED);
         itemModel(SpacedustryItems.ALUMINUM_INGOT, GENERATED);
@@ -47,7 +47,7 @@ public class SpacedustryItemModelProvider extends ItemModelProvider {
         itemModel(SpacedustryItems.RAW_TUNGSTEN, GENERATED);
         itemModel(SpacedustryItems.TUNGSTEN_INGOT, GENERATED);
 
-        itemModel(SpacedustryItems.SALTS, GENERATED);
+        itemModel(SpacedustryItems.SALT, GENERATED);
     }
 
     public void blockModel(RegistryObject<Block> block) {

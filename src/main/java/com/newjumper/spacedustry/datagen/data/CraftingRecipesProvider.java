@@ -18,7 +18,7 @@ public class CraftingRecipesProvider extends RecipeProvider implements IConditio
 
     @Override
     protected void buildCraftingRecipes(@NotNull Consumer<FinishedRecipe> consumer) {
-        ShapedRecipeBuilder.shaped(SpacedustryBlocks.SALT.get()).define('#', SpacedustryItems.SALTS.get()).pattern("##").pattern("##").unlockedBy("has_salt", has(SpacedustryItems.SALTS.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(SpacedustryBlocks.SALT_BLOCK.get()).define('#', SpacedustryItems.SALT.get()).pattern("##").pattern("##").unlockedBy("has_salt", has(SpacedustryItems.SALT.get())).save(consumer);
     }
 
     @NotNull

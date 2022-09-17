@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "spacedustry:block/salt"
+    "all": "spacedustry:block/salt_block"
   }
 }

@@ -25,6 +25,6 @@ public class SpacedustryBlockStateProvider extends BlockStateProvider {
         simpleBlock(SpacedustryBlocks.TUNGSTEN_ORE.get());
         simpleBlock(SpacedustryBlocks.DEEPSLATE_TUNGSTEN_ORE.get());
 
-        simpleBlock(SpacedustryBlocks.SALT.get());
+        simpleBlock(SpacedustryBlocks.SALT_BLOCK.get());
     }
 }
