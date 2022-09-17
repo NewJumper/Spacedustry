@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:blasting",
+  "cookingtime": 100,
+  "experience": 3.0,
+  "group": "lithium_ingot",
+  "ingredient": {
+    "item": "spacedustry:deepslate_lithium_ore"
+  },
+  "result": "spacedustry:lithium_ingot"
+}

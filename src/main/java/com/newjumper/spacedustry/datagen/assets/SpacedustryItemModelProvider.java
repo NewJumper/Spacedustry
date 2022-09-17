@@ -21,8 +21,11 @@ public class SpacedustryItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         blockModel(SpacedustryBlocks.ALUMINUM_ORE);
+        blockModel(SpacedustryBlocks.DEEPSLATE_ALUMINUM_ORE);
         blockModel(SpacedustryBlocks.LITHIUM_ORE);
+        blockModel(SpacedustryBlocks.DEEPSLATE_LITHIUM_ORE);
         blockModel(SpacedustryBlocks.TUNGSTEN_ORE);
+        blockModel(SpacedustryBlocks.DEEPSLATE_TUNGSTEN_ORE);
 
         itemModel(SpacedustryItems.RAW_ALUMINUM, GENERATED);
         itemModel(SpacedustryItems.ALUMINUM_INGOT, GENERATED);

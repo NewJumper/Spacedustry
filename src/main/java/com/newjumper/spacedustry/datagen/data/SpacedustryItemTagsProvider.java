@@ -17,6 +17,8 @@ public class SpacedustryItemTagsProvider extends ItemTagsProvider {
     @Override
     protected void addTags() {
         copy(Tags.Blocks.ORES, Tags.Items.ORES);
+        copy(Tags.Blocks.ORES_IN_GROUND_STONE, Tags.Items.ORES_IN_GROUND_STONE);
+        copy(Tags.Blocks.ORES_IN_GROUND_DEEPSLATE, Tags.Items.ORES_IN_GROUND_DEEPSLATE);
 
         copy(SpacedustryTags.Blocks.ORES_ALUMINUM, SpacedustryTags.Items.ORES_ALUMINUM);
         copy(SpacedustryTags.Blocks.ORES_LITHIUM, SpacedustryTags.Items.ORES_LITHIUM);

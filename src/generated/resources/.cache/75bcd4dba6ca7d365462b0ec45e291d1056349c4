@@ -1,9 +1,11 @@
-// 1.19.2	2022-09-15T22:59:09.3116534	Tags for minecraft:block
-0171c9859902f9e90c96115635bccb0150fddc07 data/forge/tags/blocks/ores.json
-8d4be00d45d6f0294ee83eb7ebe73e26aaddbb8d data/forge/tags/blocks/ores/aluminum.json
-1d72e4ce79501de38193cdd84940b75c72945a74 data/forge/tags/blocks/ores/lithium.json
-3ca7ca836dea826227a8633746cc9501a3e1dec4 data/forge/tags/blocks/ores/tungsten.json
-0171c9859902f9e90c96115635bccb0150fddc07 data/minecraft/tags/blocks/mineable/pickaxe.json
-3ca7ca836dea826227a8633746cc9501a3e1dec4 data/minecraft/tags/blocks/needs_diamond_tool.json
-1d72e4ce79501de38193cdd84940b75c72945a74 data/minecraft/tags/blocks/needs_iron_tool.json
-8d4be00d45d6f0294ee83eb7ebe73e26aaddbb8d data/minecraft/tags/blocks/needs_stone_tool.json
+// 1.19.2	2022-09-16T19:44:59.1956822	Tags for minecraft:block
+fc0582a05813a26ba326d96a89eeaa45038746c4 data/forge/tags/blocks/ores.json
+6fa84d61475838e02cc577ed14515f4882729573 data/forge/tags/blocks/ores/aluminum.json
+1f7b5d33c4813279bc3de34ac2daa358bb41beef data/forge/tags/blocks/ores/lithium.json
+c9cff7d1081fce8a92e3bf9434f9af2d453d5bd9 data/forge/tags/blocks/ores/tungsten.json
+907e1cdb07b51019025bbfad8646fccec4c69517 data/forge/tags/blocks/ores_in_ground/deepslate.json
+0171c9859902f9e90c96115635bccb0150fddc07 data/forge/tags/blocks/ores_in_ground/stone.json
+fc0582a05813a26ba326d96a89eeaa45038746c4 data/minecraft/tags/blocks/mineable/pickaxe.json
+e935097956ef01adf679899afcaa128df011ad4d data/minecraft/tags/blocks/needs_diamond_tool.json
+cbaaddb62dcb64017a338504dd4c62185cba110a data/minecraft/tags/blocks/needs_iron_tool.json
+bdb5957a435d183a038fbac26bdbbc125871c722 data/minecraft/tags/blocks/needs_stone_tool.json

@@ -1,7 +1,13 @@
-// 1.19.2	2022-09-14T23:16:22.1268789	Block States: spacedustry
+// 1.19.2	2022-09-16T19:44:59.1956822	Block States: spacedustry
 a502e3488d236e622742ea4fdb044693b310b8d4 assets/spacedustry/blockstates/aluminum_ore.json
+d5752a3e0808df7090bf86feaff26d25fba78ea3 assets/spacedustry/blockstates/deepslate_aluminum_ore.json
+e904756bb5c82020af6ece0d940e074a8a5df1f1 assets/spacedustry/blockstates/deepslate_lithium_ore.json
+26797baa775e62da91d4e096d67405b85bb7ddf8 assets/spacedustry/blockstates/deepslate_tungsten_ore.json
 77bee7f6b4e5f5aff72b3a87e584315fda3ddfcf assets/spacedustry/blockstates/lithium_ore.json
 1d21e16861d9c76be81b9e5c1d7bc46f36203918 assets/spacedustry/blockstates/tungsten_ore.json
 6ecce9097009447c9aba6c778c64c7060702da57 assets/spacedustry/models/block/aluminum_ore.json
+5673b62478013f96038783d29be287d818e7d9bb assets/spacedustry/models/block/deepslate_aluminum_ore.json
+524712e7d6a83895224cf476e554d0173158487e assets/spacedustry/models/block/deepslate_lithium_ore.json
+dddf34e82054369aa254e51ec8113065f95f039b assets/spacedustry/models/block/deepslate_tungsten_ore.json
 d8a1df7fc0a176195c0ae51f4764d482b380c684 assets/spacedustry/models/block/lithium_ore.json
 9fa2a2a01b986920274b790fd965c9826b0fc69a assets/spacedustry/models/block/tungsten_ore.json

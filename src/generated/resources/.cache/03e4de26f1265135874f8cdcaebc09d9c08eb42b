@@ -1,12 +1,14 @@
-// 1.19.2	2022-09-15T22:59:09.3137485	Tags for minecraft:item
+// 1.19.2	2022-09-16T19:44:59.1946054	Tags for minecraft:item
 98000ab03754a58545b4fe4d64ae714f01a2b38d data/forge/tags/items/ingots.json
 e874d9a0a2fb14ff3a998a974586a896b65e11f1 data/forge/tags/items/ingots/aluminum.json
 c0da5c9f1ea31d7fbdedc364b8011f652d499ceb data/forge/tags/items/ingots/lithium.json
 c153be35bd33dcc755e7c94d2a5d5ff0db97f7fa data/forge/tags/items/ingots/tungsten.json
-0171c9859902f9e90c96115635bccb0150fddc07 data/forge/tags/items/ores.json
-8d4be00d45d6f0294ee83eb7ebe73e26aaddbb8d data/forge/tags/items/ores/aluminum.json
-1d72e4ce79501de38193cdd84940b75c72945a74 data/forge/tags/items/ores/lithium.json
-3ca7ca836dea826227a8633746cc9501a3e1dec4 data/forge/tags/items/ores/tungsten.json
+fc0582a05813a26ba326d96a89eeaa45038746c4 data/forge/tags/items/ores.json
+6fa84d61475838e02cc577ed14515f4882729573 data/forge/tags/items/ores/aluminum.json
+1f7b5d33c4813279bc3de34ac2daa358bb41beef data/forge/tags/items/ores/lithium.json
+c9cff7d1081fce8a92e3bf9434f9af2d453d5bd9 data/forge/tags/items/ores/tungsten.json
+907e1cdb07b51019025bbfad8646fccec4c69517 data/forge/tags/items/ores_in_ground/deepslate.json
+0171c9859902f9e90c96115635bccb0150fddc07 data/forge/tags/items/ores_in_ground/stone.json
 b52ae8d0f5ec02df46863a39932c29bc8c83145e data/forge/tags/items/raw_materials.json
 421ede71bfcc4771e370ff9d5ac1899b769561c1 data/forge/tags/items/raw_materials/aluminum.json
 b0db5ae12016c9934cb768c0c535cb20a5b8afc2 data/forge/tags/items/raw_materials/lithium.json
