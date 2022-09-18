@@ -48,6 +48,11 @@ public class SpacedustryItemModelProvider extends ItemModelProvider {
         itemModel(SpacedustryItems.TUNGSTEN_INGOT, GENERATED);
 
         itemModel(SpacedustryItems.SALT, GENERATED);
+        itemModel(SpacedustryItems.BURLAM_ALLOY, GENERATED);
+        itemModel(SpacedustryItems.COBALT_ALLOY, GENERATED);
+        itemModel(SpacedustryItems.DURALUMIN_ALLOY, GENERATED);
+        itemModel(SpacedustryItems.STEEL_ALLOY, GENERATED);
+        itemModel(SpacedustryItems.SUPER_ALLOY, GENERATED);
     }
 
     public void blockModel(RegistryObject<Block> block) {

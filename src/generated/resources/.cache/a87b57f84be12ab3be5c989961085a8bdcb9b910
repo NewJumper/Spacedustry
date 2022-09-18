@@ -1,11 +1,14 @@
-// 1.19.2	2022-09-17T08:12:54.2633201	Item Models: spacedustry
+// 1.19.2	2022-09-18T12:30:30.2518403	Item Models: spacedustry
 0347cf0332060c50f9e2c99f200ed3263d9fa1f7 assets/spacedustry/models/item/aluminum_ingot.json
 d3cb3e25c4ba00eb4207b8f33b51b7e491408e49 assets/spacedustry/models/item/aluminum_ore.json
+132aa7992a97fd3a865916f50499b305fe8ce247 assets/spacedustry/models/item/burlam_alloy.json
+8e5abfe8e7c6330afc564110dbaa74270f6d6653 assets/spacedustry/models/item/cobalt_alloy.json
 3a9fe5587613febfae9d38d6ecefa2700fdc0948 assets/spacedustry/models/item/deepslate_aluminum_ore.json
 f8270e787be6ff69cf90ff930ebf2669b8cbbd23 assets/spacedustry/models/item/deepslate_lithium_ore.json
 7d0c710af8ac1045c3bdb54ac7ddad8f27cc76b8 assets/spacedustry/models/item/deepslate_molybdenite_ore.json
 014c358a82c3565f28f846e1b31a8670337485f8 assets/spacedustry/models/item/deepslate_nickel_ore.json
 883cf5bb07be57209065ab682681fdb7197cc103 assets/spacedustry/models/item/deepslate_tungsten_ore.json
+3386c84cfa95c82e8dd880035c4323f4d5aadbb7 assets/spacedustry/models/item/duralumin_alloy.json
 acbdda732d9a133ecf532ecd2a5840e37edb4cdb assets/spacedustry/models/item/lithium_ingot.json
 8df19f3f31fce3980414cd496871aef9f50539cb assets/spacedustry/models/item/lithium_ore.json
 de5ff5f16e84f982c049ac70d28212ceb465a5cc assets/spacedustry/models/item/molybdenite.json
@@ -22,5 +25,7 @@ ccb242f084d93921d9360a9f66609484e7fcfd87 assets/spacedustry/models/item/salt.jso
 6fb4684d58ac8cb8ad49fe57ae310db120142249 assets/spacedustry/models/item/salt_block.json
 dda4b8fcd6589419925e4fecd79ace0fb70b9a15 assets/spacedustry/models/item/silicon.json
 6d231ec7e89588532d5d5897142c7ddc1aee43c5 assets/spacedustry/models/item/silicon_ore.json
+f123cdc6c994ef5017a8e92ed3a9ab0ae59b3d9c assets/spacedustry/models/item/steel_alloy.json
+0b75a09c0e48d78cdbfc4b0287d3362e77342774 assets/spacedustry/models/item/super_alloy.json
 2b4f9c904ff4d95bd68f987580e2dce142fbaeef assets/spacedustry/models/item/tungsten_ingot.json
 0e0b39e3b3a45f1fdcbe33686df89a2be7cfe7ee assets/spacedustry/models/item/tungsten_ore.json
