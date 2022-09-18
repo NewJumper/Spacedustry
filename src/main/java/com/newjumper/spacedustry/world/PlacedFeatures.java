@@ -21,6 +21,8 @@ public class PlacedFeatures {
     public static final RegistryObject<PlacedFeature> ORE_TUNGSTEN = PLACED_FEATURES.register("ore_tungsten", () -> new PlacedFeature(ConfiguredFeatures.ORE_TUNGSTEN.getHolder().get(), commonOrePlacement(5, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-64), VerticalAnchor.aboveBottom(64)))));
     public static final RegistryObject<PlacedFeature> ORE_TUNGSTEN_BURIED = PLACED_FEATURES.register("ore_tungsten_buried", () -> new PlacedFeature(ConfiguredFeatures.ORE_TUNGSTEN_BURIED.getHolder().get(), commonOrePlacement(4, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-64), VerticalAnchor.aboveBottom(64)))));
 
+    public static final RegistryObject<PlacedFeature> ORE_SALT = PLACED_FEATURES.register("ore_salt", () -> new PlacedFeature(ConfiguredFeatures.ORE_SALT.getHolder().get(), commonOrePlacement(28, HeightRangePlacement.uniform(VerticalAnchor.absolute(46), VerticalAnchor.top()))));
+
     private static List<PlacementModifier> orePlacement(PlacementModifier count, PlacementModifier range) {
         return List.of(count, InSquarePlacement.spread(), range, BiomeFilter.biome());
     }

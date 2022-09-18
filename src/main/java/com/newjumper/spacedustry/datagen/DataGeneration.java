@@ -30,5 +30,6 @@ public class DataGeneration {
         SpacedustryBlockTagsProvider blockTags = new SpacedustryBlockTagsProvider(generator, fileHelper);
         generator.addProvider(event.includeServer(), blockTags);
         generator.addProvider(event.includeServer(), new SpacedustryItemTagsProvider(generator, blockTags, fileHelper));
+        generator.addProvider(event.includeServer(), new SpacedustryBiomeTagsProvider(generator, fileHelper));
     }
 }

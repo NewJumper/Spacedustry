@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#spacedustry:is_salty",
+  "features": "spacedustry:ore_salt",
+  "step": "underground_ores"
+}

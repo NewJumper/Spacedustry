@@ -1,10 +1,13 @@
 package com.newjumper.spacedustry.util;
 
+import com.newjumper.spacedustry.Spacedustry;
+import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
 
 public class SpacedustryTags {
@@ -45,6 +48,14 @@ public class SpacedustryTags {
 
         private static TagKey<Item> forgeTag(String name) {
             return ItemTags.create(new ResourceLocation("forge", name));
+        }
+    }
+
+    public static class Biomes {
+        public static final TagKey<Biome> IS_SALTY = tag("is_salty");
+
+        private static TagKey<Biome> tag(String name) {
+            return TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation(Spacedustry.MOD_ID, name));
         }
     }
 }
