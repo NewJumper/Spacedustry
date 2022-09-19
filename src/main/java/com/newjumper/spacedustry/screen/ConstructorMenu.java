@@ -9,6 +9,7 @@ import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.items.SlotItemHandler;
 import org.jetbrains.annotations.NotNull;
@@ -34,10 +35,18 @@ public class ConstructorMenu extends AbstractContainerMenu {
         addInventorySlots(pInventory);
 
         this.blockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(handler -> {
-            addSlot(new SlotItemHandler(handler, 0, 76, 53));
+            addSlot(new SlotItemHandler(handler, 0, 76, 53) {
+                @Override
+                public boolean mayPlace(@NotNull ItemStack stack) {
+                    return ForgeHooks.getBurnTime(stack, null) > 0;
+                }
+            });
             addSlot(new SlotItemHandler(handler, 1, 64, 16));
             addSlot(new SlotItemHandler(handler, 2, 88, 16));
-            addSlot(new SlotItemHandler(handler, 3, 136, 35));
+            addSlot(new SlotItemHandler(handler, 3, 136, 35) {
+                @Override
+                public boolean mayPlace(@NotNull ItemStack stack) { return false; }
+            });
         });
 
         addDataSlots(pContainerData);
@@ -59,7 +68,7 @@ public class ConstructorMenu extends AbstractContainerMenu {
     @Override
     public ItemStack quickMoveStack(@NotNull Player pPlayer, int pIndex) {
         Slot sourceSlot = slots.get(pIndex);
-        if(sourceSlot == null || !sourceSlot.hasItem()) return ItemStack.EMPTY;
+        if(!sourceSlot.hasItem()) return ItemStack.EMPTY;
 
         ItemStack sourceItem = sourceSlot.getItem();
         if(pIndex < INV_SLOTS) {

@@ -20,8 +20,8 @@ public class ConstructorScreen extends AbstractContainerScreen<ConstructorMenu> 
     @Override
     public void render(@NotNull PoseStack pPoseStack, int pMouseX, int pMouseY, float pPartialTick) {
         renderBackground(pPoseStack);
-        renderTooltip(pPoseStack, pMouseX, pMouseY);
         super.render(pPoseStack, pMouseX, pMouseY, pPartialTick);
+        renderTooltip(pPoseStack, pMouseX, pMouseY);
     }
 
     @Override
