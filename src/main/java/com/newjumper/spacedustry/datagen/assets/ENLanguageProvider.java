@@ -5,8 +5,7 @@ import com.newjumper.spacedustry.block.SpacedustryBlocks;
 import com.newjumper.spacedustry.block.entity.SpacedustryBlockEntities;
 import com.newjumper.spacedustry.item.SpacedustryItems;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
+import net.minecraft.world.item.BlockItem;
 import net.minecraftforge.common.data.LanguageProvider;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -18,7 +17,7 @@ public class ENLanguageProvider extends LanguageProvider {
     @Override
     protected void addTranslations() {
         SpacedustryBlocks.BLOCKS.getEntries().forEach(block -> add(block, "block"));
-        SpacedustryItems.ITEMS.getEntries().forEach(item -> add(item, "item"));
+        SpacedustryItems.ITEMS.getEntries().stream().filter(item -> !(item.get() instanceof BlockItem)).forEach(item -> add(item, "item"));
         SpacedustryBlockEntities.BLOCK_ENTITIES.getEntries().forEach(container -> add(container, "container"));
 
         add("itemGroup." + Spacedustry.MOD_ID, "Spacedustry");
