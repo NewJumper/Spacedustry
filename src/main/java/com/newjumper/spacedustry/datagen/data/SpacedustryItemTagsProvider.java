@@ -43,5 +43,8 @@ public class SpacedustryItemTagsProvider extends ItemTagsProvider {
         tag(SpacedustryTags.Items.INGOTS_NICKEL).add(SpacedustryItems.NICKEL_INGOT.get());
         tag(SpacedustryTags.Items.INGOTS_SILICON).add(SpacedustryItems.SILICON.get());
         tag(SpacedustryTags.Items.INGOTS_TUNGSTEN).add(SpacedustryItems.TUNGSTEN_INGOT.get());
+
+        tag(SpacedustryTags.Items.INGOTS_COBALT).add(SpacedustryItems.COBALT_ALLOY.get());
+        tag(SpacedustryTags.Items.INGOTS_STEEL).add(SpacedustryItems.STEEL_ALLOY.get());
     }
 }

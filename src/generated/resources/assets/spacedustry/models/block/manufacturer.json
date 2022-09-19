@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "spacedustry:block/manufacturer_front",
+    "side": "spacedustry:block/manufacturer_side",
+    "top": "spacedustry:block/manufacturer_top"
+  }
+}

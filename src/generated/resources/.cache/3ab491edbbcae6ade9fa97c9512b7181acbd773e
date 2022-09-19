@@ -1,3 +1,7 @@
-// 1.19.2	2022-09-17T08:12:54.2620131	Crafting Recipes
+// 1.19.2	2022-09-18T21:51:42.7043755	Crafting Recipes
+ca9895781ed2ea828177d6ce3748957ab449f16d data/spacedustry/advancements/recipes/spacedustry/constructor.json
+7d74c04ced707c3aa33cb1c61da20f556598fcf7 data/spacedustry/advancements/recipes/spacedustry/manufacturer.json
 69e8826b259c1dfcb5fa77c78119f0095922dc6e data/spacedustry/advancements/recipes/spacedustry/salt_block.json
+59b60457f2335693b54f305d0f9dfcaebd8a8f41 data/spacedustry/recipes/constructor.json
+83faa8e79bf0aaf2e6b7b8b137eb6a3532e65ab2 data/spacedustry/recipes/manufacturer.json
 4ce826ce9f85eea0da0fa035ee1eceefe8f4fd89 data/spacedustry/recipes/salt_block.json

@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "D": {
+      "item": "spacedustry:duralumin_alloy"
+    },
+    "G": {
+      "tag": "forge:glass"
+    },
+    "R": {
+      "tag": "forge:storage_blocks/redstone"
+    },
+    "S": {
+      "tag": "forge:ingots/steel"
+    },
+    "T": {
+      "tag": "forge:ingots/tungsten"
+    }
+  },
+  "pattern": [
+    "TDT",
+    "GRG",
+    "SSS"
+  ],
+  "result": {
+    "item": "spacedustry:manufacturer"
+  }
+}

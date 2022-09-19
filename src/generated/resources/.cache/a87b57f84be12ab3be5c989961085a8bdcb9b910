@@ -1,8 +1,9 @@
-// 1.19.2	2022-09-18T12:30:30.2518403	Item Models: spacedustry
+// 1.19.2	2022-09-18T21:43:55.7772513	Item Models: spacedustry
 0347cf0332060c50f9e2c99f200ed3263d9fa1f7 assets/spacedustry/models/item/aluminum_ingot.json
 d3cb3e25c4ba00eb4207b8f33b51b7e491408e49 assets/spacedustry/models/item/aluminum_ore.json
 132aa7992a97fd3a865916f50499b305fe8ce247 assets/spacedustry/models/item/burlam_alloy.json
 8e5abfe8e7c6330afc564110dbaa74270f6d6653 assets/spacedustry/models/item/cobalt_alloy.json
+5a1fe7597cbc3e1ce0374d81eaf9d3d6dccfa530 assets/spacedustry/models/item/constructor.json
 3a9fe5587613febfae9d38d6ecefa2700fdc0948 assets/spacedustry/models/item/deepslate_aluminum_ore.json
 f8270e787be6ff69cf90ff930ebf2669b8cbbd23 assets/spacedustry/models/item/deepslate_lithium_ore.json
 7d0c710af8ac1045c3bdb54ac7ddad8f27cc76b8 assets/spacedustry/models/item/deepslate_molybdenite_ore.json
@@ -11,6 +12,7 @@ f8270e787be6ff69cf90ff930ebf2669b8cbbd23 assets/spacedustry/models/item/deepslat
 3386c84cfa95c82e8dd880035c4323f4d5aadbb7 assets/spacedustry/models/item/duralumin_alloy.json
 acbdda732d9a133ecf532ecd2a5840e37edb4cdb assets/spacedustry/models/item/lithium_ingot.json
 8df19f3f31fce3980414cd496871aef9f50539cb assets/spacedustry/models/item/lithium_ore.json
+dd8030406cdab5f7d32fe30410d09f841c470016 assets/spacedustry/models/item/manufacturer.json
 de5ff5f16e84f982c049ac70d28212ceb465a5cc assets/spacedustry/models/item/molybdenite.json
 7b384c60afc8e4e4b98bdeb03003ab6e605a8074 assets/spacedustry/models/item/molybdenite_ore.json
 eee1161962cb07a9ecf33c817fcff50320c72949 assets/spacedustry/models/item/molybdenum_ingot.json

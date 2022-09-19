@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "spacedustry:block/constructor",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "spacedustry:block/constructor"
+    },
+    "facing=south": {
+      "model": "spacedustry:block/constructor",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "spacedustry:block/constructor",
+      "y": 270
+    }
+  }
+}

@@ -3,8 +3,11 @@ package com.newjumper.spacedustry.datagen.assets;
 import com.newjumper.spacedustry.Spacedustry;
 import com.newjumper.spacedustry.block.SpacedustryBlocks;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.RegistryObject;
 
 public class SpacedustryBlockStateProvider extends BlockStateProvider {
     public SpacedustryBlockStateProvider(DataGenerator gen, ExistingFileHelper exFileHelper) {
@@ -26,5 +29,12 @@ public class SpacedustryBlockStateProvider extends BlockStateProvider {
         simpleBlock(SpacedustryBlocks.DEEPSLATE_TUNGSTEN_ORE.get());
 
         simpleBlock(SpacedustryBlocks.SALT_BLOCK.get());
+
+        horizontalBlock(SpacedustryBlocks.CONSTRUCTOR.get(), blockLoc(SpacedustryBlocks.CONSTRUCTOR, "side"), blockLoc(SpacedustryBlocks.CONSTRUCTOR, "front"), blockLoc(SpacedustryBlocks.CONSTRUCTOR, "top"));
+        horizontalBlock(SpacedustryBlocks.MANUFACTURER.get(), blockLoc(SpacedustryBlocks.MANUFACTURER, "side"), blockLoc(SpacedustryBlocks.MANUFACTURER, "front"), blockLoc(SpacedustryBlocks.MANUFACTURER, "top"));
+    }
+
+    private ResourceLocation blockLoc(RegistryObject<Block> block, String suffix) {
+        return modLoc("block/" + block.getId().getPath() + "_" + suffix);
     }
 }

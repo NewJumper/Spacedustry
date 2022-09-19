@@ -46,6 +46,9 @@ public class SpacedustryTags {
         public static final TagKey<Item> INGOTS_SILICON = forgeTag("ingots/silicon");
         public static final TagKey<Item> INGOTS_TUNGSTEN = forgeTag("ingots/tungsten");
 
+        public static final TagKey<Item> INGOTS_COBALT = forgeTag("ingots/cobalt");
+        public static final TagKey<Item> INGOTS_STEEL = forgeTag("ingots/steel");
+
         private static TagKey<Item> forgeTag(String name) {
             return ItemTags.create(new ResourceLocation("forge", name));
         }

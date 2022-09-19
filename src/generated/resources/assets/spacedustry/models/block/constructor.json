@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "spacedustry:block/constructor_front",
+    "side": "spacedustry:block/constructor_side",
+    "top": "spacedustry:block/constructor_top"
+  }
+}

@@ -17,10 +17,11 @@ public class SpacedustryBlockTagsProvider extends BlockTagsProvider {
     @SuppressWarnings("unchecked")
     @Override
     protected void addTags() {
-        tag(BlockTags.MINEABLE_WITH_PICKAXE).addTags(SpacedustryTags.Blocks.ORES_ALUMINUM, SpacedustryTags.Blocks.ORES_LITHIUM, SpacedustryTags.Blocks.ORES_MOLYBDENUM, SpacedustryTags.Blocks.ORES_NICKEL, SpacedustryTags.Blocks.ORES_SILICON, SpacedustryTags.Blocks.ORES_TUNGSTEN);
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(SpacedustryBlocks.CONSTRUCTOR.get(), SpacedustryBlocks.MANUFACTURER.get())
+                .addTags(SpacedustryTags.Blocks.ORES_ALUMINUM, SpacedustryTags.Blocks.ORES_LITHIUM, SpacedustryTags.Blocks.ORES_MOLYBDENUM, SpacedustryTags.Blocks.ORES_NICKEL, SpacedustryTags.Blocks.ORES_SILICON, SpacedustryTags.Blocks.ORES_TUNGSTEN);
         tag(BlockTags.MINEABLE_WITH_SHOVEL).add(SpacedustryBlocks.SALT_BLOCK.get());
-        tag(BlockTags.NEEDS_STONE_TOOL).addTags(SpacedustryTags.Blocks.ORES_ALUMINUM, SpacedustryTags.Blocks.ORES_SILICON);
-        tag(BlockTags.NEEDS_IRON_TOOL).addTags(SpacedustryTags.Blocks.ORES_LITHIUM, SpacedustryTags.Blocks.ORES_MOLYBDENUM, SpacedustryTags.Blocks.ORES_NICKEL);
+        tag(BlockTags.NEEDS_STONE_TOOL).add(SpacedustryBlocks.CONSTRUCTOR.get()).addTags(SpacedustryTags.Blocks.ORES_ALUMINUM, SpacedustryTags.Blocks.ORES_SILICON);
+        tag(BlockTags.NEEDS_IRON_TOOL).add(SpacedustryBlocks.MANUFACTURER.get()).addTags(SpacedustryTags.Blocks.ORES_LITHIUM, SpacedustryTags.Blocks.ORES_MOLYBDENUM, SpacedustryTags.Blocks.ORES_NICKEL);
         tag(BlockTags.NEEDS_DIAMOND_TOOL).addTag(SpacedustryTags.Blocks.ORES_TUNGSTEN);
 
         tag(Tags.Blocks.ORES).addTags(SpacedustryTags.Blocks.ORES_ALUMINUM, SpacedustryTags.Blocks.ORES_LITHIUM, SpacedustryTags.Blocks.ORES_MOLYBDENUM, SpacedustryTags.Blocks.ORES_NICKEL, SpacedustryTags.Blocks.ORES_SILICON, SpacedustryTags.Blocks.ORES_TUNGSTEN);

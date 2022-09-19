@@ -33,6 +33,9 @@ public class SpacedustryBlocks {
 
     public static final RegistryObject<Block> SALT_BLOCK = register("salt_block", () -> new Block(BlockBehaviour.Properties.of(Material.CLAY).strength(0.6f).sound(SoundType.GRAVEL)));
 
+    public static final RegistryObject<Block> CONSTRUCTOR = register("constructor", () -> new ConstructorBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(3.5f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> MANUFACTURER = register("manufacturer", () -> new ManufacturerBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(4f).requiresCorrectToolForDrops()));
+
     private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> pBlock) {
         RegistryObject<T> block = BLOCKS.register(name, pBlock);
         SpacedustryItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(SpacedustryCreative.SPACEDUSTRY)));

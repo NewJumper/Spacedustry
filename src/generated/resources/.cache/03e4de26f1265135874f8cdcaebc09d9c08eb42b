@@ -1,10 +1,12 @@
-// 1.19.2	2022-09-17T00:27:15.6787443	Tags for minecraft:item
+// 1.19.2	2022-09-18T21:51:42.6958145	Tags for minecraft:item
 cc5141b4df82e4b9fbcbfe3b544e9249001176cd data/forge/tags/items/ingots.json
 e874d9a0a2fb14ff3a998a974586a896b65e11f1 data/forge/tags/items/ingots/aluminum.json
+a42d292e13293adfd463058c016c8adfa530aa4c data/forge/tags/items/ingots/cobalt.json
 c0da5c9f1ea31d7fbdedc364b8011f652d499ceb data/forge/tags/items/ingots/lithium.json
 52a0ba09449635009d815fbd3be4ed6fc8812938 data/forge/tags/items/ingots/molybdenum.json
 d0d65298ee43d994be867c61c19369b2248c4261 data/forge/tags/items/ingots/nickel.json
 3238172460eb5ccaf39082677a3d0af2e3e9a698 data/forge/tags/items/ingots/silicon.json
+7060180e2aefc9ac2d32ec21e9b2d589072e92f2 data/forge/tags/items/ingots/steel.json
 c153be35bd33dcc755e7c94d2a5d5ff0db97f7fa data/forge/tags/items/ingots/tungsten.json
 b2b6c680ba5075c21505ee2e9bd71ed4cc808451 data/forge/tags/items/ores.json
 6fa84d61475838e02cc577ed14515f4882729573 data/forge/tags/items/ores/aluminum.json

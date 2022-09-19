@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": {
+      "tag": "forge:ingots/aluminum"
+    },
+    "C": {
+      "tag": "forge:storage_blocks/coal"
+    },
+    "G": {
+      "tag": "forge:glass"
+    },
+    "M": {
+      "tag": "forge:ingots/molybdenum"
+    },
+    "S": {
+      "tag": "forge:ingots/silicon"
+    }
+  },
+  "pattern": [
+    "ASA",
+    "GCG",
+    "MAM"
+  ],
+  "result": {
+    "item": "spacedustry:constructor"
+  }
+}
