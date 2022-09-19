@@ -2,6 +2,7 @@ package com.newjumper.spacedustry.datagen.assets;
 
 import com.newjumper.spacedustry.Spacedustry;
 import com.newjumper.spacedustry.block.SpacedustryBlocks;
+import com.newjumper.spacedustry.block.entity.SpacedustryBlockEntities;
 import com.newjumper.spacedustry.item.SpacedustryItems;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.world.item.Item;
@@ -16,20 +17,16 @@ public class ENLanguageProvider extends LanguageProvider {
 
     @Override
     protected void addTranslations() {
-        SpacedustryBlocks.BLOCKS.getEntries().forEach(this::addBlock);
-        SpacedustryItems.ITEMS.getEntries().forEach(this::addItem);
+        SpacedustryBlocks.BLOCKS.getEntries().forEach(block -> add(block, "block"));
+        SpacedustryItems.ITEMS.getEntries().forEach(item -> add(item, "item"));
+        SpacedustryBlockEntities.BLOCK_ENTITIES.getEntries().forEach(container -> add(container, "container"));
 
-        add("itemGroup.spacedustry", "Spacedustry");
+        add("itemGroup." + Spacedustry.MOD_ID, "Spacedustry");
     }
 
-    private void addBlock(RegistryObject<Block> block) {
-        String key = block.getId().getPath();
-        add("block.spacedustry." + key, convertToName(key));
-    }
-
-    private void addItem(RegistryObject<Item> block) {
-        String key = block.getId().getPath();
-        add("item.spacedustry." + key, convertToName(key));
+    private void add(RegistryObject<?> entry, String prefix) {
+        String key = entry.getId().getPath();
+        add(prefix + "." + Spacedustry.MOD_ID + "." + key, convertToName(key));
     }
 
     private String convertToName(String key) {
