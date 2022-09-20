@@ -1,0 +1,14 @@
+{
+  "type": "spacedustry:constructing",
+  "ingredients": [
+    {
+      "item": "minecraft:coal"
+    },
+    {
+      "tag": "forge:ingots/iron"
+    }
+  ],
+  "result": {
+    "item": "spacedustry:steel_alloy"
+  }
+}
