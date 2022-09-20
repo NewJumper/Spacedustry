@@ -41,8 +41,8 @@ public class ConstructorMenu extends AbstractContainerMenu {
                     return ForgeHooks.getBurnTime(stack, null) > 0;
                 }
             });
-            addSlot(new SlotItemHandler(handler, 1, 64, 16));
-            addSlot(new SlotItemHandler(handler, 2, 88, 16));
+            addSlot(new SlotItemHandler(handler, 1, 64, 17));
+            addSlot(new SlotItemHandler(handler, 2, 88, 17));
             addSlot(new SlotItemHandler(handler, 3, 136, 35) {
                 @Override
                 public boolean mayPlace(@NotNull ItemStack stack) { return false; }
