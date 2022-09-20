@@ -143,8 +143,8 @@ public class ConstructorBlockEntity extends BlockEntity implements MenuProvider 
         if(blockEntity.isActive()) blockEntity.fuel--;
 
         if(canConstruct(container, recipe) && !blockEntity.isActive()) {
-            int constant = blockEntity.getFuelCapacity(blockEntity.itemHandler.getStackInSlot(0)) / 200;
-            blockEntity.maxFuel = blockEntity.maxProgress * constant;
+            double constant = blockEntity.getFuelCapacity(blockEntity.itemHandler.getStackInSlot(0)) / 200.0;
+            blockEntity.maxFuel = (int) (blockEntity.maxProgress * constant);
             blockEntity.fuel = blockEntity.maxFuel;
             blockEntity.itemHandler.extractItem(0, 1, false);
         }
