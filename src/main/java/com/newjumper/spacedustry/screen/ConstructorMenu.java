@@ -88,4 +88,18 @@ public class ConstructorMenu extends AbstractContainerMenu {
     public boolean stillValid(@NotNull Player pPlayer) {
         return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), pPlayer, SpacedustryBlocks.CONSTRUCTOR.get());
     }
+
+    public int drawFuel() {
+        int fuel = this.data.get(0);
+        int max = this.data.get(1);
+
+        return fuel == 0 ? -1 : Math.max((-14 * (fuel - max)) / max, 0);
+    }
+
+    public int drawProgress() {
+        double progress = this.data.get(2);
+        int max = this.data.get(3);
+
+        return progress == 0 ? 0 : (int) (progress / max * 24);
+    }
 }

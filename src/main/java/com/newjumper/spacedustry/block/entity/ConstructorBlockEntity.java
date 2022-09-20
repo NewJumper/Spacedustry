@@ -56,7 +56,7 @@ public class ConstructorBlockEntity extends BlockEntity implements MenuProvider 
 
         @Override
         public int getCount() {
-            return 0;
+            return 4;
         }
     };
     private int fuel;

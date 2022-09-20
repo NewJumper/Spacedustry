@@ -33,5 +33,7 @@ public class ConstructorScreen extends AbstractContainerScreen<ConstructorMenu> 
         int y = this.topPos;
 
         this.blit(pPoseStack, x, y, 0, 0, imageWidth, imageHeight);
+        if(menu.drawFuel() > -1) this.blit(pPoseStack, x + 76, y + 36 + menu.drawFuel(), 176, menu.drawFuel(), 14, 14 - menu.drawFuel());
+        if(menu.drawProgress() > 0) this.blit(pPoseStack, x + 99, y + 34, 176, 14, menu.drawProgress(), 17);
     }
 }
