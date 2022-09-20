@@ -1,0 +1,102 @@
+{
+  "criteria": {
+    "aluminum": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "spacedustry:raw_aluminum"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "lithium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "spacedustry:raw_lithium"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "molybdenite": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "spacedustry:molybdenite"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "nickel": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "spacedustry:raw_nickel"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "silicon": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "spacedustry:raw_silicon"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "tungsten": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "spacedustry:raw_tungsten"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "background": "spacedustry:textures/gui/advancements/root.png",
+    "description": {
+      "translate": "advancements.spacedustry.root.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "spacedustry:raw_aluminum"
+    },
+    "show_toast": false,
+    "title": {
+      "translate": "advancements.spacedustry.root.title"
+    }
+  },
+  "requirements": [
+    [
+      "aluminum",
+      "lithium",
+      "molybdenite",
+      "nickel",
+      "silicon",
+      "tungsten"
+    ]
+  ]
+}

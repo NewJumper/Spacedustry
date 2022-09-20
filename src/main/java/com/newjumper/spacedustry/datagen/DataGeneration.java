@@ -24,6 +24,7 @@ public class DataGeneration {
         generator.addProvider(event.includeClient(), new SpacedustryItemModelProvider(generator, fileHelper));
 
         // data
+        generator.addProvider(event.includeServer(), new SpacedustryAdvancementProvider(generator, fileHelper));
         generator.addProvider(event.includeServer(), new CraftingRecipesProvider(generator));
         generator.addProvider(event.includeServer(), new SmeltingRecipesProvider(generator));
         generator.addProvider(event.includeServer(), new SpacedustryLootTables(generator));

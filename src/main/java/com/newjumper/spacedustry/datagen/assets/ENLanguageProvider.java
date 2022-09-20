@@ -20,6 +20,11 @@ public class ENLanguageProvider extends LanguageProvider {
         SpacedustryItems.ITEMS.getEntries().stream().filter(item -> !(item.get() instanceof BlockItem)).forEach(item -> add(item, "item"));
         SpacedustryBlockEntities.BLOCK_ENTITIES.getEntries().forEach(container -> add(container, "container"));
 
+        add("advancements." + Spacedustry.MOD_ID + ".root.title", "Spacedustry");
+        add("advancements." + Spacedustry.MOD_ID + ".root.description", "New materials, new technology");
+        add("advancements." + Spacedustry.MOD_ID + ".forge_alloy.title", "Forger");
+        add("advancements." + Spacedustry.MOD_ID + ".forge_alloy.description", "Construct an alloy using a Constructor");
+
         add("itemGroup." + Spacedustry.MOD_ID, "Spacedustry");
     }
 

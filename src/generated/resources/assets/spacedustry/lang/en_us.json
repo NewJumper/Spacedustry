@@ -1,4 +1,8 @@
 {
+  "advancements.spacedustry.forge_alloy.description": "Construct an alloy using a Constructor",
+  "advancements.spacedustry.forge_alloy.title": "Forger",
+  "advancements.spacedustry.root.description": "New materials, new technology",
+  "advancements.spacedustry.root.title": "Spacedustry",
   "block.spacedustry.aluminum_ore": "Aluminum Ore",
   "block.spacedustry.constructor": "Constructor",
   "block.spacedustry.deepslate_aluminum_ore": "Deepslate Aluminum Ore",

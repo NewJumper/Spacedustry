@@ -1,0 +1,89 @@
+{
+  "parent": "spacedustry:main/root",
+  "criteria": {
+    "burlam": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "spacedustry:burlam_alloy"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "cobalt": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "spacedustry:cobalt_alloy"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "duralumin": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "spacedustry:duralumin_alloy"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "steel": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "spacedustry:steel_alloy"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "super": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "spacedustry:super_alloy"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.spacedustry.forge_alloy.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "spacedustry:steel_alloy"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.spacedustry.forge_alloy.title"
+    }
+  },
+  "requirements": [
+    [
+      "burlam",
+      "cobalt",
+      "duralumin",
+      "steel",
+      "super"
+    ]
+  ]
+}
