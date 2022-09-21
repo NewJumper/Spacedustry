@@ -1,4 +1,4 @@
-package com.newjumper.spacedustry.datagen.data;
+package com.newjumper.spacedustry.datagen.data.recipes;
 
 import com.newjumper.spacedustry.block.SpacedustryBlocks;
 import com.newjumper.spacedustry.item.SpacedustryItems;
@@ -13,8 +13,8 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Consumer;
 
-public class CraftingRecipesProvider extends RecipeProvider implements IConditionBuilder {
-    public CraftingRecipesProvider(DataGenerator gen) {
+public class CraftingRecipeProvider extends RecipeProvider implements IConditionBuilder {
+    public CraftingRecipeProvider(DataGenerator gen) {
         super(gen);
     }
 

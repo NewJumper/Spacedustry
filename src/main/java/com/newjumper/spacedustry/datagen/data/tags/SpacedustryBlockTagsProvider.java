@@ -1,4 +1,4 @@
-package com.newjumper.spacedustry.datagen.data;
+package com.newjumper.spacedustry.datagen.data.tags;
 
 import com.newjumper.spacedustry.Spacedustry;
 import com.newjumper.spacedustry.block.SpacedustryBlocks;

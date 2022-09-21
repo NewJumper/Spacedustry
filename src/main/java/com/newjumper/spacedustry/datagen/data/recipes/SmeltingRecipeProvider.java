@@ -1,4 +1,4 @@
-package com.newjumper.spacedustry.datagen.data;
+package com.newjumper.spacedustry.datagen.data.recipes;
 
 import com.google.common.collect.ImmutableList;
 import com.newjumper.spacedustry.block.SpacedustryBlocks;
@@ -12,7 +12,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Consumer;
 
-public class SmeltingRecipesProvider extends RecipeProvider implements IConditionBuilder {
+public class SmeltingRecipeProvider extends RecipeProvider implements IConditionBuilder {
     protected final ImmutableList<ItemLike> ALUMINUM_ORES = ImmutableList.of(SpacedustryBlocks.ALUMINUM_ORE.get(), SpacedustryBlocks.DEEPSLATE_ALUMINUM_ORE.get());
     protected final ImmutableList<ItemLike> LITHIUM_ORES = ImmutableList.of(SpacedustryBlocks.LITHIUM_ORE.get(), SpacedustryBlocks.DEEPSLATE_LITHIUM_ORE.get());
     protected final ImmutableList<ItemLike> MOLYBDENITE_ORES = ImmutableList.of(SpacedustryBlocks.MOLYBDENITE_ORE.get(), SpacedustryBlocks.DEEPSLATE_MOLYBDENITE_ORE.get());
@@ -20,7 +20,7 @@ public class SmeltingRecipesProvider extends RecipeProvider implements IConditio
     protected final ImmutableList<ItemLike> SILICON_ORES = ImmutableList.of(SpacedustryBlocks.SILICON_ORE.get());
     protected final ImmutableList<ItemLike> TUNGSTEN_ORES = ImmutableList.of(SpacedustryBlocks.TUNGSTEN_ORE.get(), SpacedustryBlocks.DEEPSLATE_TUNGSTEN_ORE.get());
 
-    public SmeltingRecipesProvider(DataGenerator gen) {
+    public SmeltingRecipeProvider(DataGenerator gen) {
         super(gen);
     }
 

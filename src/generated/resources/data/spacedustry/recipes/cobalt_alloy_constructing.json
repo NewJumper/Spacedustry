@@ -1,0 +1,16 @@
+{
+  "type": "spacedustry:constructing",
+  "experience": 0.0,
+  "ingredients": [
+    {
+      "tag": "forge:ingots/copper"
+    },
+    {
+      "tag": "forge:ingots/nickel"
+    }
+  ],
+  "result": {
+    "item": "spacedustry:cobalt_alloy"
+  },
+  "time": 200
+}

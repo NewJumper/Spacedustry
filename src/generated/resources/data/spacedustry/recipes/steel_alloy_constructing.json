@@ -1,5 +1,6 @@
 {
   "type": "spacedustry:constructing",
+  "experience": 0.0,
   "ingredients": [
     {
       "item": "minecraft:coal"
@@ -10,5 +11,6 @@
   ],
   "result": {
     "item": "spacedustry:steel_alloy"
-  }
+  },
+  "time": 200
 }

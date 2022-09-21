@@ -1,0 +1,16 @@
+{
+  "type": "spacedustry:constructing",
+  "experience": 0.0,
+  "ingredients": [
+    {
+      "tag": "forge:ingots/aluminum"
+    },
+    {
+      "tag": "forge:ingots/copper"
+    }
+  ],
+  "result": {
+    "item": "spacedustry:duralumin_alloy"
+  },
+  "time": 200
+}
