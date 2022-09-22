@@ -82,7 +82,7 @@ public class ConstructingCategory implements IRecipeCategory<ConstructingRecipe>
         this.fuelArrow.getUnchecked(220).draw(stack, 13, 20);
 
         Font fontRenderer = Minecraft.getInstance().font;
-        int stringWidth = fontRenderer.width("10s");
-        fontRenderer.draw(stack, "10s", background.getWidth() - stringWidth, 45, 0xff808080);
+        int stringWidth = fontRenderer.width("12.5s");
+        fontRenderer.draw(stack, "12.5s", background.getWidth() - stringWidth, 45, 0xff808080);
     }
 }
