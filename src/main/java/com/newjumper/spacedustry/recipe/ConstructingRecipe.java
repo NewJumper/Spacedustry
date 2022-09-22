@@ -90,7 +90,7 @@ public class ConstructingRecipe implements Recipe<SimpleContainer> {
             }
             ItemStack result = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(pSerializedRecipe, "result"));
             float experience = GsonHelper.getAsFloat(pSerializedRecipe, "experience", 0);
-            int time = GsonHelper.getAsInt(pSerializedRecipe, "time", 200);
+            int time = GsonHelper.getAsInt(pSerializedRecipe, "time", 250);
 
             return new ConstructingRecipe(pRecipeId, ingredients, result, experience, time);
         }

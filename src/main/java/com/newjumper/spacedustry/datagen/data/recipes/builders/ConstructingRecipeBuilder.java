@@ -26,9 +26,10 @@ import java.util.function.Consumer;
 
 public class ConstructingRecipeBuilder implements RecipeBuilder {
     private final Item result;
-    private final int count;
     private final List<Ingredient> ingredients = Lists.newArrayList();
+    private final int count;
     private final float experience;
+    private final int time;
     private final Advancement.Builder advancement = Advancement.Builder.advancement();
 
     public ConstructingRecipeBuilder(ItemLike result, int count) {
@@ -36,9 +37,14 @@ public class ConstructingRecipeBuilder implements RecipeBuilder {
     }
 
     public ConstructingRecipeBuilder(ItemLike result, int count, float experience) {
+        this(result, count, experience, 250);
+    }
+
+    public ConstructingRecipeBuilder(ItemLike result, int count, float experience, int time) {
         this.result = result.asItem();
         this.count = count;
         this.experience = experience;
+        this.time = time;
     }
 
     public ConstructingRecipeBuilder requires(TagKey<Item> tag) {
@@ -87,26 +93,28 @@ public class ConstructingRecipeBuilder implements RecipeBuilder {
     @Override
     public void save(Consumer<FinishedRecipe> consumer, ResourceLocation recipeId) {
         this.advancement.parent(new ResourceLocation("recipes/root")).addCriterion("has_the_recipe", RecipeUnlockedTrigger.unlocked(recipeId)).rewards(AdvancementRewards.Builder.recipe(recipeId)).requirements(RequirementsStrategy.OR);
-        consumer.accept(new ConstructingRecipeBuilder.Result(recipeId, this.result, this.count, this.ingredients, this.experience, this.advancement, new ResourceLocation(recipeId.getNamespace(), "recipes/" + this.result.getItemCategory().getRecipeFolderName() + "/" + recipeId.getPath())));
+        consumer.accept(new ConstructingRecipeBuilder.Result(recipeId, this.result, this.ingredients, this.count, this.experience, this.time, this.advancement, new ResourceLocation(recipeId.getNamespace(), "recipes/" + this.result.getItemCategory().getRecipeFolderName() + "/" + recipeId.getPath())));
     }
 
     public static class Result implements FinishedRecipe {
         private final ResourceLocation id;
         private final Item result;
-        private final int count;
         private final List<Ingredient> ingredients;
+        private final int count;
         private final float experience;
+        private final int time;
         private final Advancement.Builder advancement;
         private final ResourceLocation advancementId;
 
-        public Result(ResourceLocation pId, Item pResult, int pCount, List<Ingredient> pIngredients, float pExperience, Advancement.Builder pAdvancement, ResourceLocation pAdvancementId) {
-            this.id = pId;
-            this.result = pResult;
-            this.count = pCount;
-            this.ingredients = pIngredients;
-            this.experience = pExperience;
-            this.advancement = pAdvancement;
-            this.advancementId = pAdvancementId;
+        public Result(ResourceLocation id, Item result, List<Ingredient> ingredients, int count, float experience, int time, Advancement.Builder advancement, ResourceLocation advancementId) {
+            this.id = id;
+            this.result = result;
+            this.ingredients = ingredients;
+            this.count = count;
+            this.experience = experience;
+            this.time = time;
+            this.advancement = advancement;
+            this.advancementId = advancementId;
         }
 
         @Override
@@ -117,15 +125,14 @@ public class ConstructingRecipeBuilder implements RecipeBuilder {
             }
 
             pJson.add("ingredients", jsonarray);
-            JsonObject jsonobject = new JsonObject();
-            jsonobject.addProperty("item", String.valueOf(ForgeRegistries.ITEMS.getKey(result)));
-            if (this.count > 1) {
-                jsonobject.addProperty("count", this.count);
-            }
+            JsonObject jsonObject = new JsonObject();
+            jsonObject.addProperty("item", String.valueOf(ForgeRegistries.ITEMS.getKey(result)));
 
-            pJson.add("result", jsonobject);
-            pJson.addProperty("experience", this.experience);
-            pJson.addProperty("time", 200);
+            pJson.add("result", jsonObject);
+            if(count > 1) jsonObject.addProperty("count", count);
+
+            if(experience != 0) pJson.addProperty("experience", experience);
+            if(time != 250) pJson.addProperty("time", time);
         }
 
         @Override

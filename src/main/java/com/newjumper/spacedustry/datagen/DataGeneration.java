@@ -32,17 +32,16 @@ public class DataGeneration {
         generator.addProvider(event.includeClient(), new SpacedustryItemModelProvider(generator, fileHelper));
 
         // data
-        generator.addProvider(event.includeServer(), new SpacedustryAdvancementProvider(generator, fileHelper));
-
         generator.addProvider(event.includeServer(), new CraftingRecipeProvider(generator));
         generator.addProvider(event.includeServer(), new SmeltingRecipeProvider(generator));
         generator.addProvider(event.includeServer(), new ConstructingRecipeProvider(generator));
-
-        generator.addProvider(event.includeServer(), new SpacedustryLootTables(generator));
 
         SpacedustryBlockTagsProvider blockTags = new SpacedustryBlockTagsProvider(generator, fileHelper);
         generator.addProvider(event.includeServer(), blockTags);
         generator.addProvider(event.includeServer(), new SpacedustryItemTagsProvider(generator, blockTags, fileHelper));
         generator.addProvider(event.includeServer(), new SpacedustryBiomeTagsProvider(generator, fileHelper));
+
+        generator.addProvider(event.includeServer(), new SpacedustryAdvancementProvider(generator, fileHelper));
+        generator.addProvider(event.includeServer(), new SpacedustryLootTables(generator));
     }
 }
