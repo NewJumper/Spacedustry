@@ -36,6 +36,7 @@ public class SpacedustryItemModelProvider extends ItemModelProvider {
 
         blockModel(SpacedustryBlocks.CONSTRUCTOR);
         blockModel(SpacedustryBlocks.MANUFACTURER);
+        blockModel(SpacedustryBlocks.ROCKET_ASSEMBLER);
 
         itemModel(SpacedustryItems.RAW_ALUMINUM, GENERATED);
         itemModel(SpacedustryItems.ALUMINUM_INGOT, GENERATED);

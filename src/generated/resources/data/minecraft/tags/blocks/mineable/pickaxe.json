@@ -2,6 +2,7 @@
   "values": [
     "spacedustry:constructor",
     "spacedustry:manufacturer",
+    "spacedustry:rocket_assembler",
     "#forge:ores/aluminum",
     "#forge:ores/lithium",
     "#forge:ores/molybdenum",

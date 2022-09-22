@@ -1,6 +1,7 @@
 {
   "values": [
     "spacedustry:manufacturer",
+    "spacedustry:rocket_assembler",
     "#forge:ores/lithium",
     "#forge:ores/molybdenum",
     "#forge:ores/nickel"

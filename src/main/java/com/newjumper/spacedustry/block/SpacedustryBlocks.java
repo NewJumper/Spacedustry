@@ -35,6 +35,7 @@ public class SpacedustryBlocks {
 
     public static final RegistryObject<Block> CONSTRUCTOR = register("constructor", () -> new ConstructorBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(3.5f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> MANUFACTURER = register("manufacturer", () -> new ManufacturerBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(4f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> ROCKET_ASSEMBLER = register("rocket_assembler", () -> new RocketAssemblerBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(4f).requiresCorrectToolForDrops()));
 
     private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> pBlock) {
         RegistryObject<T> block = BLOCKS.register(name, pBlock);

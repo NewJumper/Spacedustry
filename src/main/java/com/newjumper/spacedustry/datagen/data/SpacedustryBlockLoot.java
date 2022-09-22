@@ -27,6 +27,7 @@ public class SpacedustryBlockLoot extends BlockLoot {
 
         this.dropSelf(SpacedustryBlocks.CONSTRUCTOR.get());
         this.dropSelf(SpacedustryBlocks.MANUFACTURER.get());
+        this.dropSelf(SpacedustryBlocks.ROCKET_ASSEMBLER.get());
     }
 
     @NotNull

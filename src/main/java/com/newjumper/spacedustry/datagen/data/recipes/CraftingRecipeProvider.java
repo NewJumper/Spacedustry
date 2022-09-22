@@ -7,6 +7,7 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import org.jetbrains.annotations.NotNull;
@@ -43,6 +44,18 @@ public class CraftingRecipeProvider extends RecipeProvider implements ICondition
                 .pattern("GRG")
                 .pattern("SSS")
                 .unlockedBy("has_duralumin", has(SpacedustryItems.DURALUMIN_ALLOY.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(SpacedustryBlocks.ROCKET_ASSEMBLER.get())
+                .define('B', SpacedustryItems.BURLAM_ALLOY.get())
+                .define('G', Tags.Items.GLASS)
+                .define('D', Tags.Items.GEMS_DIAMOND)
+                .define('A', Blocks.ANVIL)
+                .define('S', SpacedustryTags.Items.INGOTS_STEEL)
+                .define('V', SpacedustryItems.SUPER_ALLOY.get())
+                .pattern("BGB")
+                .pattern("DAD")
+                .pattern("SVS")
+                .unlockedBy("has_burlam", has(SpacedustryItems.BURLAM_ALLOY.get()))
+                .unlockedBy("has_super", has(SpacedustryItems.SUPER_ALLOY.get())).save(consumer);
     }
 
     @NotNull
