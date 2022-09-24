@@ -1,4 +1,4 @@
-// 1.19.2	2022-09-23T21:43:16.0102648	Item Models: spacedustry
+// 1.19.2	2022-09-23T23:06:22.6390885	Item Models: spacedustry
 0347cf0332060c50f9e2c99f200ed3263d9fa1f7 assets/spacedustry/models/item/aluminum_ingot.json
 d3cb3e25c4ba00eb4207b8f33b51b7e491408e49 assets/spacedustry/models/item/aluminum_ore.json
 132aa7992a97fd3a865916f50499b305fe8ce247 assets/spacedustry/models/item/burlam_alloy.json
@@ -21,10 +21,16 @@ eee1161962cb07a9ecf33c817fcff50320c72949 assets/spacedustry/models/item/molybden
 c6be8b4c753c8c7f64ae453d5697e357ae8d7a57 assets/spacedustry/models/item/nickel_ingot.json
 fcb79eeff2a9c28be3ddb2bd3b32a93b0b9478b2 assets/spacedustry/models/item/nickel_ore.json
 ae278479f4fbb23e6afff3994f4f4d8845bad95e assets/spacedustry/models/item/raw_aluminum.json
+57dd68344f142759312a9a0e67ef60382c2de5cd assets/spacedustry/models/item/raw_aluminum_block.json
 b284fa5d9f3f82c8f268afcfe7501e6592d580c9 assets/spacedustry/models/item/raw_lithium.json
+445857322070c1c6b3fdf906e39306ca44f39fa4 assets/spacedustry/models/item/raw_lithium_block.json
+2fa6ce24c2652c571e46bbf4782b695d31003458 assets/spacedustry/models/item/raw_molybdenite_block.json
 4e1d49d86bbf19071031f5b9d44c0685f85717d5 assets/spacedustry/models/item/raw_nickel.json
+2fcb0f469dfec6dff420e2cb2464aa1bc3d982d1 assets/spacedustry/models/item/raw_nickel_block.json
 976cc659a39370830620aa6c3c00d1ac0a8028c5 assets/spacedustry/models/item/raw_silicon.json
+7ad1383600616ff571489127dc32b64ac0d8806b assets/spacedustry/models/item/raw_silicon_block.json
 a284874a7e6ad5b604f5482adb3a1e53bc95e8f7 assets/spacedustry/models/item/raw_tungsten.json
+ad67214751f612cfd09b11845b71387c24dd1b38 assets/spacedustry/models/item/raw_tungsten_block.json
 5ea4237d2bea63bc8b8146e52d1eb56bf1b540bf assets/spacedustry/models/item/rocket_assembler.json
 ccb242f084d93921d9360a9f66609484e7fcfd87 assets/spacedustry/models/item/salt.json
 6fb4684d58ac8cb8ad49fe57ae310db120142249 assets/spacedustry/models/item/salt_block.json

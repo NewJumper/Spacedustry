@@ -9,6 +9,12 @@
     "#forge:ores/molybdenum",
     "#forge:ores/nickel",
     "#forge:ores/silicon",
-    "#forge:ores/tungsten"
+    "#forge:ores/tungsten",
+    "#forge:storage_blocks/raw_aluminum",
+    "#forge:storage_blocks/raw_lithium",
+    "#forge:storage_blocks/raw_molybdenum",
+    "#forge:storage_blocks/raw_nickel",
+    "#forge:storage_blocks/raw_silicon",
+    "#forge:storage_blocks/raw_tungsten"
   ]
 }

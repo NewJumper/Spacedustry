@@ -18,15 +18,21 @@ public class SpacedustryBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
         simpleBlock(SpacedustryBlocks.ALUMINUM_ORE.get());
         simpleBlock(SpacedustryBlocks.DEEPSLATE_ALUMINUM_ORE.get());
+        simpleBlock(SpacedustryBlocks.RAW_ALUMINUM_BLOCK.get());
         simpleBlock(SpacedustryBlocks.LITHIUM_ORE.get());
         simpleBlock(SpacedustryBlocks.DEEPSLATE_LITHIUM_ORE.get());
+        simpleBlock(SpacedustryBlocks.RAW_LITHIUM_BLOCK.get());
         simpleBlock(SpacedustryBlocks.MOLYBDENITE_ORE.get());
         simpleBlock(SpacedustryBlocks.DEEPSLATE_MOLYBDENITE_ORE.get());
+        simpleBlock(SpacedustryBlocks.RAW_MOLYBDENITE_BLOCK.get());
         simpleBlock(SpacedustryBlocks.NICKEL_ORE.get());
         simpleBlock(SpacedustryBlocks.DEEPSLATE_NICKEL_ORE.get());
+        simpleBlock(SpacedustryBlocks.RAW_NICKEL_BLOCK.get());
         simpleBlock(SpacedustryBlocks.SILICON_ORE.get());
+        simpleBlock(SpacedustryBlocks.RAW_SILICON_BLOCK.get());
         simpleBlock(SpacedustryBlocks.TUNGSTEN_ORE.get());
         simpleBlock(SpacedustryBlocks.DEEPSLATE_TUNGSTEN_ORE.get());
+        simpleBlock(SpacedustryBlocks.RAW_TUNGSTEN_BLOCK.get());
 
         simpleBlock(SpacedustryBlocks.SALT_BLOCK.get());
 

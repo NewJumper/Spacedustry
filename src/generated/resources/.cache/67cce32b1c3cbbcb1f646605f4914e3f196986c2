@@ -1,4 +1,4 @@
-// 1.19.2	2022-09-23T21:43:16.0043625	LootTables
+// 1.19.2	2022-09-23T23:06:22.6326671	LootTables
 37c2a1877dc6e4b9c9cbe2a0099e3bfea51b3479 data/spacedustry/loot_tables/blocks/aluminum_ore.json
 4b5b7f9a7bdab72793d6e56ca520788cce67470f data/spacedustry/loot_tables/blocks/constructor.json
 6242a20adbfa6b4971a2cf4ea29387ad14c813bf data/spacedustry/loot_tables/blocks/deepslate_aluminum_ore.json
@@ -11,6 +11,12 @@ b9f4a72c53b26282c954e6dde91611c71283780a data/spacedustry/loot_tables/blocks/lit
 2cb56ccb71229d6b1e003b0897d69341d8d4f501 data/spacedustry/loot_tables/blocks/manufacturer.json
 7740b9f3af64fbbe9eac9a75a69e8eede437bd33 data/spacedustry/loot_tables/blocks/molybdenite_ore.json
 64008c32aec0bf109ad839d536466447e80125f3 data/spacedustry/loot_tables/blocks/nickel_ore.json
+8222248c83e7d82d0297c7d1b765643204a3dc8b data/spacedustry/loot_tables/blocks/raw_aluminum_block.json
+58210ed5db5d8597d0839bf40bed4ead28eba99e data/spacedustry/loot_tables/blocks/raw_lithium_block.json
+2b760d9db65e6c544e74244fc8c7d261323f01cd data/spacedustry/loot_tables/blocks/raw_molybdenite_block.json
+c682cc9a830a223db389be50cc87ec2fb8affa91 data/spacedustry/loot_tables/blocks/raw_nickel_block.json
+9308c90c6e5826ba4220d70a1d6e1e61667832bc data/spacedustry/loot_tables/blocks/raw_silicon_block.json
+2d81855335ee5c0bd30bd01fdfae5c736ae4078a data/spacedustry/loot_tables/blocks/raw_tungsten_block.json
 ed53a2ffd11ea060c6f91dfa1a36d621596fb907 data/spacedustry/loot_tables/blocks/rocket_assembler.json
 ea7fc0c60914f6980210c71ef755ec14240c492e data/spacedustry/loot_tables/blocks/salt_block.json
 2f12dba23222ad415db1ff2f0ce565c4077ae9a2 data/spacedustry/loot_tables/blocks/silicon_ore.json

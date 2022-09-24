@@ -1,4 +1,4 @@
-// 1.19.2	2022-09-23T21:43:16.0023638	Tags for minecraft:block
+// 1.19.2	2022-09-23T23:06:22.6396389	Tags for minecraft:block
 b2b6c680ba5075c21505ee2e9bd71ed4cc808451 data/forge/tags/blocks/ores.json
 6fa84d61475838e02cc577ed14515f4882729573 data/forge/tags/blocks/ores/aluminum.json
 1f7b5d33c4813279bc3de34ac2daa358bb41beef data/forge/tags/blocks/ores/lithium.json
@@ -8,7 +8,14 @@ bcf0861f6de6e602697e4005e66c2df255aa83d7 data/forge/tags/blocks/ores/molybdenum.
 c9cff7d1081fce8a92e3bf9434f9af2d453d5bd9 data/forge/tags/blocks/ores/tungsten.json
 a9e37e62a7b3522598ab7010b91e365c47c432a1 data/forge/tags/blocks/ores_in_ground/deepslate.json
 61cf785bee73b9acea9832ba20df007970265691 data/forge/tags/blocks/ores_in_ground/stone.json
-568584e14b8a62edd98dd37194315b8ccd9ab841 data/minecraft/tags/blocks/mineable/pickaxe.json
+af76f8791e91b19a595936b5498b70b4373f74ab data/forge/tags/blocks/storage_blocks.json
+ea9f1a6e0c8b64966461af61e6489bfcd9b6c421 data/forge/tags/blocks/storage_blocks/raw_aluminum.json
+069afbdfd3731c961d0d98c21b3a578037d46e54 data/forge/tags/blocks/storage_blocks/raw_lithium.json
+754b6a352119e1843b485023ab8fe47d02d71d04 data/forge/tags/blocks/storage_blocks/raw_molybdenum.json
+6c2b38d6e76f8763d736957f6c9a78fb147908de data/forge/tags/blocks/storage_blocks/raw_nickel.json
+21391efede76570f245f60f24419813d5edfb492 data/forge/tags/blocks/storage_blocks/raw_silicon.json
+bac3e56feabbeb1327c62a89493e0b0033079c95 data/forge/tags/blocks/storage_blocks/raw_tungsten.json
+1aeea5d3ff91822235173290b980d6091117b490 data/minecraft/tags/blocks/mineable/pickaxe.json
 873eb1f643055f0fad70e92c2dd5c8a6f6cc8673 data/minecraft/tags/blocks/mineable/shovel.json
 e935097956ef01adf679899afcaa128df011ad4d data/minecraft/tags/blocks/needs_diamond_tool.json
 8842cbfaf18f774f2197d7c9d31ec842c1dae5c5 data/minecraft/tags/blocks/needs_iron_tool.json

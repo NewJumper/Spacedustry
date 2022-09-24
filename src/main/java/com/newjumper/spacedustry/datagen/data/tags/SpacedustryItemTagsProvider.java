@@ -19,6 +19,7 @@ public class SpacedustryItemTagsProvider extends ItemTagsProvider {
         copy(Tags.Blocks.ORES, Tags.Items.ORES);
         copy(Tags.Blocks.ORES_IN_GROUND_STONE, Tags.Items.ORES_IN_GROUND_STONE);
         copy(Tags.Blocks.ORES_IN_GROUND_DEEPSLATE, Tags.Items.ORES_IN_GROUND_DEEPSLATE);
+        copy(Tags.Blocks.STORAGE_BLOCKS, Tags.Items.STORAGE_BLOCKS);
 
         copy(SpacedustryTags.Blocks.ORES_ALUMINUM, SpacedustryTags.Items.ORES_ALUMINUM);
         copy(SpacedustryTags.Blocks.ORES_LITHIUM, SpacedustryTags.Items.ORES_LITHIUM);
@@ -26,6 +27,13 @@ public class SpacedustryItemTagsProvider extends ItemTagsProvider {
         copy(SpacedustryTags.Blocks.ORES_NICKEL, SpacedustryTags.Items.ORES_NICKEL);
         copy(SpacedustryTags.Blocks.ORES_SILICON, SpacedustryTags.Items.ORES_SILICON);
         copy(SpacedustryTags.Blocks.ORES_TUNGSTEN, SpacedustryTags.Items.ORES_TUNGSTEN);
+
+        copy(SpacedustryTags.Blocks.STORAGE_BLOCKS_RAW_ALUMINUM, SpacedustryTags.Items.STORAGE_BLOCKS_RAW_ALUMINUM);
+        copy(SpacedustryTags.Blocks.STORAGE_BLOCKS_RAW_LITHIUM, SpacedustryTags.Items.STORAGE_BLOCKS_RAW_LITHIUM);
+        copy(SpacedustryTags.Blocks.STORAGE_BLOCKS_RAW_MOLYBDENUM, SpacedustryTags.Items.STORAGE_BLOCKS_RAW_MOLYBDENUM);
+        copy(SpacedustryTags.Blocks.STORAGE_BLOCKS_RAW_NICKEL, SpacedustryTags.Items.STORAGE_BLOCKS_RAW_NICKEL);
+        copy(SpacedustryTags.Blocks.STORAGE_BLOCKS_RAW_SILICON, SpacedustryTags.Items.STORAGE_BLOCKS_RAW_SILICON);
+        copy(SpacedustryTags.Blocks.STORAGE_BLOCKS_RAW_TUNGSTEN, SpacedustryTags.Items.STORAGE_BLOCKS_RAW_TUNGSTEN);
 
         tag(Tags.Items.INGOTS).add(SpacedustryItems.ALUMINUM_INGOT.get(), SpacedustryItems.LITHIUM_INGOT.get(), SpacedustryItems.MOLYBDENUM_INGOT.get(), SpacedustryItems.NICKEL_INGOT.get(), SpacedustryItems.SILICON.get(), SpacedustryItems.TUNGSTEN_INGOT.get());
         tag(Tags.Items.RAW_MATERIALS).add(SpacedustryItems.RAW_ALUMINUM.get(), SpacedustryItems.RAW_LITHIUM.get(), SpacedustryItems.MOLYBDENITE.get(), SpacedustryItems.RAW_NICKEL.get(), SpacedustryItems.RAW_SILICON.get(), SpacedustryItems.RAW_TUNGSTEN.get());

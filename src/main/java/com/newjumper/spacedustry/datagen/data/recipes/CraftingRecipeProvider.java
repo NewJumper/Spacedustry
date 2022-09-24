@@ -21,6 +21,13 @@ public class CraftingRecipeProvider extends RecipeProvider implements ICondition
 
     @Override
     protected void buildCraftingRecipes(@NotNull Consumer<FinishedRecipe> consumer) {
+        nineBlockStorageRecipes(consumer, SpacedustryItems.RAW_ALUMINUM.get(), SpacedustryBlocks.RAW_ALUMINUM_BLOCK.get());
+        nineBlockStorageRecipes(consumer, SpacedustryItems.RAW_LITHIUM.get(), SpacedustryBlocks.RAW_LITHIUM_BLOCK.get());
+        nineBlockStorageRecipes(consumer, SpacedustryItems.MOLYBDENITE.get(), SpacedustryBlocks.RAW_MOLYBDENITE_BLOCK.get());
+        nineBlockStorageRecipes(consumer, SpacedustryItems.RAW_NICKEL.get(), SpacedustryBlocks.RAW_NICKEL_BLOCK.get());
+        nineBlockStorageRecipes(consumer, SpacedustryItems.RAW_SILICON.get(), SpacedustryBlocks.RAW_SILICON_BLOCK.get());
+        nineBlockStorageRecipes(consumer, SpacedustryItems.RAW_TUNGSTEN.get(), SpacedustryBlocks.RAW_TUNGSTEN_BLOCK.get());
+
         ShapedRecipeBuilder.shaped(SpacedustryBlocks.SALT_BLOCK.get()).define('#', SpacedustryItems.SALT.get()).pattern("##").pattern("##").unlockedBy("has_salt", has(SpacedustryItems.SALT.get())).save(consumer);
 
         ShapedRecipeBuilder.shaped(SpacedustryBlocks.CONSTRUCTOR.get())

@@ -19,6 +19,13 @@ public class SpacedustryTags {
         public static final TagKey<Block> ORES_SILICON = forgeTag("ores/silicon");
         public static final TagKey<Block> ORES_TUNGSTEN = forgeTag("ores/tungsten");
 
+        public static final TagKey<Block> STORAGE_BLOCKS_RAW_ALUMINUM = forgeTag("storage_blocks/raw_aluminum");
+        public static final TagKey<Block> STORAGE_BLOCKS_RAW_LITHIUM = forgeTag("storage_blocks/raw_lithium");
+        public static final TagKey<Block> STORAGE_BLOCKS_RAW_MOLYBDENUM = forgeTag("storage_blocks/raw_molybdenum");
+        public static final TagKey<Block> STORAGE_BLOCKS_RAW_NICKEL = forgeTag("storage_blocks/raw_nickel");
+        public static final TagKey<Block> STORAGE_BLOCKS_RAW_SILICON = forgeTag("storage_blocks/raw_silicon");
+        public static final TagKey<Block> STORAGE_BLOCKS_RAW_TUNGSTEN = forgeTag("storage_blocks/raw_tungsten");
+
         private static TagKey<Block> forgeTag(String name) {
             return BlockTags.create(new ResourceLocation("forge", name));
         }
@@ -31,6 +38,13 @@ public class SpacedustryTags {
         public static final TagKey<Item> ORES_NICKEL = forgeTag("ores/nickel");
         public static final TagKey<Item> ORES_SILICON = forgeTag("ores/silicon");
         public static final TagKey<Item> ORES_TUNGSTEN = forgeTag("ores/tungsten");
+
+        public static final TagKey<Item> STORAGE_BLOCKS_RAW_ALUMINUM = forgeTag("storage_blocks/raw_aluminum");
+        public static final TagKey<Item> STORAGE_BLOCKS_RAW_LITHIUM = forgeTag("storage_blocks/raw_lithium");
+        public static final TagKey<Item> STORAGE_BLOCKS_RAW_MOLYBDENUM = forgeTag("storage_blocks/raw_molybdenum");
+        public static final TagKey<Item> STORAGE_BLOCKS_RAW_NICKEL = forgeTag("storage_blocks/raw_nickel");
+        public static final TagKey<Item> STORAGE_BLOCKS_RAW_SILICON = forgeTag("storage_blocks/raw_silicon");
+        public static final TagKey<Item> STORAGE_BLOCKS_RAW_TUNGSTEN = forgeTag("storage_blocks/raw_tungsten");
 
         public static final TagKey<Item> RAW_ALUMINUM = forgeTag("raw_materials/aluminum");
         public static final TagKey<Item> RAW_LITHIUM = forgeTag("raw_materials/lithium");
