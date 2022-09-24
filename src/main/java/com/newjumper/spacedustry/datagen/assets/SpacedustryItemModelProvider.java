@@ -35,6 +35,7 @@ public class SpacedustryItemModelProvider extends ItemModelProvider {
         blockModel(SpacedustryBlocks.SALT_BLOCK);
 
         blockModel(SpacedustryBlocks.CONSTRUCTOR);
+        blockModel(SpacedustryBlocks.GAS_CONDENSER);
         blockModel(SpacedustryBlocks.MANUFACTURER);
         blockModel(SpacedustryBlocks.ROCKET_ASSEMBLER);
 
@@ -57,6 +58,8 @@ public class SpacedustryItemModelProvider extends ItemModelProvider {
         itemModel(SpacedustryItems.DURALUMIN_ALLOY, GENERATED);
         itemModel(SpacedustryItems.STEEL_ALLOY, GENERATED);
         itemModel(SpacedustryItems.SUPER_ALLOY, GENERATED);
+
+        itemModel(SpacedustryItems.GAS_CONTAINER, GENERATED);
     }
 
     public void blockModel(RegistryObject<Block> block) {

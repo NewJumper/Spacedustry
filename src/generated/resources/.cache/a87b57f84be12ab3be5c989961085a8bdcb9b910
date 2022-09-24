@@ -1,4 +1,4 @@
-// 1.19.2	2022-09-21T19:01:25.9638302	Item Models: spacedustry
+// 1.19.2	2022-09-23T21:43:16.0102648	Item Models: spacedustry
 0347cf0332060c50f9e2c99f200ed3263d9fa1f7 assets/spacedustry/models/item/aluminum_ingot.json
 d3cb3e25c4ba00eb4207b8f33b51b7e491408e49 assets/spacedustry/models/item/aluminum_ore.json
 132aa7992a97fd3a865916f50499b305fe8ce247 assets/spacedustry/models/item/burlam_alloy.json
@@ -10,6 +10,8 @@ f8270e787be6ff69cf90ff930ebf2669b8cbbd23 assets/spacedustry/models/item/deepslat
 014c358a82c3565f28f846e1b31a8670337485f8 assets/spacedustry/models/item/deepslate_nickel_ore.json
 883cf5bb07be57209065ab682681fdb7197cc103 assets/spacedustry/models/item/deepslate_tungsten_ore.json
 3386c84cfa95c82e8dd880035c4323f4d5aadbb7 assets/spacedustry/models/item/duralumin_alloy.json
+96c482af25b3447e9fe5a7a925dc114fd19f6b3e assets/spacedustry/models/item/gas_condenser.json
+2202fa832407091165136990fdb44b166181ff67 assets/spacedustry/models/item/gas_container.json
 acbdda732d9a133ecf532ecd2a5840e37edb4cdb assets/spacedustry/models/item/lithium_ingot.json
 8df19f3f31fce3980414cd496871aef9f50539cb assets/spacedustry/models/item/lithium_ore.json
 dd8030406cdab5f7d32fe30410d09f841c470016 assets/spacedustry/models/item/manufacturer.json

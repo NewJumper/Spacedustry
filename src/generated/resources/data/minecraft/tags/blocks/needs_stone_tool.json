@@ -1,6 +1,7 @@
 {
   "values": [
     "spacedustry:constructor",
+    "spacedustry:gas_condenser",
     "#forge:ores/aluminum",
     "#forge:ores/silicon"
   ]

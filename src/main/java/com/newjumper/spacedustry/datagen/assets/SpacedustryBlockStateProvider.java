@@ -31,7 +31,8 @@ public class SpacedustryBlockStateProvider extends BlockStateProvider {
         simpleBlock(SpacedustryBlocks.SALT_BLOCK.get());
 
         horizontalBlock(SpacedustryBlocks.CONSTRUCTOR.get(), blockLoc(SpacedustryBlocks.CONSTRUCTOR, "side"), blockLoc(SpacedustryBlocks.CONSTRUCTOR, "front"), blockLoc(SpacedustryBlocks.CONSTRUCTOR, "top"));
-        horizontalBlock(SpacedustryBlocks.MANUFACTURER.get(), blockLoc(SpacedustryBlocks.MANUFACTURER, "side"), blockLoc(SpacedustryBlocks.MANUFACTURER, "front"), blockLoc(SpacedustryBlocks.MANUFACTURER, "top"));
+        simpleBlock(SpacedustryBlocks.GAS_CONDENSER.get());
+        simpleBlock(SpacedustryBlocks.MANUFACTURER.get());
         simpleBlock(SpacedustryBlocks.ROCKET_ASSEMBLER.get());
     }
 

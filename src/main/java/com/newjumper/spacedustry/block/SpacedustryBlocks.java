@@ -34,6 +34,7 @@ public class SpacedustryBlocks {
     public static final RegistryObject<Block> SALT_BLOCK = register("salt_block", () -> new Block(BlockBehaviour.Properties.of(Material.CLAY).strength(0.6f).sound(SoundType.GRAVEL)));
 
     public static final RegistryObject<Block> CONSTRUCTOR = register("constructor", () -> new ConstructorBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(3.5f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> GAS_CONDENSER = register("gas_condenser", () -> new GasCondenserBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(3.5f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> MANUFACTURER = register("manufacturer", () -> new ManufacturerBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(4f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> ROCKET_ASSEMBLER = register("rocket_assembler", () -> new RocketAssemblerBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(4f).requiresCorrectToolForDrops()));
 

@@ -1,19 +1,7 @@
 {
   "variants": {
-    "facing=east": {
-      "model": "spacedustry:block/manufacturer",
-      "y": 90
-    },
-    "facing=north": {
+    "": {
       "model": "spacedustry:block/manufacturer"
-    },
-    "facing=south": {
-      "model": "spacedustry:block/manufacturer",
-      "y": 180
-    },
-    "facing=west": {
-      "model": "spacedustry:block/manufacturer",
-      "y": 270
     }
   }
 }

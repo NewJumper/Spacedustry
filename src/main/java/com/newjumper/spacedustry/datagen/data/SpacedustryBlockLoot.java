@@ -26,6 +26,7 @@ public class SpacedustryBlockLoot extends BlockLoot {
         this.add(SpacedustryBlocks.SALT_BLOCK.get(), block -> createSingleItemTableWithSilkTouch(block, SpacedustryItems.SALT.get(), ConstantValue.exactly(4)));
 
         this.dropSelf(SpacedustryBlocks.CONSTRUCTOR.get());
+        this.dropSelf(SpacedustryBlocks.GAS_CONDENSER.get());
         this.dropSelf(SpacedustryBlocks.MANUFACTURER.get());
         this.dropSelf(SpacedustryBlocks.ROCKET_ASSEMBLER.get());
     }
