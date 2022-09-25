@@ -2,11 +2,13 @@ package com.newjumper.spacedustry.screen;
 
 import com.newjumper.spacedustry.block.SpacedustryBlocks;
 import com.newjumper.spacedustry.block.entity.GasCondenserBlockEntity;
+import com.newjumper.spacedustry.capabilities.SpacedustryCapabilities;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerLevelAccess;
+import net.minecraft.world.inventory.DataSlot;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -32,10 +34,11 @@ public class GasCondenserMenu extends AbstractContainerMenu {
 
         checkContainerSize(pInventory, MENU_SLOTS);
         addInventorySlots(pInventory);
+        saveData();
 
         this.blockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(itemHandler -> {
             addSlot(new SlotItemHandler(itemHandler, 0, 137, 25));
-            addSlot(new SlotItemHandler(itemHandler, 1, 137, 48));
+            addSlot(new SlotItemHandler(itemHandler, 1, 137, 49));
         });
     }
 
@@ -49,6 +52,37 @@ public class GasCondenserMenu extends AbstractContainerMenu {
                 this.addSlot(new Slot(inventory, j + i * 9 + 9, 8 + j * 18, 84 + i * 18));
             }
         }
+    }
+
+    private void saveData() {
+        addDataSlot(new DataSlot() {
+            @Override
+            public int get() {
+                return getGas() & 0xffff;
+            }
+
+            @Override
+            public void set(int pValue) {
+                blockEntity.getCapability(SpacedustryCapabilities.GAS).ifPresent(gasStorage -> {
+                    int heatStored = gasStorage.getGasStored() & 0xffff0000;
+                    gasStorage.setGas(heatStored + (pValue & 0xffff));
+                });
+            }
+        });
+        addDataSlot(new DataSlot() {
+            @Override
+            public int get() {
+                return (getGas() >> 16) & 0xffff;
+            }
+
+            @Override
+            public void set(int pValue) {
+                blockEntity.getCapability(SpacedustryCapabilities.GAS).ifPresent(gasStorage -> {
+                    int heatStored = gasStorage.getGasStored() & 0x0000ffff;
+                    gasStorage.setGas(heatStored | (pValue << 16));
+                });
+            }
+        });
     }
 
     @NotNull
@@ -74,5 +108,13 @@ public class GasCondenserMenu extends AbstractContainerMenu {
     @Override
     public boolean stillValid(@NotNull Player pPlayer) {
         return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), pPlayer, SpacedustryBlocks.GAS_CONDENSER.get());
+    }
+
+    public int getGas() {
+        return this.blockEntity.hydrogenStorage.getGasStored();
+    }
+
+    public int drawGas() {
+        return getGas() == 0 ? 0 : Math.max((int) (getGas() / (double) blockEntity.hydrogenStorage.getGasCapacity() * 44), 1);
     }
 }

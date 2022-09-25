@@ -33,6 +33,7 @@ public class ConstructorMenu extends AbstractContainerMenu {
 
         checkContainerSize(pInventory, MENU_SLOTS);
         addInventorySlots(pInventory);
+        addDataSlots(pContainerData);
 
         this.blockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(handler -> {
             addSlot(new SlotItemHandler(handler, 0, 76, 53) {
@@ -48,8 +49,6 @@ public class ConstructorMenu extends AbstractContainerMenu {
                 public boolean mayPlace(@NotNull ItemStack stack) { return false; }
             });
         });
-
-        addDataSlots(pContainerData);
     }
 
     private void addInventorySlots(Inventory inventory) {

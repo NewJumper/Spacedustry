@@ -2,6 +2,10 @@ package com.newjumper.spacedustry.block.entity;
 
 import com.newjumper.spacedustry.Spacedustry;
 import com.newjumper.spacedustry.block.SpacedustryBlocks;
+import com.newjumper.spacedustry.capabilities.GasStorage;
+import com.newjumper.spacedustry.capabilities.GasTypes;
+import com.newjumper.spacedustry.capabilities.IGasStorage;
+import com.newjumper.spacedustry.capabilities.SpacedustryCapabilities;
 import com.newjumper.spacedustry.screen.GasCondenserMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
@@ -25,7 +29,9 @@ import org.jetbrains.annotations.Nullable;
 
 public class GasCondenserBlockEntity extends BlockEntity implements MenuProvider {
     private final LazyOptional<IItemHandler> lazyItemHandler;
+    private final LazyOptional<IGasStorage> lazyHydrogenStorage;
     public final ItemStackHandler itemHandler;
+    public final GasStorage hydrogenStorage;
 
     public GasCondenserBlockEntity(BlockPos pPos, BlockState pBlockState) {
         super(SpacedustryBlockEntities.GAS_CONDENSER.get(), pPos, pBlockState);
@@ -36,8 +42,15 @@ public class GasCondenserBlockEntity extends BlockEntity implements MenuProvider
                 setChanged();
             }
         };
+        this.hydrogenStorage = new GasStorage(GasTypes.HYDROGEN, 1000) {
+            @Override
+            protected void onGasChanged() {
+                setChanged();
+            }
+        };
 
         this.lazyItemHandler = LazyOptional.of(() -> itemHandler);
+        this.lazyHydrogenStorage = LazyOptional.of(() -> hydrogenStorage);
     }
 
     @Override
@@ -55,17 +68,20 @@ public class GasCondenserBlockEntity extends BlockEntity implements MenuProvider
     protected void saveAdditional(CompoundTag pTag) {
         super.saveAdditional(pTag);
         pTag.put("inventory", itemHandler.serializeNBT());
+        pTag.put("gas", hydrogenStorage.serializeNBT());
     }
 
     @Override
     public void load(CompoundTag pTag) {
         super.load(pTag);
         itemHandler.deserializeNBT(pTag.getCompound("inventory"));
+        hydrogenStorage.deserializeNBT(pTag.getCompound("gas"));
     }
 
     @Override
     public @NotNull <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap) {
         if(cap == ForgeCapabilities.ITEM_HANDLER) return lazyItemHandler.cast();
+        if(cap == SpacedustryCapabilities.GAS) return lazyHydrogenStorage.cast();
 
         return super.getCapability(cap);
     }
@@ -74,6 +90,7 @@ public class GasCondenserBlockEntity extends BlockEntity implements MenuProvider
     public void invalidateCaps() {
         super.invalidateCaps();
         lazyItemHandler.invalidate();
+        lazyHydrogenStorage.invalidate();
     }
 
     public void dropContents() {
@@ -87,6 +104,8 @@ public class GasCondenserBlockEntity extends BlockEntity implements MenuProvider
     }
 
     public static void tick(Level level, BlockPos pos, BlockState state, GasCondenserBlockEntity blockEntity) {
+        if(blockEntity.hydrogenStorage.getGasStored() < blockEntity.hydrogenStorage.getGasCapacity()) blockEntity.hydrogenStorage.insertGas(1);
 
+        setChanged(level, pos, state);
     }
 }

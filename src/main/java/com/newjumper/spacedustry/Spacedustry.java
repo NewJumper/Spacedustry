@@ -2,6 +2,7 @@ package com.newjumper.spacedustry;
 
 import com.newjumper.spacedustry.block.SpacedustryBlocks;
 import com.newjumper.spacedustry.block.entity.SpacedustryBlockEntities;
+import com.newjumper.spacedustry.capabilities.IGasStorage;
 import com.newjumper.spacedustry.item.SpacedustryItems;
 import com.newjumper.spacedustry.recipe.ConstructingRecipe;
 import com.newjumper.spacedustry.recipe.SpacedustryRecipes;
@@ -14,6 +15,7 @@ import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.capabilities.RegisterCapabilitiesEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -37,8 +39,13 @@ public class Spacedustry {
         SpacedustryMenuTypes.MENUS.register(eventBus);
         SpacedustryRecipes.RECIPE_SERIALIZERS.register(eventBus);
 
+        eventBus.addListener(this::registerCapabilities);
         eventBus.addListener(this::registerRecipeTypes);
         MinecraftForge.EVENT_BUS.register(this);
+    }
+
+    public void registerCapabilities(RegisterCapabilitiesEvent event) {
+        event.register(IGasStorage.class);
     }
 
     public void registerRecipeTypes(final RegisterEvent event) {
