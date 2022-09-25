@@ -26,6 +26,13 @@ public class SpacedustryTags {
         public static final TagKey<Block> STORAGE_BLOCKS_RAW_SILICON = forgeTag("storage_blocks/raw_silicon");
         public static final TagKey<Block> STORAGE_BLOCKS_RAW_TUNGSTEN = forgeTag("storage_blocks/raw_tungsten");
 
+        public static final TagKey<Block> STORAGE_BLOCKS_ALUMINUM = forgeTag("storage_blocks/aluminum");
+        public static final TagKey<Block> STORAGE_BLOCKS_LITHIUM = forgeTag("storage_blocks/lithium");
+        public static final TagKey<Block> STORAGE_BLOCKS_MOLYBDENUM = forgeTag("storage_blocks/molybdenum");
+        public static final TagKey<Block> STORAGE_BLOCKS_NICKEL = forgeTag("storage_blocks/nickel");
+        public static final TagKey<Block> STORAGE_BLOCKS_SILICON = forgeTag("storage_blocks/silicon");
+        public static final TagKey<Block> STORAGE_BLOCKS_TUNGSTEN = forgeTag("storage_blocks/tungsten");
+
         private static TagKey<Block> forgeTag(String name) {
             return BlockTags.create(new ResourceLocation("forge", name));
         }
@@ -45,6 +52,13 @@ public class SpacedustryTags {
         public static final TagKey<Item> STORAGE_BLOCKS_RAW_NICKEL = forgeTag("storage_blocks/raw_nickel");
         public static final TagKey<Item> STORAGE_BLOCKS_RAW_SILICON = forgeTag("storage_blocks/raw_silicon");
         public static final TagKey<Item> STORAGE_BLOCKS_RAW_TUNGSTEN = forgeTag("storage_blocks/raw_tungsten");
+
+        public static final TagKey<Item> STORAGE_BLOCKS_ALUMINUM = forgeTag("storage_blocks/aluminum");
+        public static final TagKey<Item> STORAGE_BLOCKS_LITHIUM = forgeTag("storage_blocks/lithium");
+        public static final TagKey<Item> STORAGE_BLOCKS_MOLYBDENUM = forgeTag("storage_blocks/molybdenum");
+        public static final TagKey<Item> STORAGE_BLOCKS_NICKEL = forgeTag("storage_blocks/nickel");
+        public static final TagKey<Item> STORAGE_BLOCKS_SILICON = forgeTag("storage_blocks/silicon");
+        public static final TagKey<Item> STORAGE_BLOCKS_TUNGSTEN = forgeTag("storage_blocks/tungsten");
 
         public static final TagKey<Item> RAW_ALUMINUM = forgeTag("raw_materials/aluminum");
         public static final TagKey<Item> RAW_LITHIUM = forgeTag("raw_materials/lithium");

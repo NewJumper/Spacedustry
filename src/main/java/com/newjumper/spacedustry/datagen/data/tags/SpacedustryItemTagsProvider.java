@@ -35,6 +35,13 @@ public class SpacedustryItemTagsProvider extends ItemTagsProvider {
         copy(SpacedustryTags.Blocks.STORAGE_BLOCKS_RAW_SILICON, SpacedustryTags.Items.STORAGE_BLOCKS_RAW_SILICON);
         copy(SpacedustryTags.Blocks.STORAGE_BLOCKS_RAW_TUNGSTEN, SpacedustryTags.Items.STORAGE_BLOCKS_RAW_TUNGSTEN);
 
+        copy(SpacedustryTags.Blocks.STORAGE_BLOCKS_ALUMINUM, SpacedustryTags.Items.STORAGE_BLOCKS_ALUMINUM);
+        copy(SpacedustryTags.Blocks.STORAGE_BLOCKS_LITHIUM, SpacedustryTags.Items.STORAGE_BLOCKS_LITHIUM);
+        copy(SpacedustryTags.Blocks.STORAGE_BLOCKS_MOLYBDENUM, SpacedustryTags.Items.STORAGE_BLOCKS_MOLYBDENUM);
+        copy(SpacedustryTags.Blocks.STORAGE_BLOCKS_NICKEL, SpacedustryTags.Items.STORAGE_BLOCKS_NICKEL);
+        copy(SpacedustryTags.Blocks.STORAGE_BLOCKS_SILICON, SpacedustryTags.Items.STORAGE_BLOCKS_SILICON);
+        copy(SpacedustryTags.Blocks.STORAGE_BLOCKS_TUNGSTEN, SpacedustryTags.Items.STORAGE_BLOCKS_TUNGSTEN);
+
         tag(Tags.Items.INGOTS).add(SpacedustryItems.ALUMINUM_INGOT.get(), SpacedustryItems.LITHIUM_INGOT.get(), SpacedustryItems.MOLYBDENUM_INGOT.get(), SpacedustryItems.NICKEL_INGOT.get(), SpacedustryItems.SILICON.get(), SpacedustryItems.TUNGSTEN_INGOT.get());
         tag(Tags.Items.RAW_MATERIALS).add(SpacedustryItems.RAW_ALUMINUM.get(), SpacedustryItems.RAW_LITHIUM.get(), SpacedustryItems.MOLYBDENITE.get(), SpacedustryItems.RAW_NICKEL.get(), SpacedustryItems.RAW_SILICON.get(), SpacedustryItems.RAW_TUNGSTEN.get());
 

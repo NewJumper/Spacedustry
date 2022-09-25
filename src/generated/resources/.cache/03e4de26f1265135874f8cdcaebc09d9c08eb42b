@@ -1,4 +1,4 @@
-// 1.19.2	2022-09-23T23:06:22.6289032	Tags for minecraft:item
+// 1.19.2	2022-09-25T18:21:43.3400376	Tags for minecraft:item
 cc5141b4df82e4b9fbcbfe3b544e9249001176cd data/forge/tags/items/ingots.json
 e874d9a0a2fb14ff3a998a974586a896b65e11f1 data/forge/tags/items/ingots/aluminum.json
 a42d292e13293adfd463058c016c8adfa530aa4c data/forge/tags/items/ingots/cobalt.json
@@ -24,10 +24,16 @@ b0db5ae12016c9934cb768c0c535cb20a5b8afc2 data/forge/tags/items/raw_materials/lit
 7ff6d85c1f74cc26e715cd5698265c675be95c97 data/forge/tags/items/raw_materials/nickel.json
 325d0e2a9676f1c2dd722925773551e5649903e6 data/forge/tags/items/raw_materials/silicon.json
 7d1b0e6379a709c1aa02b99c9e4df2d8c5b4f031 data/forge/tags/items/raw_materials/tungsten.json
-af76f8791e91b19a595936b5498b70b4373f74ab data/forge/tags/items/storage_blocks.json
+7a96357f8de8b808c0ca61ad7e5ba1141d58e9ba data/forge/tags/items/storage_blocks.json
+21805fe6e41b783dd2901e685de64ab9493f7d68 data/forge/tags/items/storage_blocks/aluminum.json
+5aefcd0623661d94138981525bacdcfc7005f2c6 data/forge/tags/items/storage_blocks/lithium.json
+8fc7d72159a22bc53d48e3178d4152bdc8272428 data/forge/tags/items/storage_blocks/molybdenum.json
+4e531736ec2938545b83f2c974ea1232c5c6e5ca data/forge/tags/items/storage_blocks/nickel.json
 ea9f1a6e0c8b64966461af61e6489bfcd9b6c421 data/forge/tags/items/storage_blocks/raw_aluminum.json
 069afbdfd3731c961d0d98c21b3a578037d46e54 data/forge/tags/items/storage_blocks/raw_lithium.json
 754b6a352119e1843b485023ab8fe47d02d71d04 data/forge/tags/items/storage_blocks/raw_molybdenum.json
 6c2b38d6e76f8763d736957f6c9a78fb147908de data/forge/tags/items/storage_blocks/raw_nickel.json
 21391efede76570f245f60f24419813d5edfb492 data/forge/tags/items/storage_blocks/raw_silicon.json
 bac3e56feabbeb1327c62a89493e0b0033079c95 data/forge/tags/items/storage_blocks/raw_tungsten.json
+44128f338a560e51268d69deba85f158fd093abe data/forge/tags/items/storage_blocks/silicon.json
+fea3046f716e5c4246c55161e18e72ee6c2fb97a data/forge/tags/items/storage_blocks/tungsten.json

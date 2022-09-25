@@ -1,5 +1,7 @@
 {
   "values": [
-    "#forge:ores/tungsten"
+    "#forge:ores/tungsten",
+    "#forge:storage_blocks/raw_tungsten",
+    "#forge:storage_blocks/tungsten"
   ]
 }

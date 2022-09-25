@@ -22,20 +22,26 @@ public class SpacedustryBlocks {
     public static final RegistryObject<Block> ALUMINUM_ORE = register("aluminum_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(3f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> DEEPSLATE_ALUMINUM_ORE = register("deepslate_aluminum_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4.5f, 3f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> RAW_ALUMINUM_BLOCK = register("raw_aluminum_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(5f, 6f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> ALUMINUM_BLOCK = register("aluminum_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(5f, 6f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> LITHIUM_ORE = register("lithium_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(3f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> DEEPSLATE_LITHIUM_ORE = register("deepslate_lithium_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4.5f, 3f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> RAW_LITHIUM_BLOCK = register("raw_lithium_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(5f, 6f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> LITHIUM_BLOCK = register("lithium_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(5f, 6f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> MOLYBDENITE_ORE = register("molybdenite_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4f, 3.5f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> DEEPSLATE_MOLYBDENITE_ORE = register("deepslate_molybdenite_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(5.5f, 3.5f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> RAW_MOLYBDENITE_BLOCK = register("raw_molybdenite_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(5.5f, 7f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> MOLYBDENUM_BLOCK = register("molybdenum_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(5.5f, 7f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> NICKEL_ORE = register("nickel_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(3f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> DEEPSLATE_NICKEL_ORE = register("deepslate_nickel_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4.5f, 3f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> RAW_NICKEL_BLOCK = register("raw_nickel_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(5f, 6f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> NICKEL_BLOCK = register("nickel_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(5f, 6f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> SILICON_ORE = register("silicon_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(3f, 2.5f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> RAW_SILICON_BLOCK = register("raw_silicon_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(5f, 6f).requiresCorrectToolForDrops()));
-    public static final RegistryObject<Block> TUNGSTEN_ORE = register("tungsten_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4f, 3.5f).requiresCorrectToolForDrops()));
-    public static final RegistryObject<Block> DEEPSLATE_TUNGSTEN_ORE = register("deepslate_tungsten_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(5.5f, 3.5f).requiresCorrectToolForDrops()));
-    public static final RegistryObject<Block> RAW_TUNGSTEN_BLOCK = register("raw_tungsten_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(6f, 7f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> SILICON_BLOCK = register("silicon_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(5f, 6f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> TUNGSTEN_ORE = register("tungsten_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> DEEPSLATE_TUNGSTEN_ORE = register("deepslate_tungsten_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(5.5f, 5f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> RAW_TUNGSTEN_BLOCK = register("raw_tungsten_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(6f, 8f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> TUNGSTEN_BLOCK = register("tungsten_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(6f, 13f).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> SALT_BLOCK = register("salt_block", () -> new Block(BlockBehaviour.Properties.of(Material.CLAY).strength(0.6f).sound(SoundType.GRAVEL)));
 

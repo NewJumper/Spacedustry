@@ -4,6 +4,12 @@
     "spacedustry:rocket_assembler",
     "#forge:ores/lithium",
     "#forge:ores/molybdenum",
-    "#forge:ores/nickel"
+    "#forge:ores/nickel",
+    "#forge:storage_blocks/raw_lithium",
+    "#forge:storage_blocks/lithium",
+    "#forge:storage_blocks/raw_molybdenum",
+    "#forge:storage_blocks/molybdenum",
+    "#forge:storage_blocks/raw_nickel",
+    "#forge:storage_blocks/nickel"
   ]
 }
