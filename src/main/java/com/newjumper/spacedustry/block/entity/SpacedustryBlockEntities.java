@@ -11,4 +11,5 @@ public class SpacedustryBlockEntities {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, Spacedustry.MOD_ID);
 
     public static final RegistryObject<BlockEntityType<ConstructorBlockEntity>> CONSTRUCTOR = BLOCK_ENTITIES.register("constructor", () -> BlockEntityType.Builder.of(ConstructorBlockEntity::new, SpacedustryBlocks.CONSTRUCTOR.get()).build(null));
+    public static final RegistryObject<BlockEntityType<GasCondenserBlockEntity>> GAS_CONDENSER = BLOCK_ENTITIES.register("gas_condenser", () -> BlockEntityType.Builder.of(GasCondenserBlockEntity::new, SpacedustryBlocks.GAS_CONDENSER.get()).build(null));
 }
