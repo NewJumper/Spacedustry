@@ -1,5 +1,7 @@
 {
   "values": [
+    "spacedustry:debris_rocks",
+    "spacedustry:space_stone",
     "#forge:ores/tungsten",
     "#forge:storage_blocks/raw_tungsten",
     "#forge:storage_blocks/tungsten"

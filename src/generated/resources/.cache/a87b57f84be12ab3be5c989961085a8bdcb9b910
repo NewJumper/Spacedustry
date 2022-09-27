@@ -1,10 +1,11 @@
-// 1.19.2	2022-09-25T18:21:43.348971	Item Models: spacedustry
+// 1.19.2	2022-09-26T19:20:22.9295452	Item Models: spacedustry
 ad8ccac2356374591af1f23a88de172174b7c84a assets/spacedustry/models/item/aluminum_block.json
 0347cf0332060c50f9e2c99f200ed3263d9fa1f7 assets/spacedustry/models/item/aluminum_ingot.json
 d3cb3e25c4ba00eb4207b8f33b51b7e491408e49 assets/spacedustry/models/item/aluminum_ore.json
 132aa7992a97fd3a865916f50499b305fe8ce247 assets/spacedustry/models/item/burlam_alloy.json
 8e5abfe8e7c6330afc564110dbaa74270f6d6653 assets/spacedustry/models/item/cobalt_alloy.json
 5a1fe7597cbc3e1ce0374d81eaf9d3d6dccfa530 assets/spacedustry/models/item/constructor.json
+266c613595f1d3d572c089c9b89ca7efd24d164e assets/spacedustry/models/item/debris_rocks.json
 3a9fe5587613febfae9d38d6ecefa2700fdc0948 assets/spacedustry/models/item/deepslate_aluminum_ore.json
 f8270e787be6ff69cf90ff930ebf2669b8cbbd23 assets/spacedustry/models/item/deepslate_lithium_ore.json
 7d0c710af8ac1045c3bdb54ac7ddad8f27cc76b8 assets/spacedustry/models/item/deepslate_molybdenite_ore.json
@@ -41,6 +42,7 @@ ccb242f084d93921d9360a9f66609484e7fcfd87 assets/spacedustry/models/item/salt.jso
 dda4b8fcd6589419925e4fecd79ace0fb70b9a15 assets/spacedustry/models/item/silicon.json
 5de19ca79f34f2e4eb6cd4a535b80014d7aefc7a assets/spacedustry/models/item/silicon_block.json
 6d231ec7e89588532d5d5897142c7ddc1aee43c5 assets/spacedustry/models/item/silicon_ore.json
+8a00aa76a0f4ad18de805a4dc5c800701519ae54 assets/spacedustry/models/item/space_stone.json
 f123cdc6c994ef5017a8e92ed3a9ab0ae59b3d9c assets/spacedustry/models/item/steel_alloy.json
 0b75a09c0e48d78cdbfc4b0287d3362e77342774 assets/spacedustry/models/item/super_alloy.json
 ab995dc8fa8ba1dcc668c0e5fdbb809a1ba808e7 assets/spacedustry/models/item/tungsten_block.json

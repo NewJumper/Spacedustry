@@ -20,6 +20,9 @@ public class SpacedustryItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
+        blockModel(SpacedustryBlocks.DEBRIS_ROCKS);
+        blockModel(SpacedustryBlocks.SPACE_STONE);
+
         blockModel(SpacedustryBlocks.ALUMINUM_ORE);
         blockModel(SpacedustryBlocks.DEEPSLATE_ALUMINUM_ORE);
         blockModel(SpacedustryBlocks.RAW_ALUMINUM_BLOCK);

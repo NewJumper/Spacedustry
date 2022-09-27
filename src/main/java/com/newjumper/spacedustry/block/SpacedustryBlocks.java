@@ -19,6 +19,9 @@ import java.util.function.Supplier;
 public class SpacedustryBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Spacedustry.MOD_ID);
 
+    public static final RegistryObject<Block> DEBRIS_ROCKS = register("debris_rocks", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(3f, 15f)));
+    public static final RegistryObject<Block> SPACE_STONE = register("space_stone", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(3f, 60f)));
+
     public static final RegistryObject<Block> ALUMINUM_ORE = register("aluminum_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(3f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> DEEPSLATE_ALUMINUM_ORE = register("deepslate_aluminum_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4.5f, 3f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> RAW_ALUMINUM_BLOCK = register("raw_aluminum_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(5f, 6f).requiresCorrectToolForDrops()));

@@ -16,6 +16,9 @@ public class SpacedustryBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+        simpleBlock(SpacedustryBlocks.DEBRIS_ROCKS.get());
+        simpleBlock(SpacedustryBlocks.SPACE_STONE.get());
+
         simpleBlock(SpacedustryBlocks.ALUMINUM_ORE.get());
         simpleBlock(SpacedustryBlocks.DEEPSLATE_ALUMINUM_ORE.get());
         simpleBlock(SpacedustryBlocks.RAW_ALUMINUM_BLOCK.get());

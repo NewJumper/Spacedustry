@@ -11,6 +11,9 @@ import org.jetbrains.annotations.NotNull;
 public class SpacedustryBlockLoot extends BlockLoot {
     @Override
     protected void addTables() {
+        this.dropSelf(SpacedustryBlocks.DEBRIS_ROCKS.get());
+        this.dropSelf(SpacedustryBlocks.SPACE_STONE.get());
+
         this.add(SpacedustryBlocks.ALUMINUM_ORE.get(), block -> createOreDrop(block, SpacedustryItems.RAW_ALUMINUM.get()));
         this.add(SpacedustryBlocks.DEEPSLATE_ALUMINUM_ORE.get(), block -> createOreDrop(block, SpacedustryItems.RAW_ALUMINUM.get()));
         this.dropSelf(SpacedustryBlocks.RAW_ALUMINUM_BLOCK.get());
