@@ -6,6 +6,8 @@ import com.newjumper.spacedustry.item.SpacedustryItems;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import org.jetbrains.annotations.NotNull;
@@ -26,6 +28,8 @@ public class SmeltingRecipeProvider extends RecipeProvider implements ICondition
 
     @Override
     protected void buildCraftingRecipes(@NotNull Consumer<FinishedRecipe> consumer) {
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(SpacedustryBlocks.COBBLED_MOON_STONE.get()), SpacedustryBlocks.MOON_STONE.get().asItem(), 0.2f, 200).unlockedBy("has_cobbled_moon_stone", has(SpacedustryBlocks.COBBLED_MOON_STONE.get())).save(consumer);
+
         oreSmelting(consumer, ALUMINUM_ORES, SpacedustryItems.ALUMINUM_INGOT.get(), 2.8f, 200, "aluminum_ingot");
         oreSmelting(consumer, LITHIUM_ORES, SpacedustryItems.LITHIUM_INGOT.get(), 3f, 200, "lithium_ingot");
         oreSmelting(consumer, MOLYBDENITE_ORES, SpacedustryItems.MOLYBDENUM_INGOT.get(), 3f, 200, "molybdenum_ingot");

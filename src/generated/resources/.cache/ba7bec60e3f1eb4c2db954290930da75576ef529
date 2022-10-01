@@ -1,4 +1,4 @@
-// 1.19.2	2022-09-17T00:27:15.686551	Smelting Recipes
+// 1.19.2	2022-09-30T19:01:57.8558099	Smelting Recipes
 f22f1a1e13c372033f10d344b08db3383a1e495b data/minecraft/advancements/recipes/spacedustry/aluminum_ingot_from_blasting_aluminum_ore.json
 7661bb6b3dc11206089ea047c28a6fcd72492c42 data/minecraft/advancements/recipes/spacedustry/aluminum_ingot_from_blasting_deepslate_aluminum_ore.json
 1cb946fd05746ba5c4f8f3fbf13ae647a2894ac2 data/minecraft/advancements/recipes/spacedustry/aluminum_ingot_from_smelting_aluminum_ore.json
@@ -43,3 +43,5 @@ b30f051427daf0a7a00a8dc0d022f504fa1982ac data/minecraft/recipes/silicon_from_bla
 d012e8b962195d4ec05546db49e4d6045baae2db data/minecraft/recipes/tungsten_ingot_from_blasting_tungsten_ore.json
 26211af80238ca080f65014e214650a16815a9e7 data/minecraft/recipes/tungsten_ingot_from_smelting_deepslate_tungsten_ore.json
 560a1ded77468b7e7434071663666a05a5b02344 data/minecraft/recipes/tungsten_ingot_from_smelting_tungsten_ore.json
+ba090773c5c8118186fc7da612976eabc1615c93 data/spacedustry/advancements/recipes/spacedustry/moon_stone.json
+520bb1ea8caa961c65f7e8e972cbfdb79170dcfe data/spacedustry/recipes/moon_stone.json

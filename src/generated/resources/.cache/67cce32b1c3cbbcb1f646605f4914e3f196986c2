@@ -1,6 +1,7 @@
-// 1.19.2	2022-09-26T19:20:22.9393994	LootTables
+// 1.19.2	2022-09-30T19:01:57.8465631	LootTables
 09e26ba5554b85bd3ad18bced546fe45087889c2 data/spacedustry/loot_tables/blocks/aluminum_block.json
 37c2a1877dc6e4b9c9cbe2a0099e3bfea51b3479 data/spacedustry/loot_tables/blocks/aluminum_ore.json
+0b5e8864fce9d23106f564275ba18baa3b9321e6 data/spacedustry/loot_tables/blocks/cobbled_moon_stone.json
 4b5b7f9a7bdab72793d6e56ca520788cce67470f data/spacedustry/loot_tables/blocks/constructor.json
 ea0f85719ef311ed15d7ac761847846a3c3f0a7e data/spacedustry/loot_tables/blocks/debris_rocks.json
 6242a20adbfa6b4971a2cf4ea29387ad14c813bf data/spacedustry/loot_tables/blocks/deepslate_aluminum_ore.json
@@ -9,11 +10,13 @@ b4ea4eadafbecd3fbba327a4be8811a85dd55d0b data/spacedustry/loot_tables/blocks/dee
 5b44d578942ffa04631079f77ead5bb52acae054 data/spacedustry/loot_tables/blocks/deepslate_nickel_ore.json
 222dc2aa9e9acc2105d235c7bba6153260e3daf9 data/spacedustry/loot_tables/blocks/deepslate_tungsten_ore.json
 f04de767f2d41af1970cf8ab27d1040709b97669 data/spacedustry/loot_tables/blocks/gas_condenser.json
+33f9fb7c5c99155b3c0b2f5368c15efaef678b78 data/spacedustry/loot_tables/blocks/glazed_rock.json
 75cabc06fb68a9214e7e851277ccfbad8771305b data/spacedustry/loot_tables/blocks/lithium_block.json
 b9f4a72c53b26282c954e6dde91611c71283780a data/spacedustry/loot_tables/blocks/lithium_ore.json
 2cb56ccb71229d6b1e003b0897d69341d8d4f501 data/spacedustry/loot_tables/blocks/manufacturer.json
 7740b9f3af64fbbe9eac9a75a69e8eede437bd33 data/spacedustry/loot_tables/blocks/molybdenite_ore.json
 f69062ae10e9d360bb0a66f7a2c6e0c0fe3c4afa data/spacedustry/loot_tables/blocks/molybdenum_block.json
+4eb3bc1df63d76b08b9b4a5059467818f6a8d326 data/spacedustry/loot_tables/blocks/moon_stone.json
 1ec12f2766d7ce9a85f8a5f3ea1efb709a4c16b4 data/spacedustry/loot_tables/blocks/nickel_block.json
 64008c32aec0bf109ad839d536466447e80125f3 data/spacedustry/loot_tables/blocks/nickel_ore.json
 8222248c83e7d82d0297c7d1b765643204a3dc8b data/spacedustry/loot_tables/blocks/raw_aluminum_block.json

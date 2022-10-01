@@ -2,6 +2,9 @@
   "values": [
     "spacedustry:debris_rocks",
     "spacedustry:space_stone",
+    "spacedustry:moon_stone",
+    "spacedustry:cobbled_moon_stone",
+    "spacedustry:glazed_rock",
     "spacedustry:constructor",
     "spacedustry:gas_condenser",
     "spacedustry:manufacturer",
