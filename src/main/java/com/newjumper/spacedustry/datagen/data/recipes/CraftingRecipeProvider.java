@@ -21,6 +21,8 @@ public class CraftingRecipeProvider extends RecipeProvider implements ICondition
 
     @Override
     protected void buildCraftingRecipes(@NotNull Consumer<FinishedRecipe> consumer) {
+        ShapedRecipeBuilder.shaped(SpacedustryBlocks.MOON_STONE_BRICKS.get(), 4).define('#', SpacedustryBlocks.COBBLED_MOON_STONE.get()).pattern("##").pattern("##").unlockedBy("has_cobbled_moon_stone", has(SpacedustryBlocks.COBBLED_MOON_STONE.get())).save(consumer);
+
         nineBlockStorageRecipes(consumer, SpacedustryItems.RAW_ALUMINUM.get(), SpacedustryBlocks.RAW_ALUMINUM_BLOCK.get());
         nineBlockStorageRecipes(consumer, SpacedustryItems.ALUMINUM_INGOT.get(), SpacedustryBlocks.ALUMINUM_BLOCK.get());
         nineBlockStorageRecipes(consumer, SpacedustryItems.RAW_LITHIUM.get(), SpacedustryBlocks.RAW_LITHIUM_BLOCK.get());

@@ -1,4 +1,4 @@
-// 1.19.2	2022-09-30T19:01:57.8465631	LootTables
+// 1.19.2	2022-10-01T11:18:32.7191186	LootTables
 09e26ba5554b85bd3ad18bced546fe45087889c2 data/spacedustry/loot_tables/blocks/aluminum_block.json
 37c2a1877dc6e4b9c9cbe2a0099e3bfea51b3479 data/spacedustry/loot_tables/blocks/aluminum_ore.json
 0b5e8864fce9d23106f564275ba18baa3b9321e6 data/spacedustry/loot_tables/blocks/cobbled_moon_stone.json
@@ -17,6 +17,7 @@ b9f4a72c53b26282c954e6dde91611c71283780a data/spacedustry/loot_tables/blocks/lit
 7740b9f3af64fbbe9eac9a75a69e8eede437bd33 data/spacedustry/loot_tables/blocks/molybdenite_ore.json
 f69062ae10e9d360bb0a66f7a2c6e0c0fe3c4afa data/spacedustry/loot_tables/blocks/molybdenum_block.json
 4eb3bc1df63d76b08b9b4a5059467818f6a8d326 data/spacedustry/loot_tables/blocks/moon_stone.json
+ba22a5121fb0f64860e8f26fe1c37d8a3ca8089d data/spacedustry/loot_tables/blocks/moon_stone_bricks.json
 1ec12f2766d7ce9a85f8a5f3ea1efb709a4c16b4 data/spacedustry/loot_tables/blocks/nickel_block.json
 64008c32aec0bf109ad839d536466447e80125f3 data/spacedustry/loot_tables/blocks/nickel_ore.json
 8222248c83e7d82d0297c7d1b765643204a3dc8b data/spacedustry/loot_tables/blocks/raw_aluminum_block.json

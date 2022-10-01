@@ -25,6 +25,7 @@ public class SpacedustryItemModelProvider extends ItemModelProvider {
 
         blockModel(SpacedustryBlocks.MOON_STONE);
         blockModel(SpacedustryBlocks.COBBLED_MOON_STONE);
+        blockModel(SpacedustryBlocks.MOON_STONE_BRICKS);
         blockModel(SpacedustryBlocks.GLAZED_ROCK);
 
         blockModel(SpacedustryBlocks.ALUMINUM_ORE);

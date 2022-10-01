@@ -24,7 +24,8 @@ public class SpacedustryBlocks {
 
     public static final RegistryObject<Block> MOON_STONE = register("moon_stone", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(2.5f, 4f)));
     public static final RegistryObject<Block> COBBLED_MOON_STONE = register("cobbled_moon_stone", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(3f, 5f)));
-    public static final RegistryObject<Block> GLAZED_ROCK = register("glazed_rock", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(3f, 6)));
+    public static final RegistryObject<Block> MOON_STONE_BRICKS = register("moon_stone_bricks", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(3f, 9f)));
+    public static final RegistryObject<Block> GLAZED_ROCK = register("glazed_rock", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(3f, 6f)));
 
     public static final RegistryObject<Block> ALUMINUM_ORE = register("aluminum_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(3f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> DEEPSLATE_ALUMINUM_ORE = register("deepslate_aluminum_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4.5f, 3f).requiresCorrectToolForDrops()));

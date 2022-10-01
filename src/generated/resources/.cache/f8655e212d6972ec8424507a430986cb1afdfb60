@@ -1,4 +1,4 @@
-// 1.19.2	2022-09-30T19:01:57.8583228	Block States: spacedustry
+// 1.19.2	2022-10-01T11:18:32.7233676	Block States: spacedustry
 9dc84480da73c586e76bff8c58fd5d38c721e7a5 assets/spacedustry/blockstates/aluminum_block.json
 a502e3488d236e622742ea4fdb044693b310b8d4 assets/spacedustry/blockstates/aluminum_ore.json
 db3abb3786e2f9fc77b22398e33ffa4cd6b6643d assets/spacedustry/blockstates/cobbled_moon_stone.json
@@ -17,6 +17,7 @@ aa245c22d943dcf36ac1cc27663949ecd8bfc139 assets/spacedustry/blockstates/lithium_
 a47b499d4c6494d9c7afddde6b5cf12fc0efa745 assets/spacedustry/blockstates/molybdenite_ore.json
 a4c80c5f7b6393d42716e5f1d709437670aa9a90 assets/spacedustry/blockstates/molybdenum_block.json
 19da050aba77e5bad0c25655a1033e7f6553f6f1 assets/spacedustry/blockstates/moon_stone.json
+0116034c0810750e3d07991e343e4e593744096a assets/spacedustry/blockstates/moon_stone_bricks.json
 fe7a68dfd9927d3cfcda7e8e5ddfaa884c879743 assets/spacedustry/blockstates/nickel_block.json
 7b1aee223a1ed2ece08162cafa23f1c36ccef5b2 assets/spacedustry/blockstates/nickel_ore.json
 ccf300b84063cdb54501f1674e566d32c11525f3 assets/spacedustry/blockstates/raw_aluminum_block.json
@@ -50,6 +51,7 @@ d8a1df7fc0a176195c0ae51f4764d482b380c684 assets/spacedustry/models/block/lithium
 9aa2c73b019a97a318de8150c3c50aaa101522fe assets/spacedustry/models/block/molybdenite_ore.json
 dacbc29cea8750db61d49e588563527de8df4083 assets/spacedustry/models/block/molybdenum_block.json
 186039162fe3e77f262655bc8dda3de62c121180 assets/spacedustry/models/block/moon_stone.json
+d67f12afe044f8fe3ed09df56574fbe1ca2861fd assets/spacedustry/models/block/moon_stone_bricks.json
 e306bb721316a6b75db0bd6a0cab5fc2cbfff058 assets/spacedustry/models/block/nickel_block.json
 8edb7df2343bb6e31ad5592346fc993e7aeacbdd assets/spacedustry/models/block/nickel_ore.json
 253f78e7a8f18b792be3ea7b183d8f849f001f83 assets/spacedustry/models/block/raw_aluminum_block.json

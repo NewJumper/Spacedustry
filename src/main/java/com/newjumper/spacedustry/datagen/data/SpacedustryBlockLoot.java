@@ -16,6 +16,7 @@ public class SpacedustryBlockLoot extends BlockLoot {
 
         this.add(SpacedustryBlocks.MOON_STONE.get(), block -> createSingleItemTableWithSilkTouch(block, SpacedustryBlocks.COBBLED_MOON_STONE.get()));
         this.dropSelf(SpacedustryBlocks.COBBLED_MOON_STONE.get());
+        this.dropSelf(SpacedustryBlocks.MOON_STONE_BRICKS.get());
         this.dropSelf(SpacedustryBlocks.GLAZED_ROCK.get());
 
         this.add(SpacedustryBlocks.ALUMINUM_ORE.get(), block -> createOreDrop(block, SpacedustryItems.RAW_ALUMINUM.get()));

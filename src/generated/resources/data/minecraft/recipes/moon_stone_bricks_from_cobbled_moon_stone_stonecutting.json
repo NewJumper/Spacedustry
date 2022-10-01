@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "spacedustry:cobbled_moon_stone"
+  },
+  "result": "spacedustry:moon_stone_bricks"
+}

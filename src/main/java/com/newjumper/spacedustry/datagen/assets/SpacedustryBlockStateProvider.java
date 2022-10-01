@@ -21,6 +21,7 @@ public class SpacedustryBlockStateProvider extends BlockStateProvider {
 
         simpleBlock(SpacedustryBlocks.MOON_STONE.get());
         simpleBlock(SpacedustryBlocks.COBBLED_MOON_STONE.get());
+        simpleBlock(SpacedustryBlocks.MOON_STONE_BRICKS.get());
         simpleBlock(SpacedustryBlocks.GLAZED_ROCK.get());
 
         simpleBlock(SpacedustryBlocks.ALUMINUM_ORE.get());

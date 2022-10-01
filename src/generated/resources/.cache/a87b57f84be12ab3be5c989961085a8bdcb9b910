@@ -1,4 +1,4 @@
-// 1.19.2	2022-09-30T19:01:57.8505635	Item Models: spacedustry
+// 1.19.2	2022-10-01T11:18:32.7181225	Item Models: spacedustry
 ad8ccac2356374591af1f23a88de172174b7c84a assets/spacedustry/models/item/aluminum_block.json
 0347cf0332060c50f9e2c99f200ed3263d9fa1f7 assets/spacedustry/models/item/aluminum_ingot.json
 d3cb3e25c4ba00eb4207b8f33b51b7e491408e49 assets/spacedustry/models/item/aluminum_ore.json
@@ -25,6 +25,7 @@ de5ff5f16e84f982c049ac70d28212ceb465a5cc assets/spacedustry/models/item/molybden
 3d9edb6793c111fdf520720006f6ce333b70ce69 assets/spacedustry/models/item/molybdenum_block.json
 eee1161962cb07a9ecf33c817fcff50320c72949 assets/spacedustry/models/item/molybdenum_ingot.json
 95c624d9d4c129e4cf32166618011496c0b115cd assets/spacedustry/models/item/moon_stone.json
+42b35c38867c2c26c28a719aadfcee472a42867e assets/spacedustry/models/item/moon_stone_bricks.json
 28c120c1308ae0960fb79837a0dd94d6604dac3d assets/spacedustry/models/item/nickel_block.json
 c6be8b4c753c8c7f64ae453d5697e357ae8d7a57 assets/spacedustry/models/item/nickel_ingot.json
 fcb79eeff2a9c28be3ddb2bd3b32a93b0b9478b2 assets/spacedustry/models/item/nickel_ore.json
