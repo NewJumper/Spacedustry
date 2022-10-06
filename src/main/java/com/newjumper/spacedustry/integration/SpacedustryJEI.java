@@ -26,7 +26,7 @@ public class SpacedustryJEI implements IModPlugin {
     public void registerCategories(IRecipeCategoryRegistration registration) {
         IGuiHelper guiHelper = registration.getJeiHelpers().getGuiHelper();
 
-        registration.addRecipeCategories(new ConstructingCategory(guiHelper));
+        registration.addRecipeCategories(new ConstructingCategory(guiHelper, 250));
     }
 
     @Override

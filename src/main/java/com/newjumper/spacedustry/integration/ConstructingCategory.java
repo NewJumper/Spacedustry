@@ -30,8 +30,9 @@ public class ConstructingCategory implements IRecipeCategory<ConstructingRecipe>
     private final IDrawable icon;
     private final LoadingCache<Integer, IDrawableAnimated> progress;
     private final LoadingCache<Integer, IDrawableAnimated> flame;
+    private final int time;
 
-    public ConstructingCategory(IGuiHelper guiHelper) {
+    public ConstructingCategory(IGuiHelper guiHelper, int time) {
         this.background = guiHelper.createDrawable(TEXTURE, 63, 16, 94, 54);
         this.icon = guiHelper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(SpacedustryBlocks.CONSTRUCTOR.get()));
 
@@ -47,6 +48,7 @@ public class ConstructingCategory implements IRecipeCategory<ConstructingRecipe>
                 return guiHelper.drawableBuilder(TEXTURE, 176, 0, 14, 14).buildAnimated(time, IDrawableAnimated.StartDirection.TOP, true);
             }
         });
+        this.time = time;
     }
 
     @Override
@@ -78,11 +80,11 @@ public class ConstructingCategory implements IRecipeCategory<ConstructingRecipe>
 
     @Override
     public void draw(ConstructingRecipe recipe, IRecipeSlotsView recipeSlotsView, PoseStack stack, double mouseX, double mouseY) {
-        this.progress.getUnchecked(100).draw(stack, 36, 18);
-        this.flame.getUnchecked(220).draw(stack, 13, 20);
+        this.progress.getUnchecked((time - 50) / 100).draw(stack, 36, 18);
+        this.flame.getUnchecked(time - 20).draw(stack, 13, 20);
 
         Font fontRenderer = Minecraft.getInstance().font;
-        int stringWidth = fontRenderer.width("12.5s");
-        fontRenderer.draw(stack, "12.5s", background.getWidth() - stringWidth, 45, 0xff808080);
+        int stringWidth = fontRenderer.width(time / 20 + "s");
+        fontRenderer.draw(stack, time / 20 + "s", background.getWidth() - stringWidth, 45, 0xff808080);
     }
 }

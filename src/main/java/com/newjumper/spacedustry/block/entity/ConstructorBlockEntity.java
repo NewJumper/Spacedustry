@@ -30,8 +30,6 @@ import org.jetbrains.annotations.Nullable;
 import java.util.Optional;
 
 public class ConstructorBlockEntity extends BlockEntity implements MenuProvider {
-    private final LazyOptional<IItemHandler> lazyItemHandler;
-    public final ItemStackHandler itemHandler;
     private final ContainerData data = new ContainerData() {
         @Override
         public int get(int pIndex) {
@@ -59,6 +57,8 @@ public class ConstructorBlockEntity extends BlockEntity implements MenuProvider 
             return 4;
         }
     };
+    private final LazyOptional<IItemHandler> lazyItemHandler;
+    public final ItemStackHandler itemHandler;
     private int fuel;
     private int maxFuel;
     private int progress;
