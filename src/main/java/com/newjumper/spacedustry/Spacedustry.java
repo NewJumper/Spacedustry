@@ -8,6 +8,7 @@ import com.newjumper.spacedustry.recipe.ConstructingRecipe;
 import com.newjumper.spacedustry.recipe.SpacedustryRecipes;
 import com.newjumper.spacedustry.screen.ConstructorScreen;
 import com.newjumper.spacedustry.screen.GasCondenserScreen;
+import com.newjumper.spacedustry.screen.ManufacturerScreen;
 import com.newjumper.spacedustry.screen.SpacedustryMenuTypes;
 import com.newjumper.spacedustry.world.ConfiguredFeatures;
 import com.newjumper.spacedustry.world.PlacedFeatures;
@@ -60,6 +61,7 @@ public class Spacedustry {
         public static void clientSetup(final FMLClientSetupEvent event) {
             MenuScreens.register(SpacedustryMenuTypes.CONSTRUCTOR_MENU.get(), ConstructorScreen::new);
             MenuScreens.register(SpacedustryMenuTypes.GAS_CONDENSER_MENU.get(), GasCondenserScreen::new);
+            MenuScreens.register(SpacedustryMenuTypes.MANUFACTURER_MENU.get(), ManufacturerScreen::new);
         }
     }
 }

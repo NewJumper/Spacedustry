@@ -2,8 +2,8 @@ package com.newjumper.spacedustry.block.entity;
 
 import com.newjumper.spacedustry.Spacedustry;
 import com.newjumper.spacedustry.block.SpacedustryBlocks;
-import com.newjumper.spacedustry.recipe.ConstructingRecipe;
 import com.newjumper.spacedustry.screen.ConstructorMenu;
+import com.newjumper.spacedustry.screen.ManufacturerMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
@@ -14,11 +14,9 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.util.LazyOptional;
@@ -27,17 +25,15 @@ import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.Optional;
-
-public class ConstructorBlockEntity extends BlockEntity implements MenuProvider {
+public class ManufacturerBlockEntity extends BlockEntity implements MenuProvider {
     private final ContainerData data = new ContainerData() {
         @Override
         public int get(int pIndex) {
             return switch (pIndex) {
-                case 0 -> ConstructorBlockEntity.this.fuel;
-                case 1 -> ConstructorBlockEntity.this.maxFuel;
-                case 2 -> ConstructorBlockEntity.this.progress;
-                case 3 -> ConstructorBlockEntity.this.maxProgress;
+                case 0 -> ManufacturerBlockEntity.this.fuel;
+                case 1 -> ManufacturerBlockEntity.this.maxFuel;
+                case 2 -> ManufacturerBlockEntity.this.progress;
+                case 3 -> ManufacturerBlockEntity.this.maxProgress;
                 default -> 0;
             };
         }
@@ -45,10 +41,10 @@ public class ConstructorBlockEntity extends BlockEntity implements MenuProvider 
         @Override
         public void set(int pIndex, int pValue) {
             switch (pIndex) {
-                case 0 -> ConstructorBlockEntity.this.fuel = pValue;
-                case 1 -> ConstructorBlockEntity.this.maxFuel = pValue;
-                case 2 -> ConstructorBlockEntity.this.progress = pValue;
-                case 3 -> ConstructorBlockEntity.this.maxProgress = pValue;
+                case 0 -> ManufacturerBlockEntity.this.fuel = pValue;
+                case 1 -> ManufacturerBlockEntity.this.maxFuel = pValue;
+                case 2 -> ManufacturerBlockEntity.this.progress = pValue;
+                case 3 -> ManufacturerBlockEntity.this.maxProgress = pValue;
             }
         }
 
@@ -64,8 +60,8 @@ public class ConstructorBlockEntity extends BlockEntity implements MenuProvider 
     private int progress;
     private int maxProgress;
 
-    public ConstructorBlockEntity(BlockPos pPos, BlockState pBlockState) {
-        super(SpacedustryBlockEntities.CONSTRUCTOR.get(), pPos, pBlockState);
+    public ManufacturerBlockEntity(BlockPos pPos, BlockState pBlockState) {
+        super(SpacedustryBlockEntities.MANUFACTURER.get(), pPos, pBlockState);
 
         this.itemHandler = new ItemStackHandler(4) {
             @Override
@@ -79,13 +75,13 @@ public class ConstructorBlockEntity extends BlockEntity implements MenuProvider 
 
     @Override
     public @NotNull Component getDisplayName() {
-        return Component.translatable("container." + Spacedustry.MOD_ID + "." + SpacedustryBlocks.CONSTRUCTOR.getId().getPath());
+        return Component.translatable("container." + Spacedustry.MOD_ID + "." + SpacedustryBlocks.MANUFACTURER.getId().getPath());
     }
 
     @Nullable
     @Override
     public AbstractContainerMenu createMenu(int pContainerId, Inventory pPlayerInventory, Player pPlayer) {
-        return new ConstructorMenu(pContainerId, pPlayerInventory, this, this.data);
+        return new ManufacturerMenu(pContainerId, pPlayerInventory, this, this.data);
     }
 
     @Override
@@ -131,53 +127,7 @@ public class ConstructorBlockEntity extends BlockEntity implements MenuProvider 
         Containers.dropContents(this.level, this.worldPosition, inventory);
     }
 
-    public static void tick(Level level, BlockPos pos, BlockState state, ConstructorBlockEntity blockEntity) {
-        SimpleContainer container = new SimpleContainer(blockEntity.itemHandler.getSlots());
-        for(int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
-            container.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
-        }
+    public static void tick(Level level, BlockPos pos, BlockState state, ManufacturerBlockEntity blockEntity) {
 
-        Optional<ConstructingRecipe> recipe = level.getRecipeManager().getRecipeFor(ConstructingRecipe.Type.INSTANCE, container, level);
-        recipe.ifPresent(separatingRecipe -> blockEntity.maxProgress = separatingRecipe.getTime());
-
-        if(blockEntity.isActive()) blockEntity.fuel--;
-
-        if(canConstruct(container, recipe) && !blockEntity.isActive()) {
-            double constant = blockEntity.getFuelCapacity(blockEntity.itemHandler.getStackInSlot(0)) / 200.0;
-            blockEntity.maxFuel = (int) (blockEntity.maxProgress * constant);
-            blockEntity.fuel = blockEntity.maxFuel;
-            blockEntity.itemHandler.extractItem(0, 1, false);
-        }
-
-        if(canConstruct(container, recipe) && blockEntity.isActive()) {
-            blockEntity.progress++;
-            if(blockEntity.progress == blockEntity.maxProgress) {
-                blockEntity.itemHandler.extractItem(1,1, false);
-                blockEntity.itemHandler.extractItem(2,1, false);
-                blockEntity.itemHandler.setStackInSlot(3, new ItemStack(recipe.get().getResultItem().getItem(), blockEntity.itemHandler.getStackInSlot(3).getCount() + recipe.get().getResultItem().getCount()));
-
-                blockEntity.progress = 0;
-            }
-        }
-
-        if(blockEntity.itemHandler.getStackInSlot(1).isEmpty() || blockEntity.itemHandler.getStackInSlot(2).isEmpty()) blockEntity.progress = 0;
-
-        setChanged(level, pos, state);
-    }
-
-    private static boolean canConstruct(SimpleContainer container, Optional<ConstructingRecipe> recipe) {
-        return recipe.isPresent() && validOutput(container, recipe.get().getResultItem(), container.getContainerSize() - 1);
-    }
-
-    private boolean isActive() {
-        return this.fuel > 0;
-    }
-
-    private int getFuelCapacity(ItemStack stack) {
-        return stack.isEmpty() ? 0 : ForgeHooks.getBurnTime(stack, null);
-    }
-
-    private static boolean validOutput(SimpleContainer container, ItemStack result, int lastSlot) {
-        return (container.getItem(lastSlot).getItem() == result.getItem() || container.getItem(lastSlot).isEmpty()) && (container.getItem(lastSlot).getCount() < container.getItem(lastSlot).getMaxStackSize());
     }
 }
