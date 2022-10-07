@@ -10,4 +10,5 @@ public class SpacedustryRecipes {
     public static final DeferredRegister<RecipeSerializer<?>> RECIPE_SERIALIZERS = DeferredRegister.create(ForgeRegistries.RECIPE_SERIALIZERS, Spacedustry.MOD_ID);
 
     public static final RegistryObject<RecipeSerializer<ConstructingRecipe>> CONSTRUCTING = RECIPE_SERIALIZERS.register("constructing", ConstructingRecipe.Serializer::new);
+    public static final RegistryObject<RecipeSerializer<ManufacturingRecipe>> MANUFACTURING = RECIPE_SERIALIZERS.register("manufacturing", ManufacturingRecipe.Serializer::new);
 }

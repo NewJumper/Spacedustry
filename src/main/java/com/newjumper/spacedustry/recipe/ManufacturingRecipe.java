@@ -11,16 +11,18 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
 
-public class ConstructingRecipe implements Recipe<SimpleContainer> {
+public class ManufacturingRecipe implements Recipe<SimpleContainer> {
     private final ResourceLocation id;
     private final NonNullList<Ingredient> ingredients;
+    private final Ingredient conductor;
     private final ItemStack result;
     private final float experience;
     private final int time;
 
-    public ConstructingRecipe(ResourceLocation pId, NonNullList<Ingredient> pIngredients, ItemStack pResult, float pExperience, int pTime) {
+    public ManufacturingRecipe(ResourceLocation pId, NonNullList<Ingredient> pIngredients, Ingredient pConductor, ItemStack pResult, float pExperience, int pTime) {
         this.id = pId;
         this.ingredients = pIngredients;
+        this.conductor = pConductor;
         this.result = pResult;
         this.experience = pExperience;
         this.time = pTime;
@@ -67,51 +69,54 @@ public class ConstructingRecipe implements Recipe<SimpleContainer> {
 
     @Override
     public RecipeSerializer<?> getSerializer() {
-        return SpacedustryRecipes.CONSTRUCTING.get();
+        return SpacedustryRecipes.MANUFACTURING.get();
     }
 
     @Override
     public RecipeType<?> getType() {
-        return Type.INSTANCE;
+        return ManufacturingRecipe.Type.INSTANCE;
     }
 
-    public static class Type implements RecipeType<ConstructingRecipe> {
+    public static class Type implements RecipeType<ManufacturingRecipe> {
         private Type() {}
-        public static final Type INSTANCE = new Type();
+        public static final ManufacturingRecipe.Type INSTANCE = new ManufacturingRecipe.Type();
     }
 
-    public static class Serializer implements RecipeSerializer<ConstructingRecipe> {
+    public static class Serializer implements RecipeSerializer<ManufacturingRecipe> {
         @Override
-        public ConstructingRecipe fromJson(ResourceLocation pId, JsonObject pJson) {
+        public ManufacturingRecipe fromJson(ResourceLocation pId, JsonObject pJson) {
             JsonArray input = GsonHelper.getAsJsonArray(pJson, "ingredients");
             NonNullList<Ingredient> ingredients = NonNullList.withSize(2, Ingredient.EMPTY);
             for(int i = 0; i < ingredients.size(); i++) {
                 ingredients.set(i, Ingredient.fromJson(input.get(i)));
             }
+            Ingredient conductor = Ingredient.fromJson(GsonHelper.getAsJsonObject(pJson, "conductor"));
             ItemStack result = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(pJson, "result"));
             float experience = GsonHelper.getAsFloat(pJson, "experience", 0);
             int time = GsonHelper.getAsInt(pJson, "time", 250);
 
-            return new ConstructingRecipe(pId, ingredients, result, experience, time);
+            return new ManufacturingRecipe(pId, ingredients, conductor, result, experience, time);
         }
 
         @Override
-        public ConstructingRecipe fromNetwork(ResourceLocation pId, FriendlyByteBuf pBuffer) {
+        public ManufacturingRecipe fromNetwork(ResourceLocation pId, FriendlyByteBuf pBuffer) {
             NonNullList<Ingredient> ingredients = NonNullList.withSize(pBuffer.readInt(), Ingredient.EMPTY);
             ingredients.replaceAll(ignored -> Ingredient.fromNetwork(pBuffer));
+            Ingredient conductor = Ingredient.fromNetwork(pBuffer);
             ItemStack result = pBuffer.readItem();
             float experience = pBuffer.readFloat();
             int time = pBuffer.readVarInt();
 
-            return new ConstructingRecipe(pId, ingredients, result, experience, time);
+            return new ManufacturingRecipe(pId, ingredients, conductor, result, experience, time);
         }
 
         @Override
-        public void toNetwork(FriendlyByteBuf pBuffer, ConstructingRecipe pRecipe) {
+        public void toNetwork(FriendlyByteBuf pBuffer, ManufacturingRecipe pRecipe) {
             pBuffer.writeInt(pRecipe.getIngredients().size());
             for(Ingredient ingredient : pRecipe.getIngredients()) {
                 ingredient.toNetwork(pBuffer);
             }
+            pRecipe.conductor.toNetwork(pBuffer);
             pBuffer.writeItem(pRecipe.getResultItem());
             pBuffer.writeFloat(pRecipe.getExperience());
             pBuffer.writeVarInt(pRecipe.getTime());

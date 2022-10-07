@@ -2,7 +2,6 @@ package com.newjumper.spacedustry.block.entity;
 
 import com.newjumper.spacedustry.Spacedustry;
 import com.newjumper.spacedustry.block.SpacedustryBlocks;
-import com.newjumper.spacedustry.screen.ConstructorMenu;
 import com.newjumper.spacedustry.screen.ManufacturerMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;

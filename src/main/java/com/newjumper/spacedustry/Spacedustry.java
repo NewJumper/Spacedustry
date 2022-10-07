@@ -5,6 +5,7 @@ import com.newjumper.spacedustry.block.entity.SpacedustryBlockEntities;
 import com.newjumper.spacedustry.capabilities.IGasStorage;
 import com.newjumper.spacedustry.item.SpacedustryItems;
 import com.newjumper.spacedustry.recipe.ConstructingRecipe;
+import com.newjumper.spacedustry.recipe.ManufacturingRecipe;
 import com.newjumper.spacedustry.recipe.SpacedustryRecipes;
 import com.newjumper.spacedustry.screen.ConstructorScreen;
 import com.newjumper.spacedustry.screen.GasCondenserScreen;
@@ -52,6 +53,7 @@ public class Spacedustry {
     public void registerRecipeTypes(final RegisterEvent event) {
         event.register(ForgeRegistries.Keys.RECIPE_TYPES, helper -> {
             helper.register(new ResourceLocation(MOD_ID, "constructing"), ConstructingRecipe.Type.INSTANCE);
+            helper.register(new ResourceLocation(MOD_ID, "manufacturing"), ManufacturingRecipe.Type.INSTANCE);
         });
     }
 
