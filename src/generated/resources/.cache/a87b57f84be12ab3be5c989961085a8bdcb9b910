@@ -1,4 +1,4 @@
-// 1.19.2	2022-10-12T21:28:32.7260263	Item Models: spacedustry
+// 1.19.2	2022-10-12T21:50:40.0333999	Item Models: spacedustry
 eb1410995614dd481433a3cae14e9dce3b473516 assets/spacedustry/models/item/aerograde_plate.json
 ad8ccac2356374591af1f23a88de172174b7c84a assets/spacedustry/models/item/aluminum_block.json
 0347cf0332060c50f9e2c99f200ed3263d9fa1f7 assets/spacedustry/models/item/aluminum_ingot.json
@@ -7,6 +7,7 @@ bef6a0173b3ae9b9d8677b0eed36711cb5315009 assets/spacedustry/models/item/bulnite_
 1f85a89dfe008df5dce8bb22bdd3ad58b212dab3 assets/spacedustry/models/item/bulnite_plate.json
 8e5abfe8e7c6330afc564110dbaa74270f6d6653 assets/spacedustry/models/item/cobalt_alloy.json
 ce83cf93ab75bf5276b3475d5e96363cd9c53ccc assets/spacedustry/models/item/cobbled_moon_stone.json
+15ea4611fa772a67d965d05a2de59af57db944b6 assets/spacedustry/models/item/composite_builder.json
 5a1fe7597cbc3e1ce0374d81eaf9d3d6dccfa530 assets/spacedustry/models/item/constructor.json
 266c613595f1d3d572c089c9b89ca7efd24d164e assets/spacedustry/models/item/debris_rocks.json
 3a9fe5587613febfae9d38d6ecefa2700fdc0948 assets/spacedustry/models/item/deepslate_aluminum_ore.json

@@ -30,8 +30,9 @@ public class SpacedustryItems {
     public static final RegistryObject<Item> STEEL_ALLOY = ITEMS.register("steel_alloy", () -> new Item(new Item.Properties().tab(SpacedustryCreative.SPACEDUSTRY)));
     public static final RegistryObject<Item> SUPER_ALLOY = ITEMS.register("super_alloy", () -> new Item(new Item.Properties().tab(SpacedustryCreative.SPACEDUSTRY)));
 
-    public static final RegistryObject<Item> BULNITE_PLATE = ITEMS.register("bulnite_plate", () -> new Item(new Item.Properties().tab(SpacedustryCreative.SPACEDUSTRY)));
+    public static final RegistryObject<Item> COMPOSITE_BUILDER = ITEMS.register("composite_builder", () -> new Item(new Item.Properties().tab(SpacedustryCreative.SPACEDUSTRY)));
     public static final RegistryObject<Item> AEROGRADE_PLATE = ITEMS.register("aerograde_plate", () -> new Item(new Item.Properties().tab(SpacedustryCreative.SPACEDUSTRY)));
+    public static final RegistryObject<Item> BULNITE_PLATE = ITEMS.register("bulnite_plate", () -> new Item(new Item.Properties().tab(SpacedustryCreative.SPACEDUSTRY)));
 
     public static final RegistryObject<Item> GAS_CONTAINER = ITEMS.register("gas_container", () -> new Item(new Item.Properties().tab(SpacedustryCreative.SPACEDUSTRY).stacksTo(1)));
 }

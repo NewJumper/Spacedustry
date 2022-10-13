@@ -79,8 +79,9 @@ public class SpacedustryItemModelProvider extends ItemModelProvider {
         itemModel(SpacedustryItems.STEEL_ALLOY, GENERATED);
         itemModel(SpacedustryItems.SUPER_ALLOY, GENERATED);
 
-        itemModel(SpacedustryItems.BULNITE_PLATE, GENERATED);
+        itemModel(SpacedustryItems.COMPOSITE_BUILDER, GENERATED);
         itemModel(SpacedustryItems.AEROGRADE_PLATE, GENERATED);
+        itemModel(SpacedustryItems.BULNITE_PLATE, GENERATED);
 
         itemModel(SpacedustryItems.GAS_CONTAINER, GENERATED);
     }
