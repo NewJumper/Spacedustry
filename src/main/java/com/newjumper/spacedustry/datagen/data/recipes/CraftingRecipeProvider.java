@@ -60,7 +60,7 @@ public class CraftingRecipeProvider extends RecipeProvider implements ICondition
                 .pattern("SSS")
                 .unlockedBy("has_duralumin", has(SpacedustryItems.DURALUMIN_ALLOY.get())).save(consumer);
         ShapedRecipeBuilder.shaped(SpacedustryBlocks.ROCKET_ASSEMBLER.get())
-                .define('B', SpacedustryItems.BURLAM_ALLOY.get())
+                .define('B', SpacedustryItems.BULNITE_ALLOY.get())
                 .define('G', Tags.Items.GLASS)
                 .define('D', Tags.Items.GEMS_DIAMOND)
                 .define('A', Blocks.ANVIL)
@@ -69,7 +69,7 @@ public class CraftingRecipeProvider extends RecipeProvider implements ICondition
                 .pattern("BGB")
                 .pattern("DAD")
                 .pattern("SVS")
-                .unlockedBy("has_burlam", has(SpacedustryItems.BURLAM_ALLOY.get()))
+                .unlockedBy("has_bulnite", has(SpacedustryItems.BULNITE_ALLOY.get()))
                 .unlockedBy("has_super", has(SpacedustryItems.SUPER_ALLOY.get())).save(consumer);
     }
 

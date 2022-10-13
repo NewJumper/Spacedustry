@@ -73,14 +73,14 @@ public class SpacedustryItemModelProvider extends ItemModelProvider {
         itemModel(SpacedustryItems.TUNGSTEN_INGOT, GENERATED);
 
         itemModel(SpacedustryItems.SALT, GENERATED);
-        itemModel(SpacedustryItems.BURLAM_ALLOY, GENERATED);
+        itemModel(SpacedustryItems.BULNITE_ALLOY, GENERATED);
         itemModel(SpacedustryItems.COBALT_ALLOY, GENERATED);
         itemModel(SpacedustryItems.DURALUMIN_ALLOY, GENERATED);
         itemModel(SpacedustryItems.STEEL_ALLOY, GENERATED);
         itemModel(SpacedustryItems.SUPER_ALLOY, GENERATED);
 
-        itemModel(SpacedustryItems.BURLAM_PLATE, GENERATED);
-        itemModel(SpacedustryItems.COMPOSITE_PLATE, GENERATED);
+        itemModel(SpacedustryItems.BULNITE_PLATE, GENERATED);
+        itemModel(SpacedustryItems.AEROGRADE_PLATE, GENERATED);
 
         itemModel(SpacedustryItems.GAS_CONTAINER, GENERATED);
     }

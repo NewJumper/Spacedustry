@@ -42,7 +42,7 @@ public class SpacedustryAdvancementProvider extends AdvancementProvider {
                         Component.translatable(id + "forge_alloy.title"),
                         Component.translatable(id + "forge_alloy.description"),
                         null, FrameType.TASK, true, true, false)
-                .addCriterion("burlam", InventoryChangeTrigger.TriggerInstance.hasItems(SpacedustryItems.BURLAM_ALLOY.get()))
+                .addCriterion("bulnite", InventoryChangeTrigger.TriggerInstance.hasItems(SpacedustryItems.BULNITE_ALLOY.get()))
                 .addCriterion("cobalt", InventoryChangeTrigger.TriggerInstance.hasItems(SpacedustryItems.COBALT_ALLOY.get()))
                 .addCriterion("duralumin", InventoryChangeTrigger.TriggerInstance.hasItems(SpacedustryItems.DURALUMIN_ALLOY.get()))
                 .addCriterion("steel", InventoryChangeTrigger.TriggerInstance.hasItems(SpacedustryItems.STEEL_ALLOY.get()))

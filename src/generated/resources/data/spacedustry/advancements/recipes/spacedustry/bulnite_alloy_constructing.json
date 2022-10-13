@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "spacedustry:burlam_alloy_constructing"
+        "recipe": "spacedustry:bulnite_alloy_constructing"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "spacedustry:burlam_alloy_constructing"
+      "spacedustry:bulnite_alloy_constructing"
     ]
   }
 }

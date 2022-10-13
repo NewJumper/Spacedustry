@@ -20,7 +20,7 @@ public class ConstructingRecipeProvider extends RecipeProvider implements ICondi
 
     @Override
     protected void buildCraftingRecipes(@NotNull Consumer<FinishedRecipe> consumer) {
-        new ConstructingRecipeBuilder(SpacedustryItems.BURLAM_ALLOY.get(), 1)
+        new ConstructingRecipeBuilder(SpacedustryItems.BULNITE_ALLOY.get(), 1)
                 .requires(SpacedustryTags.Items.INGOTS_ALUMINUM).requires(SpacedustryTags.Items.INGOTS_LITHIUM)
                 .unlockedBy("has_aluminum", has(SpacedustryTags.Items.INGOTS_ALUMINUM)).unlockedBy("has_lithium", has(SpacedustryTags.Items.INGOTS_LITHIUM)).save(consumer);
 

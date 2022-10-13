@@ -1,4 +1,4 @@
-// 1.19.2	2022-10-01T11:18:32.7162379	Crafting Recipes
+// 1.19.2	2022-10-12T21:32:23.8901656	Crafting Recipes
 14830f30c3417997fb096f6ed3ee8b2c00696f0e data/minecraft/advancements/recipes/spacedustry/aluminum_block.json
 7da62a4fe319ea63088db8dbfb0149511dbc42c2 data/minecraft/advancements/recipes/spacedustry/aluminum_ingot.json
 837ee9829ade906e2311a67ada55df8748bd062d data/minecraft/advancements/recipes/spacedustry/lithium_block.json
@@ -50,10 +50,10 @@ ee88abfaef40c053364a8b7a4b3a88c830850142 data/minecraft/recipes/tungsten_block.j
 ca9895781ed2ea828177d6ce3748957ab449f16d data/spacedustry/advancements/recipes/spacedustry/constructor.json
 7d74c04ced707c3aa33cb1c61da20f556598fcf7 data/spacedustry/advancements/recipes/spacedustry/manufacturer.json
 af66773896bb16c328f234c3e63857b46f666c79 data/spacedustry/advancements/recipes/spacedustry/moon_stone_bricks.json
-d9000f76f0041c48714dcce14b1e4b1984e1f57b data/spacedustry/advancements/recipes/spacedustry/rocket_assembler.json
+612632b885ad62c48d78e5043eb7fd6b017de96a data/spacedustry/advancements/recipes/spacedustry/rocket_assembler.json
 69e8826b259c1dfcb5fa77c78119f0095922dc6e data/spacedustry/advancements/recipes/spacedustry/salt_block.json
 59b60457f2335693b54f305d0f9dfcaebd8a8f41 data/spacedustry/recipes/constructor.json
 83faa8e79bf0aaf2e6b7b8b137eb6a3532e65ab2 data/spacedustry/recipes/manufacturer.json
 247ac9916f4dc2c74a1445558409317389cd472e data/spacedustry/recipes/moon_stone_bricks.json
-eaae0f838942c089d40f108baddf20dac8313f94 data/spacedustry/recipes/rocket_assembler.json
+70576364048eab46c5862ad39e061f49d8c6e00e data/spacedustry/recipes/rocket_assembler.json
 4ce826ce9f85eea0da0fa035ee1eceefe8f4fd89 data/spacedustry/recipes/salt_block.json

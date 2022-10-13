@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "spacedustry:item/burlam_plate"
+    "layer0": "spacedustry:item/bulnite_plate"
   }
 }

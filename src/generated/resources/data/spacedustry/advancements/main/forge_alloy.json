@@ -1,12 +1,12 @@
 {
   "parent": "spacedustry:main/root",
   "criteria": {
-    "burlam": {
+    "bulnite": {
       "conditions": {
         "items": [
           {
             "items": [
-              "spacedustry:burlam_alloy"
+              "spacedustry:bulnite_alloy"
             ]
           }
         ]
@@ -79,7 +79,7 @@
   },
   "requirements": [
     [
-      "burlam",
+      "bulnite",
       "cobalt",
       "duralumin",
       "steel",

@@ -24,14 +24,14 @@ public class SpacedustryItems {
     public static final RegistryObject<Item> TUNGSTEN_INGOT = ITEMS.register("tungsten_ingot", () -> new Item(new Item.Properties().tab(SpacedustryCreative.SPACEDUSTRY)));
 
     public static final RegistryObject<Item> SALT = ITEMS.register("salt", () -> new Item(new Item.Properties().tab(SpacedustryCreative.SPACEDUSTRY)));
-    public static final RegistryObject<Item> BURLAM_ALLOY = ITEMS.register("burlam_alloy", () -> new Item(new Item.Properties().tab(SpacedustryCreative.SPACEDUSTRY)));
+    public static final RegistryObject<Item> BULNITE_ALLOY = ITEMS.register("bulnite_alloy", () -> new Item(new Item.Properties().tab(SpacedustryCreative.SPACEDUSTRY)));
     public static final RegistryObject<Item> COBALT_ALLOY = ITEMS.register("cobalt_alloy", () -> new Item(new Item.Properties().tab(SpacedustryCreative.SPACEDUSTRY)));
     public static final RegistryObject<Item> DURALUMIN_ALLOY = ITEMS.register("duralumin_alloy", () -> new Item(new Item.Properties().tab(SpacedustryCreative.SPACEDUSTRY)));
     public static final RegistryObject<Item> STEEL_ALLOY = ITEMS.register("steel_alloy", () -> new Item(new Item.Properties().tab(SpacedustryCreative.SPACEDUSTRY)));
     public static final RegistryObject<Item> SUPER_ALLOY = ITEMS.register("super_alloy", () -> new Item(new Item.Properties().tab(SpacedustryCreative.SPACEDUSTRY)));
 
-    public static final RegistryObject<Item> BURLAM_PLATE = ITEMS.register("burlam_plate", () -> new Item(new Item.Properties().tab(SpacedustryCreative.SPACEDUSTRY)));
-    public static final RegistryObject<Item> COMPOSITE_PLATE = ITEMS.register("composite_plate", () -> new Item(new Item.Properties().tab(SpacedustryCreative.SPACEDUSTRY)));
+    public static final RegistryObject<Item> BULNITE_PLATE = ITEMS.register("bulnite_plate", () -> new Item(new Item.Properties().tab(SpacedustryCreative.SPACEDUSTRY)));
+    public static final RegistryObject<Item> AEROGRADE_PLATE = ITEMS.register("aerograde_plate", () -> new Item(new Item.Properties().tab(SpacedustryCreative.SPACEDUSTRY)));
 
     public static final RegistryObject<Item> GAS_CONTAINER = ITEMS.register("gas_container", () -> new Item(new Item.Properties().tab(SpacedustryCreative.SPACEDUSTRY).stacksTo(1)));
 }
