@@ -52,8 +52,10 @@ public class GasCondenserScreen extends AbstractContainerScreen<GasCondenserMenu
 
         this.blit(pPoseStack, x, y, 0, 0, imageWidth, imageHeight);
 
-        int frame = (int) (menu.blockEntity.getLevel().getGameTime() / 5) % 6;
-        this.blit(pPoseStack, x + 45, y + 19, 176 + 13 * frame, 0, 13, 24);
+        if(menu.blockEntity.canCondense()) {
+            int frame = (int) (menu.blockEntity.getLevel().getGameTime() / 4) % 6;
+            this.blit(pPoseStack, x + 45, y + 19, 176 + 13 * frame, 0, 13, 24);
+        }
 
         if(menu.drawGas() > 0) this.blit(pPoseStack, x + 70, y + 67 - this.menu.drawGas(), 184, 68 - this.menu.drawGas(), 24, this.menu.drawGas());
     }

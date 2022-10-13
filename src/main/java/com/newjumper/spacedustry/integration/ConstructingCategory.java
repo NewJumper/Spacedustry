@@ -29,23 +29,16 @@ public class ConstructingCategory implements IRecipeCategory<ConstructingRecipe>
     private final IDrawable background;
     private final IDrawable icon;
     private final LoadingCache<Integer, IDrawableAnimated> progress;
-    private final LoadingCache<Integer, IDrawableAnimated> flame;
     private final int time;
 
     public ConstructingCategory(IGuiHelper guiHelper, int time) {
-        this.background = guiHelper.createDrawable(TEXTURE, 63, 16, 94, 54);
+        this.background = guiHelper.createDrawable(TEXTURE, 68, 16, 91, 54);
         this.icon = guiHelper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(SpacedustryBlocks.CONSTRUCTOR.get()));
 
-        this.progress = CacheBuilder.newBuilder().maximumSize(25).build(new CacheLoader<>() {
+        this.progress = CacheBuilder.newBuilder().maximumSize(30).build(new CacheLoader<>() {
             @Override
             public IDrawableAnimated load(Integer time) {
-                return guiHelper.drawableBuilder(TEXTURE, 176, 14, 24, 17).buildAnimated(time, IDrawableAnimated.StartDirection.LEFT, false);
-            }
-        });
-        this.flame = CacheBuilder.newBuilder().maximumSize(15).build(new CacheLoader<>() {
-            @Override
-            public IDrawableAnimated load(Integer time) {
-                return guiHelper.drawableBuilder(TEXTURE, 176, 0, 14, 14).buildAnimated(time, IDrawableAnimated.StartDirection.TOP, true);
+                return guiHelper.drawableBuilder(TEXTURE, 176, 0, 29, 28).buildAnimated(time, IDrawableAnimated.StartDirection.LEFT, false);
             }
         });
         this.time = time;
@@ -73,15 +66,14 @@ public class ConstructingCategory implements IRecipeCategory<ConstructingRecipe>
 
     @Override
     public void setRecipe(IRecipeLayoutBuilder builder, ConstructingRecipe recipe, IFocusGroup focuses) {
-        builder.addSlot(RecipeIngredientRole.INPUT, 1, 1).addIngredients(recipe.getIngredients().get(0));
-        builder.addSlot(RecipeIngredientRole.INPUT, 25, 1).addIngredients(recipe.getIngredients().get(1));
-        builder.addSlot(RecipeIngredientRole.OUTPUT, 73, 19).addItemStack(recipe.getResultItem());
+        builder.addSlot(RecipeIngredientRole.INPUT, 1, 7).addIngredients(recipe.getIngredients().get(0));
+        builder.addSlot(RecipeIngredientRole.INPUT, 1, 31).addIngredients(recipe.getIngredients().get(1));
+        builder.addSlot(RecipeIngredientRole.OUTPUT, 68, 19).addItemStack(recipe.getResultItem());
     }
 
     @Override
     public void draw(ConstructingRecipe recipe, IRecipeSlotsView recipeSlotsView, PoseStack stack, double mouseX, double mouseY) {
-        this.progress.getUnchecked((time - 50) / 100).draw(stack, 36, 18);
-        this.flame.getUnchecked(time - 20).draw(stack, 13, 20);
+        this.progress.getUnchecked((int) (time / 2.5)).draw(stack, 24, 14);
 
         Font fontRenderer = Minecraft.getInstance().font;
         int stringWidth = fontRenderer.width(time / 20 + "s");

@@ -19,7 +19,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class GasCondenserMenu extends AbstractContainerMenu {
     private static final int INV_SLOTS = 36;
-    private static final int MENU_SLOTS = 2;
+    private static final int MENU_SLOTS = 3;
     public final GasCondenserBlockEntity blockEntity;
     private final Level level;
 
@@ -37,8 +37,9 @@ public class GasCondenserMenu extends AbstractContainerMenu {
         saveData();
 
         this.blockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(itemHandler -> {
-            addSlot(new SlotItemHandler(itemHandler, 0, 137, 25));
-            addSlot(new SlotItemHandler(itemHandler, 1, 137, 49));
+            addSlot(new SlotItemHandler(itemHandler, 0, 43, 47));
+            addSlot(new SlotItemHandler(itemHandler, 1, 137, 25));
+            addSlot(new SlotItemHandler(itemHandler, 2, 137, 49));
         });
     }
 

@@ -17,6 +17,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.capabilities.Capability;
@@ -36,7 +37,7 @@ public class GasCondenserBlockEntity extends BlockEntity implements MenuProvider
     public GasCondenserBlockEntity(BlockPos pPos, BlockState pBlockState) {
         super(SpacedustryBlockEntities.GAS_CONDENSER.get(), pPos, pBlockState);
 
-        this.itemHandler = new ItemStackHandler(2) {
+        this.itemHandler = new ItemStackHandler(3) {
             @Override
             protected void onContentsChanged(int slot) {
                 setChanged();
@@ -104,8 +105,12 @@ public class GasCondenserBlockEntity extends BlockEntity implements MenuProvider
     }
 
     public static void tick(Level level, BlockPos pos, BlockState state, GasCondenserBlockEntity blockEntity) {
-        if(blockEntity.hydrogenStorage.getGasStored() < blockEntity.hydrogenStorage.getGasCapacity()) blockEntity.hydrogenStorage.insertGas(1);
+        if(blockEntity.hydrogenStorage.getGasStored() < blockEntity.hydrogenStorage.getGasCapacity() && blockEntity.canCondense()) blockEntity.hydrogenStorage.insertGas(1);
 
         setChanged(level, pos, state);
+    }
+
+    public boolean canCondense() {
+        return this.itemHandler.getStackInSlot(0).is(Blocks.PACKED_ICE.asItem());
     }
 }

@@ -35,9 +35,9 @@ public class ManufacturerMenu extends AbstractContainerMenu {
         addDataSlots(pContainerData);
 
         this.blockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(handler -> {
-            addSlot(new SlotItemHandler(handler, 0, 64, 25));
-            addSlot(new SlotItemHandler(handler, 1, 53, 46));
-            addSlot(new SlotItemHandler(handler, 2, 75, 46));
+            addSlot(new SlotItemHandler(handler, 0, 64, 50));
+            addSlot(new SlotItemHandler(handler, 1, 53, 20));
+            addSlot(new SlotItemHandler(handler, 2, 75, 20));
             addSlot(new SlotItemHandler(handler, 3, 136, 35) {
                 @Override
                 public boolean mayPlace(@NotNull ItemStack stack) { return false; }

@@ -169,15 +169,15 @@ public class ConstructorBlockEntity extends BlockEntity implements MenuProvider 
         return recipe.isPresent() && validOutput(container, recipe.get().getResultItem(), container.getContainerSize() - 1);
     }
 
+    private static boolean validOutput(SimpleContainer container, ItemStack result, int lastSlot) {
+        return (container.getItem(lastSlot).getItem() == result.getItem() || container.getItem(lastSlot).isEmpty()) && (container.getItem(lastSlot).getCount() < container.getItem(lastSlot).getMaxStackSize());
+    }
+
     private boolean isActive() {
         return this.fuel > 0;
     }
 
     private int getFuelCapacity(ItemStack stack) {
         return stack.isEmpty() ? 0 : ForgeHooks.getBurnTime(stack, null);
-    }
-
-    private static boolean validOutput(SimpleContainer container, ItemStack result, int lastSlot) {
-        return (container.getItem(lastSlot).getItem() == result.getItem() || container.getItem(lastSlot).isEmpty()) && (container.getItem(lastSlot).getCount() < container.getItem(lastSlot).getMaxStackSize());
     }
 }

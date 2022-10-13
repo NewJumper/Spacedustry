@@ -36,14 +36,14 @@ public class ConstructorMenu extends AbstractContainerMenu {
         addDataSlots(pContainerData);
 
         this.blockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(handler -> {
-            addSlot(new SlotItemHandler(handler, 0, 76, 53) {
+            addSlot(new SlotItemHandler(handler, 0, 27, 43) {
                 @Override
                 public boolean mayPlace(@NotNull ItemStack stack) {
                     return ForgeHooks.getBurnTime(stack, null) > 0;
                 }
             });
-            addSlot(new SlotItemHandler(handler, 1, 64, 17));
-            addSlot(new SlotItemHandler(handler, 2, 88, 17));
+            addSlot(new SlotItemHandler(handler, 1, 69, 23));
+            addSlot(new SlotItemHandler(handler, 2, 69, 47));
             addSlot(new SlotItemHandler(handler, 3, 136, 35) {
                 @Override
                 public boolean mayPlace(@NotNull ItemStack stack) { return false; }
@@ -99,6 +99,6 @@ public class ConstructorMenu extends AbstractContainerMenu {
         double progress = this.data.get(2);
         int max = this.data.get(3);
 
-        return progress == 0 ? 0 : (int) (progress / max * 24);
+        return progress == 0 ? 0 : (int) (progress / max * 29);
     }
 }
