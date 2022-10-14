@@ -2,6 +2,7 @@ package com.newjumper.spacedustry.integration;
 
 import com.newjumper.spacedustry.Spacedustry;
 import com.newjumper.spacedustry.recipe.ConstructingRecipe;
+import com.newjumper.spacedustry.recipe.ManufacturingRecipe;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.helpers.IGuiHelper;
@@ -26,14 +27,16 @@ public class SpacedustryJEI implements IModPlugin {
     public void registerCategories(IRecipeCategoryRegistration registration) {
         IGuiHelper guiHelper = registration.getJeiHelpers().getGuiHelper();
 
-        registration.addRecipeCategories(new ConstructingCategory(guiHelper, 250));
+        registration.addRecipeCategories(new ConstructingCategory(guiHelper, 250), new ManufacturingCategory(guiHelper, 250));
     }
 
     @Override
     public void registerRecipes(IRecipeRegistration registration) {
         RecipeManager recipes = Objects.requireNonNull(Minecraft.getInstance().level).getRecipeManager();
         List<ConstructingRecipe> constructing = recipes.getAllRecipesFor(ConstructingRecipe.Type.INSTANCE);
+        List<ManufacturingRecipe> manufacturing = recipes.getAllRecipesFor(ManufacturingRecipe.Type.INSTANCE);
 
         registration.addRecipes(new RecipeType<>(new ResourceLocation(Spacedustry.MOD_ID, "constructing"), ConstructingRecipe.class), constructing);
+        registration.addRecipes(new RecipeType<>(new ResourceLocation(Spacedustry.MOD_ID, "manufacturing"), ManufacturingRecipe.class), manufacturing);
     }
 }
