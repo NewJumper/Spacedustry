@@ -24,7 +24,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 import java.util.function.Consumer;
 
-public class ConstructingRecipeBuilder implements RecipeBuilder {
+public class ManufacturingRecipeBuilder implements RecipeBuilder {
     private final Item result;
     private final List<Ingredient> ingredients = Lists.newArrayList();
     private final int count;
@@ -32,37 +32,37 @@ public class ConstructingRecipeBuilder implements RecipeBuilder {
     private final int time;
     private final Advancement.Builder advancement = Advancement.Builder.advancement();
 
-    public ConstructingRecipeBuilder(ItemLike result, int count) {
+    public ManufacturingRecipeBuilder(ItemLike result, int count) {
         this(result, count, 0);
     }
 
-    public ConstructingRecipeBuilder(ItemLike result, int count, float experience) {
+    public ManufacturingRecipeBuilder(ItemLike result, int count, float experience) {
         this(result, count, experience, 250);
     }
 
-    public ConstructingRecipeBuilder(ItemLike result, int count, float experience, int time) {
+    public ManufacturingRecipeBuilder(ItemLike result, int count, float experience, int time) {
         this.result = result.asItem();
         this.count = count;
         this.experience = experience;
         this.time = time;
     }
 
-    public ConstructingRecipeBuilder requires(TagKey<Item> tag) {
+    public ManufacturingRecipeBuilder requires(TagKey<Item> tag) {
         return this.requires(tag, 1);
     }
 
-    public ConstructingRecipeBuilder requires(TagKey<Item> tag, int quantity) {
+    public ManufacturingRecipeBuilder requires(TagKey<Item> tag, int quantity) {
         for(int i = 0; i < quantity; i++) {
             this.ingredients.add(Ingredient.of(tag));
         }
         return this;
     }
 
-    public ConstructingRecipeBuilder requires(ItemLike item) {
+    public ManufacturingRecipeBuilder requires(ItemLike item) {
         return this.requires(item, 1);
     }
 
-    public ConstructingRecipeBuilder requires(ItemLike item, int quantity) {
+    public ManufacturingRecipeBuilder requires(ItemLike item, int quantity) {
         for(int i = 0; i < quantity; i++) {
             this.ingredients.add(Ingredient.of(item));
         }
@@ -87,13 +87,13 @@ public class ConstructingRecipeBuilder implements RecipeBuilder {
 
     @Override
     public void save(Consumer<FinishedRecipe> consumer) {
-        this.save(consumer, new ResourceLocation(Spacedustry.MOD_ID, ForgeRegistries.ITEMS.getKey(result).getPath() + "_constructing"));
+        this.save(consumer, new ResourceLocation(Spacedustry.MOD_ID, ForgeRegistries.ITEMS.getKey(result).getPath() + "_manufacturing"));
     }
 
     @Override
     public void save(Consumer<FinishedRecipe> consumer, ResourceLocation recipeId) {
         this.advancement.parent(new ResourceLocation("recipes/root")).addCriterion("has_the_recipe", RecipeUnlockedTrigger.unlocked(recipeId)).rewards(AdvancementRewards.Builder.recipe(recipeId)).requirements(RequirementsStrategy.OR);
-        consumer.accept(new ConstructingRecipeBuilder.Result(recipeId, this.result, this.ingredients, this.count, this.experience, this.time, this.advancement, new ResourceLocation(recipeId.getNamespace(), "recipes/" + this.result.getItemCategory().getRecipeFolderName() + "/" + recipeId.getPath())));
+        consumer.accept(new ManufacturingRecipeBuilder.Result(recipeId, this.result, this.ingredients, this.count, this.experience, this.time, this.advancement, new ResourceLocation(recipeId.getNamespace(), "recipes/" + this.result.getItemCategory().getRecipeFolderName() + "/" + recipeId.getPath())));
     }
 
     public static class Result implements FinishedRecipe {
@@ -142,7 +142,7 @@ public class ConstructingRecipeBuilder implements RecipeBuilder {
 
         @Override
         public RecipeSerializer<?> getType() {
-            return SpacedustryRecipes.CONSTRUCTING.get();
+            return SpacedustryRecipes.MANUFACTURING.get();
         }
 
         @Nullable

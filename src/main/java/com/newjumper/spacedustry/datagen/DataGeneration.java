@@ -6,8 +6,8 @@ import com.newjumper.spacedustry.datagen.assets.SpacedustryBlockStateProvider;
 import com.newjumper.spacedustry.datagen.assets.SpacedustryItemModelProvider;
 import com.newjumper.spacedustry.datagen.data.SpacedustryAdvancementProvider;
 import com.newjumper.spacedustry.datagen.data.SpacedustryLootTables;
-import com.newjumper.spacedustry.datagen.data.recipes.ConstructingRecipeProvider;
 import com.newjumper.spacedustry.datagen.data.recipes.CraftingRecipeProvider;
+import com.newjumper.spacedustry.datagen.data.recipes.MachiningRecipeProvider;
 import com.newjumper.spacedustry.datagen.data.recipes.SmeltingRecipeProvider;
 import com.newjumper.spacedustry.datagen.data.recipes.StonecuttingRecipeProvider;
 import com.newjumper.spacedustry.datagen.data.tags.SpacedustryBiomeTagsProvider;
@@ -36,7 +36,7 @@ public class DataGeneration {
         generator.addProvider(event.includeServer(), new CraftingRecipeProvider(generator));
         generator.addProvider(event.includeServer(), new SmeltingRecipeProvider(generator));
         generator.addProvider(event.includeServer(), new StonecuttingRecipeProvider(generator));
-        generator.addProvider(event.includeServer(), new ConstructingRecipeProvider(generator));
+        generator.addProvider(event.includeServer(), new MachiningRecipeProvider(generator));
 
         SpacedustryBlockTagsProvider blockTags = new SpacedustryBlockTagsProvider(generator, fileHelper);
         generator.addProvider(event.includeServer(), blockTags);

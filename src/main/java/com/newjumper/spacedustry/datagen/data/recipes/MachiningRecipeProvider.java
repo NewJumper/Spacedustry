@@ -1,6 +1,7 @@
 package com.newjumper.spacedustry.datagen.data.recipes;
 
 import com.newjumper.spacedustry.datagen.data.recipes.builders.ConstructingRecipeBuilder;
+import com.newjumper.spacedustry.datagen.data.recipes.builders.ManufacturingRecipeBuilder;
 import com.newjumper.spacedustry.item.SpacedustryItems;
 import com.newjumper.spacedustry.util.SpacedustryTags;
 import net.minecraft.data.DataGenerator;
@@ -13,8 +14,8 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Consumer;
 
-public class ConstructingRecipeProvider extends RecipeProvider implements IConditionBuilder {
-    public ConstructingRecipeProvider(DataGenerator gen) {
+public class MachiningRecipeProvider extends RecipeProvider implements IConditionBuilder {
+    public MachiningRecipeProvider(DataGenerator gen) {
         super(gen);
     }
 
@@ -39,6 +40,15 @@ public class ConstructingRecipeProvider extends RecipeProvider implements ICondi
         new ConstructingRecipeBuilder(SpacedustryItems.SUPER_ALLOY.get(), 1)
                 .requires(SpacedustryTags.Items.INGOTS_MOLYBDENUM).requires(SpacedustryTags.Items.INGOTS_NICKEL)
                 .unlockedBy("has_molybdenum", has(SpacedustryTags.Items.INGOTS_MOLYBDENUM)).unlockedBy("has_nickel", has(SpacedustryTags.Items.ORES_NICKEL)).save(consumer);
+
+
+        new ManufacturingRecipeBuilder(SpacedustryItems.BULNITE_PLATE.get(), 1)
+                .requires(SpacedustryItems.BULNITE_ALLOY.get(), 2)
+                .unlockedBy("has_bulnite", has(SpacedustryItems.BULNITE_ALLOY.get())).save(consumer);
+
+        new ManufacturingRecipeBuilder(SpacedustryItems.AEROGRADE_PLATE.get(), 1)
+                .requires(SpacedustryItems.STEEL_ALLOY.get()).requires(SpacedustryItems.DURALUMIN_ALLOY.get())
+                .unlockedBy("has_steel", has(SpacedustryItems.STEEL_ALLOY.get())).unlockedBy("has_duralumin", has(SpacedustryItems.DURALUMIN_ALLOY.get())).save(consumer);
     }
 
     @NotNull

@@ -1,0 +1,14 @@
+{
+  "type": "spacedustry:manufacturing",
+  "ingredients": [
+    {
+      "item": "spacedustry:steel_alloy"
+    },
+    {
+      "item": "spacedustry:duralumin_alloy"
+    }
+  ],
+  "result": {
+    "item": "spacedustry:aerograde_plate"
+  }
+}
