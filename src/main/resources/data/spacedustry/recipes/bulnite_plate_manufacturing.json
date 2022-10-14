@@ -1,0 +1,14 @@
+{
+  "type": "spacedustry:manufacturing",
+  "ingredients": [
+    {
+      "item": "spacedustry:bulnite_alloy"
+    },
+    {
+      "item": "spacedustry:bulnite_alloy"
+    }
+  ],
+  "result": {
+    "item": "spacedustry:bulnite_plate"
+  }
+}

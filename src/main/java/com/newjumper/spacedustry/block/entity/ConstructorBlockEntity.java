@@ -138,7 +138,7 @@ public class ConstructorBlockEntity extends BlockEntity implements MenuProvider 
         }
 
         Optional<ConstructingRecipe> recipe = level.getRecipeManager().getRecipeFor(ConstructingRecipe.Type.INSTANCE, container, level);
-        recipe.ifPresent(separatingRecipe -> blockEntity.maxProgress = separatingRecipe.getTime());
+        recipe.ifPresent(constructingRecipe -> blockEntity.maxProgress = constructingRecipe.getTime());
 
         if(blockEntity.isActive()) blockEntity.fuel--;
 
@@ -161,16 +161,12 @@ public class ConstructorBlockEntity extends BlockEntity implements MenuProvider 
         }
 
         if(blockEntity.itemHandler.getStackInSlot(1).isEmpty() || blockEntity.itemHandler.getStackInSlot(2).isEmpty()) blockEntity.progress = 0;
-
         setChanged(level, pos, state);
     }
 
     private static boolean canConstruct(SimpleContainer container, Optional<ConstructingRecipe> recipe) {
-        return recipe.isPresent() && validOutput(container, recipe.get().getResultItem(), container.getContainerSize() - 1);
-    }
-
-    private static boolean validOutput(SimpleContainer container, ItemStack result, int lastSlot) {
-        return (container.getItem(lastSlot).getItem() == result.getItem() || container.getItem(lastSlot).isEmpty()) && (container.getItem(lastSlot).getCount() < container.getItem(lastSlot).getMaxStackSize());
+        int output = container.getContainerSize() - 1;
+        return recipe.isPresent() && (container.getItem(output).getItem() == recipe.get().getResultItem().getItem() || container.getItem(output).isEmpty()) && (container.getItem(output).getCount() < container.getItem(output).getMaxStackSize());
     }
 
     private boolean isActive() {

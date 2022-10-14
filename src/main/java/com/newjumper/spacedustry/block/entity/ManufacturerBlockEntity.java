@@ -2,6 +2,8 @@ package com.newjumper.spacedustry.block.entity;
 
 import com.newjumper.spacedustry.Spacedustry;
 import com.newjumper.spacedustry.block.SpacedustryBlocks;
+import com.newjumper.spacedustry.item.SpacedustryItems;
+import com.newjumper.spacedustry.recipe.ManufacturingRecipe;
 import com.newjumper.spacedustry.screen.ManufacturerMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
@@ -13,6 +15,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
@@ -24,15 +27,16 @@ import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.Optional;
+
 public class ManufacturerBlockEntity extends BlockEntity implements MenuProvider {
     private final ContainerData data = new ContainerData() {
         @Override
         public int get(int pIndex) {
             return switch (pIndex) {
-                case 0 -> ManufacturerBlockEntity.this.fuel;
-                case 1 -> ManufacturerBlockEntity.this.maxFuel;
-                case 2 -> ManufacturerBlockEntity.this.progress;
-                case 3 -> ManufacturerBlockEntity.this.maxProgress;
+                case 0 -> ManufacturerBlockEntity.this.power;
+                case 1 -> ManufacturerBlockEntity.this.progress;
+                case 2 -> ManufacturerBlockEntity.this.maxProgress;
                 default -> 0;
             };
         }
@@ -40,22 +44,20 @@ public class ManufacturerBlockEntity extends BlockEntity implements MenuProvider
         @Override
         public void set(int pIndex, int pValue) {
             switch (pIndex) {
-                case 0 -> ManufacturerBlockEntity.this.fuel = pValue;
-                case 1 -> ManufacturerBlockEntity.this.maxFuel = pValue;
-                case 2 -> ManufacturerBlockEntity.this.progress = pValue;
-                case 3 -> ManufacturerBlockEntity.this.maxProgress = pValue;
+                case 0 -> ManufacturerBlockEntity.this.power = pValue;
+                case 1 -> ManufacturerBlockEntity.this.progress = pValue;
+                case 2 -> ManufacturerBlockEntity.this.maxProgress = pValue;
             }
         }
 
         @Override
         public int getCount() {
-            return 4;
+            return 3;
         }
     };
     private final LazyOptional<IItemHandler> lazyItemHandler;
     public final ItemStackHandler itemHandler;
-    private int fuel;
-    private int maxFuel;
+    private int power;
     private int progress;
     private int maxProgress;
 
@@ -87,8 +89,7 @@ public class ManufacturerBlockEntity extends BlockEntity implements MenuProvider
     protected void saveAdditional(@NotNull CompoundTag pTag) {
         super.saveAdditional(pTag);
         pTag.put("inventory", itemHandler.serializeNBT());
-        pTag.putInt("fuel", this.fuel);
-        pTag.putInt("maxFuel", this.maxFuel);
+        pTag.putInt("power", this.power);
         pTag.putInt("progress", this.progress);
         pTag.putInt("maxProgress", this.maxProgress);
     }
@@ -97,8 +98,7 @@ public class ManufacturerBlockEntity extends BlockEntity implements MenuProvider
     public void load(@NotNull CompoundTag pTag) {
         super.load(pTag);
         itemHandler.deserializeNBT(pTag.getCompound("inventory"));
-        this.fuel = pTag.getInt("fuel");
-        this.maxFuel = pTag.getInt("maxFuel");
+        this.power = pTag.getInt("power");
         this.progress = pTag.getInt("progress");
         this.maxProgress = pTag.getInt("maxProgress");
     }
@@ -127,6 +127,43 @@ public class ManufacturerBlockEntity extends BlockEntity implements MenuProvider
     }
 
     public static void tick(Level level, BlockPos pos, BlockState state, ManufacturerBlockEntity blockEntity) {
+        SimpleContainer container = new SimpleContainer(blockEntity.itemHandler.getSlots());
+        for(int i = 0; i < blockEntity.itemHandler.getSlots(); i++) {
+            container.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
+        }
 
+        Optional<ManufacturingRecipe> recipe = level.getRecipeManager().getRecipeFor(ManufacturingRecipe.Type.INSTANCE, container, level);
+        recipe.ifPresent(manufacturingRecipe -> blockEntity.maxProgress = manufacturingRecipe.getTime());
+
+        if(canManufacture(container, recipe) && !blockEntity.isActive()) {
+            if(blockEntity.itemHandler.getStackInSlot(0).is(SpacedustryItems.COMPOSITE_BUILDER.get())) {
+                blockEntity.itemHandler.extractItem(0, 1, false);
+                blockEntity.power = 4;
+            }
+        }
+
+        if(canManufacture(container, recipe) && blockEntity.isActive()) {
+            blockEntity.progress++;
+            if(blockEntity.progress == blockEntity.maxProgress) {
+                blockEntity.itemHandler.extractItem(1,1, false);
+                blockEntity.itemHandler.extractItem(2,1, false);
+                blockEntity.itemHandler.setStackInSlot(3, new ItemStack(recipe.get().getResultItem().getItem(), blockEntity.itemHandler.getStackInSlot(3).getCount() + recipe.get().getResultItem().getCount()));
+
+                blockEntity.progress = 0;
+                blockEntity.power--;
+            }
+        }
+
+        if(blockEntity.itemHandler.getStackInSlot(1).isEmpty() || blockEntity.itemHandler.getStackInSlot(2).isEmpty()) blockEntity.progress = 0;
+        setChanged(level, pos, state);
+    }
+
+    private static boolean canManufacture(SimpleContainer container, Optional<ManufacturingRecipe> recipe) {
+        int output = container.getContainerSize() - 1;
+        return recipe.isPresent() && (container.getItem(output).getItem() == recipe.get().getResultItem().getItem() || container.getItem(output).isEmpty()) && (container.getItem(output).getCount() < container.getItem(output).getMaxStackSize());
+    }
+
+    private boolean isActive() {
+        return this.power > 0;
     }
 }

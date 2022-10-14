@@ -14,15 +14,13 @@ import net.minecraft.world.level.Level;
 public class ManufacturingRecipe implements Recipe<SimpleContainer> {
     private final ResourceLocation id;
     private final NonNullList<Ingredient> ingredients;
-    private final Ingredient conductor;
     private final ItemStack result;
     private final float experience;
     private final int time;
 
-    public ManufacturingRecipe(ResourceLocation pId, NonNullList<Ingredient> pIngredients, Ingredient pConductor, ItemStack pResult, float pExperience, int pTime) {
+    public ManufacturingRecipe(ResourceLocation pId, NonNullList<Ingredient> pIngredients, ItemStack pResult, float pExperience, int pTime) {
         this.id = pId;
         this.ingredients = pIngredients;
-        this.conductor = pConductor;
         this.result = pResult;
         this.experience = pExperience;
         this.time = pTime;
@@ -90,24 +88,22 @@ public class ManufacturingRecipe implements Recipe<SimpleContainer> {
             for(int i = 0; i < ingredients.size(); i++) {
                 ingredients.set(i, Ingredient.fromJson(input.get(i)));
             }
-            Ingredient conductor = Ingredient.fromJson(GsonHelper.getAsJsonObject(pJson, "conductor"));
             ItemStack result = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(pJson, "result"));
             float experience = GsonHelper.getAsFloat(pJson, "experience", 0);
             int time = GsonHelper.getAsInt(pJson, "time", 250);
 
-            return new ManufacturingRecipe(pId, ingredients, conductor, result, experience, time);
+            return new ManufacturingRecipe(pId, ingredients, result, experience, time);
         }
 
         @Override
         public ManufacturingRecipe fromNetwork(ResourceLocation pId, FriendlyByteBuf pBuffer) {
             NonNullList<Ingredient> ingredients = NonNullList.withSize(pBuffer.readInt(), Ingredient.EMPTY);
             ingredients.replaceAll(ignored -> Ingredient.fromNetwork(pBuffer));
-            Ingredient conductor = Ingredient.fromNetwork(pBuffer);
             ItemStack result = pBuffer.readItem();
             float experience = pBuffer.readFloat();
             int time = pBuffer.readVarInt();
 
-            return new ManufacturingRecipe(pId, ingredients, conductor, result, experience, time);
+            return new ManufacturingRecipe(pId, ingredients, result, experience, time);
         }
 
         @Override
@@ -116,7 +112,6 @@ public class ManufacturingRecipe implements Recipe<SimpleContainer> {
             for(Ingredient ingredient : pRecipe.getIngredients()) {
                 ingredient.toNetwork(pBuffer);
             }
-            pRecipe.conductor.toNetwork(pBuffer);
             pBuffer.writeItem(pRecipe.getResultItem());
             pBuffer.writeFloat(pRecipe.getExperience());
             pBuffer.writeVarInt(pRecipe.getTime());

@@ -81,4 +81,15 @@ public class ManufacturerMenu extends AbstractContainerMenu {
     public boolean stillValid(@NotNull Player pPlayer) {
         return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), pPlayer, SpacedustryBlocks.MANUFACTURER.get());
     }
+
+    public int drawPower() {
+        return this.data.get(0) * 2;
+    }
+
+    public int drawProgress() {
+        double progress = this.data.get(1);
+        int max = this.data.get(2);
+
+        return progress == 0 ? 0 : (int) (progress / max * 24);
+    }
 }

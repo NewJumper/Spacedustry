@@ -73,7 +73,7 @@ public class ConstructingCategory implements IRecipeCategory<ConstructingRecipe>
 
     @Override
     public void draw(ConstructingRecipe recipe, IRecipeSlotsView recipeSlotsView, PoseStack stack, double mouseX, double mouseY) {
-        this.progress.getUnchecked((int) (time / 2.5)).draw(stack, 24, 14);
+        this.progress.getUnchecked((time - 10) / 3).draw(stack, 24, 14);
 
         Font fontRenderer = Minecraft.getInstance().font;
         int stringWidth = fontRenderer.width(time / 20 + "s");

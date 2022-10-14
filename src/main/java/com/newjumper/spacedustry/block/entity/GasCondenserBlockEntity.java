@@ -105,12 +105,12 @@ public class GasCondenserBlockEntity extends BlockEntity implements MenuProvider
     }
 
     public static void tick(Level level, BlockPos pos, BlockState state, GasCondenserBlockEntity blockEntity) {
-        if(blockEntity.hydrogenStorage.getGasStored() < blockEntity.hydrogenStorage.getGasCapacity() && blockEntity.canCondense()) blockEntity.hydrogenStorage.insertGas(1);
+        if(blockEntity.canCondense()) blockEntity.hydrogenStorage.insertGas(1);
 
         setChanged(level, pos, state);
     }
 
     public boolean canCondense() {
-        return this.itemHandler.getStackInSlot(0).is(Blocks.PACKED_ICE.asItem());
+        return this.hydrogenStorage.getGasStored() < this.hydrogenStorage.getGasCapacity() && this.itemHandler.getStackInSlot(0).is(Blocks.PACKED_ICE.asItem());
     }
 }
