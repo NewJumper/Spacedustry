@@ -1,6 +1,6 @@
 modLoader="javafml"
 loaderVersion="[43,)"
-license="All rights reserved"
+license="AGPL-3.0"
 
 [[mods]]
     modId="spacedustry"
@@ -8,7 +8,6 @@ license="All rights reserved"
 
     displayName="Spacedustry"
     authors="NewJumper"
-#    logoFile="examplemod.png"
     description='''A mod for space travel!'''
 
 [[dependencies.spacedustry]]
