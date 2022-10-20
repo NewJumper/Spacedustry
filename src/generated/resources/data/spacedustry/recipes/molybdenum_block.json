@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "molybdenum_block",
+  "key": {
+    "#": {
+      "item": "spacedustry:molybdenum_ingot"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "item": "spacedustry:molybdenum_block"
+  }
+}

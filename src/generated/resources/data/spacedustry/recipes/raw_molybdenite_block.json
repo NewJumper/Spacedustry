@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "raw_molybdenite_block",
+  "key": {
+    "#": {
+      "item": "spacedustry:molybdenite"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "item": "spacedustry:raw_molybdenite_block"
+  }
+}

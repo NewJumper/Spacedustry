@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "raw_tungsten",
+  "ingredients": [
+    {
+      "item": "spacedustry:raw_tungsten_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "spacedustry:raw_tungsten"
+  }
+}

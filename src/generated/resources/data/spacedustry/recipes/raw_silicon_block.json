@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "raw_silicon_block",
+  "key": {
+    "#": {
+      "item": "spacedustry:raw_silicon"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "item": "spacedustry:raw_silicon_block"
+  }
+}

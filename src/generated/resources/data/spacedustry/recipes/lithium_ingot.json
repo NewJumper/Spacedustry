@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "lithium_ingot",
+  "ingredients": [
+    {
+      "item": "spacedustry:lithium_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "spacedustry:lithium_ingot"
+  }
+}

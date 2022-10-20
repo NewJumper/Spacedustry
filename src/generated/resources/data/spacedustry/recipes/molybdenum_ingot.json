@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "molybdenum_ingot",
+  "ingredients": [
+    {
+      "item": "spacedustry:molybdenum_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "spacedustry:molybdenum_ingot"
+  }
+}
