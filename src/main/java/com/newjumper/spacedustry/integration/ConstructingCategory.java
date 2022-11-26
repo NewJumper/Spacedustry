@@ -77,6 +77,6 @@ public class ConstructingCategory implements IRecipeCategory<ConstructingRecipe>
 
         Font fontRenderer = Minecraft.getInstance().font;
         int stringWidth = fontRenderer.width(time / 20 + "s");
-        fontRenderer.draw(stack, time / 20 + "s", background.getWidth() - stringWidth, 45, 0xff808080);
+        fontRenderer.draw(stack, time / 20 + "s", background.getWidth() - stringWidth, background.getHeight() - 9, 0xff808080);
     }
 }
