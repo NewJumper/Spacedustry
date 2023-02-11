@@ -14,8 +14,8 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraftforge.network.NetworkHooks;
-import org.jetbrains.annotations.Nullable;
 
+@SuppressWarnings({"deprecation", "NullableProblems"})
 public class ConstructorBlock extends MachineBlock {
     public ConstructorBlock(Properties pProperties) {
         super(pProperties);
@@ -45,13 +45,11 @@ public class ConstructorBlock extends MachineBlock {
         super.onRemove(pState, pLevel, pPos, pNewState, pIsMoving);
     }
 
-    @Nullable
     @Override
     public BlockEntity newBlockEntity(BlockPos pPos, BlockState pState) {
         return new ConstructorBlockEntity(pPos, pState);
     }
 
-    @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level pLevel, BlockState pState, BlockEntityType<T> pBlockEntityType) {
         return createTickerHelper(pBlockEntityType, SpacedustryBlockEntities.CONSTRUCTOR.get(), ConstructorBlockEntity::tick);

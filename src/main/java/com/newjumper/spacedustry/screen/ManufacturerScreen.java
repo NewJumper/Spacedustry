@@ -31,7 +31,7 @@ public class ManufacturerScreen extends AbstractContainerScreen<ManufacturerMenu
     }
 
     @Override
-    protected void renderBg(PoseStack pPoseStack, float pPartialTick, int pMouseX, int pMouseY) {
+    protected void renderBg(@NotNull PoseStack pPoseStack, float pPartialTick, int pMouseX, int pMouseY) {
         RenderSystem.setShader(GameRenderer::getPositionTexShader);
         RenderSystem.setShaderColor(1, 1, 1, 1);
         RenderSystem.setShaderTexture(0, GUI);
@@ -39,7 +39,7 @@ public class ManufacturerScreen extends AbstractContainerScreen<ManufacturerMenu
         int y = this.topPos;
 
         this.blit(pPoseStack, x, y, 0, 0, imageWidth, imageHeight);
-        if(menu.drawPower() > 0) this.blit(pPoseStack, x + 64, y + 46 - menu.drawPower(), 176, 25 - menu.drawPower(), 16, 1 + menu.drawPower());
-        if(menu.drawProgress() > 0) this.blit(pPoseStack, x + 98, y + 34, 176, 0, menu.drawProgress(), 17);
+        if(menu.drawPower() > 0) this.blit(pPoseStack, x + 64, y + 47 - menu.drawPower(), 176, 25 - menu.drawPower(), 16, 1 + menu.drawPower());
+        if(menu.drawProgress() > 0) this.blit(pPoseStack, x + 98, y + 35, 176, 0, menu.drawProgress(), 17);
     }
 }

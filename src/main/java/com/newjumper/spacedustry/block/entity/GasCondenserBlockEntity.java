@@ -25,9 +25,8 @@ import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
+@SuppressWarnings("NullableProblems")
 public class GasCondenserBlockEntity extends BlockEntity implements MenuProvider {
     private final LazyOptional<IItemHandler> lazyItemHandler;
     private final LazyOptional<IGasStorage> lazyHydrogenStorage;
@@ -59,7 +58,6 @@ public class GasCondenserBlockEntity extends BlockEntity implements MenuProvider
         return Component.translatable("container." + Spacedustry.MOD_ID + "." + SpacedustryBlocks.GAS_CONDENSER.getId().getPath());
     }
 
-    @Nullable
     @Override
     public AbstractContainerMenu createMenu(int pContainerId, Inventory pPlayerInventory, Player pPlayer) {
         return new GasCondenserMenu(pContainerId, pPlayerInventory, this);
@@ -80,7 +78,7 @@ public class GasCondenserBlockEntity extends BlockEntity implements MenuProvider
     }
 
     @Override
-    public @NotNull <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap) {
+    public <T> LazyOptional<T> getCapability(Capability<T> cap) {
         if(cap == ForgeCapabilities.ITEM_HANDLER) return lazyItemHandler.cast();
         if(cap == SpacedustryCapabilities.GAS) return lazyHydrogenStorage.cast();
 

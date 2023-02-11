@@ -24,11 +24,10 @@ import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;
 
+@SuppressWarnings("NullableProblems")
 public class ConstructorBlockEntity extends BlockEntity implements MenuProvider {
     private final ContainerData data = new ContainerData() {
         @Override
@@ -78,18 +77,17 @@ public class ConstructorBlockEntity extends BlockEntity implements MenuProvider 
     }
 
     @Override
-    public @NotNull Component getDisplayName() {
+    public Component getDisplayName() {
         return Component.translatable("container." + Spacedustry.MOD_ID + "." + SpacedustryBlocks.CONSTRUCTOR.getId().getPath());
     }
 
-    @Nullable
     @Override
     public AbstractContainerMenu createMenu(int pContainerId, Inventory pPlayerInventory, Player pPlayer) {
         return new ConstructorMenu(pContainerId, pPlayerInventory, this, this.data);
     }
 
     @Override
-    protected void saveAdditional(@NotNull CompoundTag pTag) {
+    protected void saveAdditional(CompoundTag pTag) {
         super.saveAdditional(pTag);
         pTag.put("inventory", itemHandler.serializeNBT());
         pTag.putInt("fuel", this.fuel);
@@ -99,7 +97,7 @@ public class ConstructorBlockEntity extends BlockEntity implements MenuProvider 
     }
 
     @Override
-    public void load(@NotNull CompoundTag pTag) {
+    public void load(CompoundTag pTag) {
         super.load(pTag);
         itemHandler.deserializeNBT(pTag.getCompound("inventory"));
         this.fuel = pTag.getInt("fuel");
@@ -109,7 +107,7 @@ public class ConstructorBlockEntity extends BlockEntity implements MenuProvider 
     }
 
     @Override
-    public @NotNull <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap) {
+    public <T> LazyOptional<T> getCapability(Capability<T> cap) {
         if(cap == ForgeCapabilities.ITEM_HANDLER) return lazyItemHandler.cast();
 
         return super.getCapability(cap);

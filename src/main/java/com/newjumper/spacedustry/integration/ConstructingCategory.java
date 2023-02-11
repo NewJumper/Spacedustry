@@ -23,6 +23,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 
+@SuppressWarnings("NullableProblems")
 public class ConstructingCategory implements IRecipeCategory<ConstructingRecipe> {
     public final static ResourceLocation TEXTURE = new ResourceLocation(Spacedustry.MOD_ID, "textures/gui/container/constructor.png");
 

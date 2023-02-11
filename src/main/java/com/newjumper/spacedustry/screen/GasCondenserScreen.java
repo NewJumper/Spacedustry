@@ -3,8 +3,6 @@ package com.newjumper.spacedustry.screen;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.newjumper.spacedustry.Spacedustry;
-import com.newjumper.spacedustry.capabilities.IGasStorage;
-import com.newjumper.spacedustry.screen.renderer.ToolTipRenderer;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.network.chat.Component;
@@ -12,11 +10,12 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 
 public class GasCondenserScreen extends AbstractContainerScreen<GasCondenserMenu> {
     public static final ResourceLocation GUI = new ResourceLocation(Spacedustry.MOD_ID, "textures/gui/container/gas_condenser.png");
-    private final ToolTipRenderer<IGasStorage> gasToolTip = new ToolTipRenderer<>(menu.blockEntity.hydrogenStorage);
 
     public GasCondenserScreen(GasCondenserMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
         super(pMenu, pPlayerInventory, pTitle);
@@ -39,7 +38,10 @@ public class GasCondenserScreen extends AbstractContainerScreen<GasCondenserMenu
     protected void renderLabels(@NotNull PoseStack pPoseStack, int pMouseX, int pMouseY) {
         super.renderLabels(pPoseStack, pMouseX, pMouseY);
 
-        if(isHovering(70, 23, 24, 44, pMouseX, pMouseY)) renderTooltip(pPoseStack, gasToolTip.getToolTip(), Optional.empty(), pMouseX - this.leftPos, pMouseY - this.topPos);
+        if(isHovering(70, 23, 24, 44, pMouseX, pMouseY)) {
+            Component tooltip = Component.literal((menu.blockEntity.hydrogenStorage).getGasType().getFormula() + " - " + (menu.blockEntity.hydrogenStorage).getGasStored() + " mb");
+            renderTooltip(pPoseStack, List.of(tooltip), Optional.empty(), pMouseX - this.leftPos, pMouseY - this.topPos);
+        }
     }
 
     @Override
@@ -53,7 +55,7 @@ public class GasCondenserScreen extends AbstractContainerScreen<GasCondenserMenu
         this.blit(pPoseStack, x, y, 0, 0, imageWidth, imageHeight);
 
         if(menu.blockEntity.canCondense()) {
-            int frame = (int) (menu.blockEntity.getLevel().getGameTime() / 4) % 6;
+            int frame = (int) (Objects.requireNonNull(menu.blockEntity.getLevel()).getGameTime() / 4) % 6;
             this.blit(pPoseStack, x + 45, y + 19, 176 + 13 * frame, 0, 13, 24);
         }
 

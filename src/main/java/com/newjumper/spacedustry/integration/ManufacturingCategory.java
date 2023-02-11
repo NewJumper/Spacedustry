@@ -12,6 +12,7 @@ import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
 import mezz.jei.api.gui.drawable.IDrawableAnimated;
+import mezz.jei.api.gui.drawable.IDrawableStatic;
 import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
 import mezz.jei.api.helpers.IGuiHelper;
 import mezz.jei.api.recipe.IFocusGroup;
@@ -25,13 +26,14 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 
+@SuppressWarnings("NullableProblems")
 public class ManufacturingCategory implements IRecipeCategory<ManufacturingRecipe> {
     public final static ResourceLocation TEXTURE = new ResourceLocation(Spacedustry.MOD_ID, "textures/gui/container/manufacturer.png");
 
     private final IDrawable background;
     private final IDrawable icon;
     private final LoadingCache<Integer, IDrawableAnimated> progress;
-    private final LoadingCache<Integer, IDrawableAnimated> power;
+    private final LoadingCache<Integer, IDrawableStatic> power;
     private final int time;
 
     public ManufacturingCategory(IGuiHelper guiHelper, int time) {
@@ -46,8 +48,8 @@ public class ManufacturingCategory implements IRecipeCategory<ManufacturingRecip
         });
         this.power = CacheBuilder.newBuilder().maximumSize(10).build(new CacheLoader<>() {
             @Override
-            public IDrawableAnimated load(Integer time) {
-                return guiHelper.drawableBuilder(TEXTURE, 176, 17, 16, 9).buildAnimated(time, IDrawableAnimated.StartDirection.TOP, true);
+            public IDrawableStatic load(Integer key) {
+                return guiHelper.drawableBuilder(TEXTURE, 176, 17, 16, 9).build();
             }
         });
         this.time = time;
