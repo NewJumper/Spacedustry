@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_molybdenite": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "spacedustry:molybdenite"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "spacedustry:raw_molybdenite_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_molybdenite",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "spacedustry:raw_molybdenite_block"
+    ]
+  },
+  "sends_telemetry_event": false
+}

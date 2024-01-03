@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "group": "silicon_block",
   "key": {
     "#": {
@@ -13,5 +14,6 @@
   ],
   "result": {
     "item": "spacedustry:silicon_block"
-  }
+  },
+  "show_notification": true
 }

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_duralumin": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "spacedustry:duralumin_alloy"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "spacedustry:manufacturer"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_duralumin",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "spacedustry:manufacturer"
+    ]
+  },
+  "sends_telemetry_event": false
+}

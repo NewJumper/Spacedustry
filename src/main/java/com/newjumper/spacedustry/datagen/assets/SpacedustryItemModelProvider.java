@@ -1,9 +1,9 @@
 package com.newjumper.spacedustry.datagen.assets;
 
 import com.newjumper.spacedustry.Spacedustry;
-import com.newjumper.spacedustry.block.SpacedustryBlocks;
-import com.newjumper.spacedustry.item.SpacedustryItems;
-import net.minecraft.data.DataGenerator;
+import com.newjumper.spacedustry.content.SpacedustryBlocks;
+import com.newjumper.spacedustry.content.SpacedustryItems;
+import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
@@ -14,8 +14,8 @@ import net.minecraftforge.registries.RegistryObject;
 public class SpacedustryItemModelProvider extends ItemModelProvider {
     private final ModelFile GENERATED = getExistingFile(mcLoc("item/generated"));
 
-    public SpacedustryItemModelProvider(DataGenerator gen, ExistingFileHelper exFileHelper) {
-        super(gen, Spacedustry.MOD_ID, exFileHelper);
+    public SpacedustryItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
+        super(output, Spacedustry.MOD_ID, existingFileHelper);
     }
 
     @Override

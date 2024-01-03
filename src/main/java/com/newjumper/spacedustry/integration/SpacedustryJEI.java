@@ -1,7 +1,7 @@
 package com.newjumper.spacedustry.integration;
 
 import com.newjumper.spacedustry.Spacedustry;
-import com.newjumper.spacedustry.block.SpacedustryBlocks;
+import com.newjumper.spacedustry.content.SpacedustryBlocks;
 import com.newjumper.spacedustry.recipe.ConstructingRecipe;
 import com.newjumper.spacedustry.recipe.ManufacturingRecipe;
 import mezz.jei.api.IModPlugin;

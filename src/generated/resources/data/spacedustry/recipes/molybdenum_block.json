@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "group": "molybdenum_block",
   "key": {
     "#": {
@@ -13,5 +14,6 @@
   ],
   "result": {
     "item": "spacedustry:molybdenum_block"
-  }
+  },
+  "show_notification": true
 }

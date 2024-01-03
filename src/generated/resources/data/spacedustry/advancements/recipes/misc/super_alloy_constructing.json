@@ -1,0 +1,44 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_molybdenum": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:ingots/molybdenum"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_nickel": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:ores/nickel"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "spacedustry:super_alloy_constructing"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_molybdenum",
+      "has_nickel",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "spacedustry:super_alloy_constructing"
+    ]
+  },
+  "sends_telemetry_event": true
+}

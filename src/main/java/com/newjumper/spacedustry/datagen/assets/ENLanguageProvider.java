@@ -1,17 +1,17 @@
 package com.newjumper.spacedustry.datagen.assets;
 
 import com.newjumper.spacedustry.Spacedustry;
-import com.newjumper.spacedustry.block.SpacedustryBlocks;
-import com.newjumper.spacedustry.block.entity.SpacedustryBlockEntities;
-import com.newjumper.spacedustry.item.SpacedustryItems;
-import net.minecraft.data.DataGenerator;
+import com.newjumper.spacedustry.content.SpacedustryBlocks;
+import com.newjumper.spacedustry.content.SpacedustryItems;
+import com.newjumper.spacedustry.content.block.entity.SpacedustryBlockEntities;
+import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.BlockItem;
 import net.minecraftforge.common.data.LanguageProvider;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ENLanguageProvider extends LanguageProvider {
-    public ENLanguageProvider(DataGenerator gen) {
-        super(gen, Spacedustry.MOD_ID, "en_us");
+    public ENLanguageProvider(PackOutput output) {
+        super(output, Spacedustry.MOD_ID, "en_us");
     }
 
     @Override

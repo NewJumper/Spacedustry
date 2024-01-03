@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "building",
   "key": {
     "#": {
       "item": "spacedustry:salt"
@@ -11,5 +12,6 @@
   ],
   "result": {
     "item": "spacedustry:salt_block"
-  }
+  },
+  "show_notification": true
 }

@@ -1,8 +1,8 @@
 package com.newjumper.spacedustry.datagen.assets;
 
 import com.newjumper.spacedustry.Spacedustry;
-import com.newjumper.spacedustry.block.SpacedustryBlocks;
-import net.minecraft.data.DataGenerator;
+import com.newjumper.spacedustry.content.SpacedustryBlocks;
+import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
@@ -10,8 +10,8 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 
 public class SpacedustryBlockStateProvider extends BlockStateProvider {
-    public SpacedustryBlockStateProvider(DataGenerator gen, ExistingFileHelper exFileHelper) {
-        super(gen, Spacedustry.MOD_ID, exFileHelper);
+    public SpacedustryBlockStateProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
+        super(output, Spacedustry.MOD_ID, existingFileHelper);
     }
 
     @Override

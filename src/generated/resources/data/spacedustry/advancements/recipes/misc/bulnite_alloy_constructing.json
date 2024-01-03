@@ -1,0 +1,44 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_aluminum": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:ingots/aluminum"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_lithium": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:ingots/lithium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "spacedustry:bulnite_alloy_constructing"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_aluminum",
+      "has_lithium",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "spacedustry:bulnite_alloy_constructing"
+    ]
+  },
+  "sends_telemetry_event": true
+}

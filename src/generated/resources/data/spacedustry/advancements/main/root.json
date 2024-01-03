@@ -98,5 +98,6 @@
       "silicon",
       "tungsten"
     ]
-  ]
+  ],
+  "sends_telemetry_event": true
 }

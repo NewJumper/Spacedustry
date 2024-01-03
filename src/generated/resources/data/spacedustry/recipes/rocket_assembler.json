@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "key": {
     "A": {
       "item": "minecraft:anvil"
@@ -27,5 +28,6 @@
   ],
   "result": {
     "item": "spacedustry:rocket_assembler"
-  }
+  },
+  "show_notification": true
 }

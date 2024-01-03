@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_duralumin": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "spacedustry:duralumin_alloy"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_steel": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "spacedustry:steel_alloy"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "spacedustry:aerograde_plate_manufacturing"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_steel",
+      "has_duralumin",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "spacedustry:aerograde_plate_manufacturing"
+    ]
+  },
+  "sends_telemetry_event": true
+}

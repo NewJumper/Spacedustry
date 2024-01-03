@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "group": "raw_aluminum_block",
   "key": {
     "#": {
@@ -13,5 +14,6 @@
   ],
   "result": {
     "item": "spacedustry:raw_aluminum_block"
-  }
+  },
+  "show_notification": true
 }

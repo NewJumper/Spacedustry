@@ -1,21 +1,26 @@
 package com.newjumper.spacedustry.datagen.data.tags;
 
 import com.newjumper.spacedustry.Spacedustry;
-import com.newjumper.spacedustry.item.SpacedustryItems;
+import com.newjumper.spacedustry.content.SpacedustryItems;
 import com.newjumper.spacedustry.util.SpacedustryTags;
-import net.minecraft.data.DataGenerator;
-import net.minecraft.data.tags.BlockTagsProvider;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.data.tags.TagsProvider;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import org.jetbrains.annotations.NotNull;
+
+import java.util.concurrent.CompletableFuture;
 
 public class SpacedustryItemTagsProvider extends ItemTagsProvider {
-    public SpacedustryItemTagsProvider(DataGenerator gen, BlockTagsProvider blockTags, ExistingFileHelper exFileHelper) {
-        super(gen, blockTags, Spacedustry.MOD_ID, exFileHelper);
+    public SpacedustryItemTagsProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookup, TagsProvider<Block> blockTags, ExistingFileHelper existingFileHelper) {
+        super(output, lookup, blockTags.contentsGetter(), Spacedustry.MOD_ID, existingFileHelper);
     }
 
     @Override
-    protected void addTags() {
+    protected void addTags(HolderLookup.@NotNull Provider pProvider) {
         copy(Tags.Blocks.ORES, Tags.Items.ORES);
         copy(Tags.Blocks.ORES_IN_GROUND_STONE, Tags.Items.ORES_IN_GROUND_STONE);
         copy(Tags.Blocks.ORES_IN_GROUND_DEEPSLATE, Tags.Items.ORES_IN_GROUND_DEEPSLATE);

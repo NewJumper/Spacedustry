@@ -85,5 +85,6 @@
       "steel",
       "super"
     ]
-  ]
+  ],
+  "sends_telemetry_event": true
 }

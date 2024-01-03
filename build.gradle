@@ -4,7 +4,6 @@ plugins {
     id 'maven-publish'
     id 'net.minecraftforge.gradle' version '[6.0,6.2)'
     id 'org.parchmentmc.librarian.forgegradle' version '1.+'
-    id 'org.spongepowered.mixin' version '0.7.+'
 }
 
 version = minecraft_version + "-" + mod_version
@@ -66,11 +65,6 @@ dependencies {
     compileOnly fg.deobf("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}")
     compileOnly fg.deobf("mezz.jei:jei-${minecraft_version}-forge-api:${jei_version}")
     runtimeOnly fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jei_version}")
-}
-
-mixin {
-    add sourceSets.main, 'mixins.deeperdarker.refmap.json'
-    config 'mixins.deeperdarker.json'
 }
 
 tasks.named('processResources', ProcessResources).configure {

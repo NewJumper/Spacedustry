@@ -3,6 +3,7 @@ package com.newjumper.spacedustry.recipe;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import net.minecraft.core.NonNullList;
+import net.minecraft.core.RegistryAccess;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.GsonHelper;
@@ -11,6 +12,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
 
+@SuppressWarnings("NullableProblems")
 public class ManufacturingRecipe implements Recipe<SimpleContainer> {
     private final ResourceLocation id;
     private final NonNullList<Ingredient> ingredients;
@@ -33,8 +35,8 @@ public class ManufacturingRecipe implements Recipe<SimpleContainer> {
     }
 
     @Override
-    public ItemStack assemble(SimpleContainer pContainer) {
-        return result;
+    public ItemStack assemble(SimpleContainer pContainer, RegistryAccess pRegistryAccess) {
+        return result.copy();
     }
 
     @Override
@@ -53,8 +55,8 @@ public class ManufacturingRecipe implements Recipe<SimpleContainer> {
     }
 
     @Override
-    public ItemStack getResultItem() {
-        return result.copy();
+    public ItemStack getResultItem(RegistryAccess pRegistryAccess) {
+        return result;
     }
 
     public float getExperience() {
@@ -112,9 +114,9 @@ public class ManufacturingRecipe implements Recipe<SimpleContainer> {
             for(Ingredient ingredient : pRecipe.getIngredients()) {
                 ingredient.toNetwork(pBuffer);
             }
-            pBuffer.writeItem(pRecipe.getResultItem());
-            pBuffer.writeFloat(pRecipe.getExperience());
-            pBuffer.writeVarInt(pRecipe.getTime());
+            pBuffer.writeItem(pRecipe.result);
+            pBuffer.writeFloat(pRecipe.experience);
+            pBuffer.writeVarInt(pRecipe.time);
         }
     }
 }
