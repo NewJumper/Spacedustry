@@ -1,6 +1,6 @@
 {
   "type": "forge:add_features",
   "biomes": "#minecraft:is_overworld",
-  "features": "spacedustry:ore_nickel",
+  "features": "spacedustry:tungsten",
   "step": "underground_ores"
 }
